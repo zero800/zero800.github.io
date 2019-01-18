@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        
+		<link href="../scripts/panes.css" rel="stylesheet" type="text/css">
+        <link href="../scripts/tablet.css" rel="stylesheet" type="text/css">        
+		<link href="../scripts/video-js.css" rel="stylesheet">
+		
+		
+		<style type="text/css">
+            /* Pane configuration */
+            .left.col { width: 85px; }
+            .right.col { left: 85px; right: 0; }
+            .header.row { height: 50px; line-height: 50px; }
+            .body.row { top: 50px; bottom: 0px; }
+            .footer.row { height: 0px; bottom: 0; line-height: 50px; }
+        </style>
+    </head>
+ 
+ <body>
+        <script src="../scripts/video-min.js"></script>
+        <script src="../scripts/pt-BR.js"></script>	
+		<script src="../scripts/youtube.min.js"></script>	
+		<script src="../scripts/plugin.min.js"></script>
+		<script src="../scripts/videojs-playlist-min.js"></script>				
+		
+		<div class="left col">
+            <div class="header row"> &nbsp;&nbsp;
+			 <a href="../geral.html">
+			<img border="0" src="../img/inicio.png" align="top" alt="Início" width="42" >
+			</a>
+			</div>
+            <div class="body row scroll-y">			
+				
+				
+				
+				<ul id="ul_li" class="listview">
+                    <li id="0" onClick="reply_click(0)" class="selected">The Palms, Thailândia</li>
+					<li id="1" onClick="reply_click(1)">Cat Cafe, San Diego</li>
+					<li id="2" onClick="reply_click(2)">SLOPPY JOE'S 1, Flórida</li>
+					<li id="3" onClick="reply_click(3)">SLOPPY JOE'S 2, Flórida</li>
+					<li id="4" onClick="reply_click(4)">Tropical Murphys, Thailândia</li>
+					<li id="5" onClick="reply_click(5)">Schooner Wharf, Flórida</li>					
+					<li id="6" onClick="reply_click(6)">Soggy Dollar Bar, Ilhas Virgens Britânicas</li>
+					<li id="7" onClick="reply_click(7)">Ritam Grada, Croácia</li>
+					<li id="8" onClick="reply_click(8)">Smokin' Tuna Saloon, Flórida</li>
+					<li id="9" onClick="reply_click(9)">Irish Kevin's - Flórida</li>
+					
+					<li id="10" onClick="reply_click(10)">De Haven Beach, Amsterdã</li>
+					<li id="11" onClick="reply_click(11)">Cafe de Paris, Croácia</li>
+					<li id="12" onClick="reply_click(12)">Sweet Soul Cafe 1, Thailândia</li>
+					<li id="13" onClick="reply_click(13)">Sweet Soul Cafe 2, Thailândia</li>
+					<li id="14" onClick="reply_click(14)">Hog's Breath Saloon, Flórida</li>
+					<li id="15" onClick="reply_click(15)">Fish Tales, USA</li>					
+					<li id="16" onClick="reply_click(16)">Royal Palms Beach, Ilhas Cayman</li>					
+					<li id="17" onClick="reply_click(17)">The Temple, Irlanda</li>					
+							   
+                </ul>
+            </div>
+            
+        </div>
+        <div class="right col">
+            <div class="header row">&nbsp;&nbsp; BARES
+			 <img border="0" src="../img/mini.png" align="right" alt="Cameras do Brasil" width="42" >
+			</div>
+            <div class="body row">            		
+			
+				
+			<video autoplay id="example_video_1" class="video-js vjs-big-play-centered vjs-16-9" controls preload="auto" width="100%" poster="../img/padrao.png" data-setup="{}">  
+			</video>	
+			
+			<script>
+				   var videoList = [{
+				  sources: [{					
+					src: ("https://youtu.be/mM93KAk4hy4") ,
+					type: 'video/youtube' /* 00 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/pIfrF9MZT48") ,
+					type: 'video/youtube' /* 01 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://56eaaf2a94c81.streamlock.net/sloppyjoes/sloppyjoes.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 02 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://56e51b0079975.streamlock.net/crowdcam/crowdcam.stream/chunklist_w1143477239.m3u8") ,
+					type: 'application/x-mpegURL' /* 03 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/sbZNL98Z0GE") ,
+					type: 'video/youtube' /* 04 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://wowza.floridakeysmedia.com:8090/schoonerwharf/schoonerwharf.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 05 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/hDzrpintkxY") ,
+					type: 'video/youtube' /* 06 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://cdn-002.whatsupcams.com/hls/hr_samoevent02.m3u8") ,
+					type: 'application/x-mpegURL' /* 07 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://wowza.floridakeysmedia.com:8090/smokintunabar/smokintunabar.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 08 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://wowza.floridakeysmedia.com:8090/irishkevinsbar/irishkevinsbar.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 09 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/UDsPPyXgaFM") ,
+					type: 'video/youtube' /* 10 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://cdn-002.whatsupcams.com/hls/hr_caffeparis01.m3u8") ,
+					type: 'application/x-mpegURL' /* 11 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/OBsmLKuNELA") ,
+					type: 'video/youtube' /* 12 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/IYCqsEYVgj0") ,
+					type: 'video/youtube' /* 13 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://wse1.resortcams.com/live-audio/hogsbreath1.stream_aac/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 14 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://livestream.fullcityservers.com:8081/fishtales.live/beach.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 15 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/aita57yVYcc") ,
+					type: 'video/youtube' /* 16 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://videos3.earthcam.com/fecnetwork/4054.flv/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 15 */
+				  }],
+				  poster: 'img/padrao.png'  
+				  
+				}];
+				
+				https://videos3.earthcam.com/fecnetwork/4054.flv/playlist.m3u8
+				
+				var player = videojs(document.querySelector('video'), {
+				  inactivityTimeout: 1200
+				});				
+				//player.playlist(videoList, 4);/// play video 5				
+				player.playlist(videoList);
+				player.playlist.autoadvance(0); // 0 = play all								
+				
+				
+				/* ADD PREVIOUS */
+				var Button = videojs.getComponent("Button");
+
+				// Extend default
+				var PrevButton = videojs.extend(Button, {				 
+				  constructor: function() {
+					Button.apply(this, arguments);				
+					this.addClass("vjs-icon-previous-item");
+					this.controlText("Previous");
+					
+				  },			
+
+				  handleClick: function() {
+				  
+				  const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
+					for (let i = 0; i < numItems; i++) {					
+					  if (document.getElementById(i).classList == 'selected' &&  i != 0){
+						document.getElementById(i).classList.remove('selected');
+						document.getElementById(i-1).classList.add('selected');	
+						i = numItems;
+					  } 				
+					}	
+					player.playlist.previous();
+				  }
+				});
+				
+				var NextButton = videojs.extend(Button, {				  
+				  constructor: function() {
+					Button.apply(this, arguments);
+				
+					this.addClass("vjs-icon-next-item");
+					this.controlText("Next");
+				  },
+
+				  handleClick: function() {
+					
+					const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
+					for (let i = 0; i < numItems; i++) {					
+					  if (document.getElementById(i).classList == 'selected' &&  i != numItems-1){
+						document.getElementById(i).classList.remove('selected');
+						document.getElementById(i+1).classList.add('selected');	
+						i = numItems;
+					  } 				
+					}			
+					player.playlist.next();
+				  }
+				});
+				
+				videojs.registerComponent("NextButton", NextButton);
+				videojs.registerComponent("PrevButton", PrevButton);				
+				player.getChild("controlBar").addChild("PrevButton", {}, 0);
+				player.getChild("controlBar").addChild("NextButton", {}, 2);
+				
+				function reply_click(clicked_id)
+				{							
+					const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
+					for (let i = 0; i < numItems; i++) {					
+						document.getElementById(i).classList.remove('selected');						
+					}	
+					document.getElementById(clicked_id).classList.add('selected');
+					player.playlist.currentItem(clicked_id); 
+				}
+			  </script>
+			               
+            </div>
+            
+        </div>       
+    
+</body></html>

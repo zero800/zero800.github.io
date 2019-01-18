@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)http://stevesanderson.github.io/fixed-height-layouts-demo/two-columns.html -->
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+				
+		<link href="../../scripts/panes.css" rel="stylesheet" type="text/css">
+        <link href="../../scripts/tablet.css" rel="stylesheet" type="text/css">  	
+
+	
+		
+		<style type="text/css">
+            /* Pane configuration */
+            .left.col { width: 85px; }
+            .right.col { left: 85px; right: 0; }
+            .header.row { height: 50px; line-height: 50px; }
+            .body.row { top: 50px; bottom: 0px; }
+            .footer.row { height: 0px; bottom: 0; line-height: 50px; }
+			.marble {
+			  cursor: pointer;
+			  width: 32px;
+			  height: 32px;
+			  background-image: url('1.png');
+			  background-size: 32px 32px;
+			}
+			.marbleselected {
+			  cursor: pointer;
+			  width: 32px;
+			  height: 32px;
+			  background-image: url('2.png');
+			  background-size: 32px 32px;
+			}
+			.marbleless {
+			  cursor: pointer;
+			  width: 32px;
+			  height: 32px;
+			  background-image: url('3.png');
+			  background-size: 32px 32px;
+			}
+			.nomarble {
+			  width: 32px;
+			  height: 32px;
+			  background-size: 32px 32px;
+			}
+			.restart {
+			  width: 32px;
+			  height: 32px;
+			  background-image: url('4.png');
+			  background-size: 32px 32px;
+			}
+        </style>		
+		
+    </head>
+ 
+ <body>      		
+		
+		<div class="left col">
+            <div class="header row"> &nbsp;&nbsp;
+			 <a href="../../jogos.html">
+			<img border="0" src="../../img/voltar.png" align="top" alt="Jogos" width="42" >
+			</a>
+			</div>
+            <div class="body row scroll-y">							
+				
+				<ul id="ul_li" class="listview">                    			
+					<li onclick="location.href='../../geral.html'" > CÂMERAS <br> AO VIVO </li>
+					<li onclick="location.href='../../transito.html'"> TRÂNSITO </li>
+					<li onclick="location.href='../../abertos.html'"> CANAIS ABERTOS </li>
+					<li onclick="location.href='../../filmes.html'"> FILMES DO YOUTUBE </li>	
+					<li onclick="location.href='../../infantil.html'"> INFANTIL </li>	
+					<li onclick="location.href='../../jogos.html'" class="selected">JOGOS</li>
+					<li>&nbsp; <br> &nbsp; </li>
+					<li>&nbsp; <br> &nbsp; </li>
+					<li>&nbsp; <br> &nbsp; </li>
+					<li>&nbsp; <br> &nbsp; </li>
+					<li>&nbsp; <br> &nbsp; </li>
+					<li>&nbsp; <br> &nbsp; </li>					
+					
+                </ul>
+            </div>
+            
+        </div>
+        <div class="right col">
+            <div class="header row">&nbsp;&nbsp; RESTA 1
+			 <img border="0" src="../../img/mini.png" align="right" alt="Cameras do Brasil" width="42" >
+			</div>
+            <div class="body row">          		
+
+				
+				<div class="row" style="margin-top: 10px">
+				<div class="col-md-2">
+				</div>
+				<div class="col-md-8">
+				  <center>
+					<table background="fundo.png">
+					  <tr>
+						<td id="o00" class="nomarble"></td>
+						<td id="o01" class="nomarble"></td>
+						<td id="o02" class="marble"></td>
+						<td id="o03" class="marble"></td>
+						<td id="o04" class="marble"></td>
+						<td id="o05" class="nomarble"></td>
+						<td id="o06" class="nomarble"></td>
+					  </tr>
+					  <tr>
+						<td id="o10" class="nomarble"></td>
+						<td id="o11" class="nomarble"></td>
+						<td id="o12" class="marble"></td>
+						<td id="o13" class="marble"></td>
+						<td id="o14" class="marble"></td>
+						<td id="o15" class="nomarble"></td>
+						<td id="o16" class="nomarble"></td>
+					  </tr>
+					  <tr>
+						<td id="o20" class="marble"></td>
+						<td id="o21" class="marble"></td>
+						<td id="o22" class="marble"></td>
+						<td id="o23" class="marble"></td>
+						<td id="o24" class="marble"></td>
+						<td id="o25" class="marble"></td>
+						<td id="o26" class="marble"></td>
+					  </tr>
+					  <tr>
+						<td id="o30" class="marble"></td>
+						<td id="o31" class="marble"></td>
+						<td id="o32" class="marble"></td>
+						<td id="o33" class="marbleless"></td>
+						<td id="o34" class="marble"></td>
+						<td id="o35" class="marble"></td>
+						<td id="o36" class="marble"></td>
+					  </tr>
+					  <tr>
+						<td id="o40" class="marble"></td>
+						<td id="o41" class="marble"></td>
+						<td id="o42" class="marble"></td>
+						<td id="o43" class="marble"></td>
+						<td id="o44" class="marble"></td>
+						<td id="o45" class="marble"></td>
+						<td id="o46" class="marble"></td>
+					  </tr>
+					  <tr>
+						<td id="o50" class="nomarble"></td>
+						<td id="o51" class="nomarble"></td>
+						<td id="o52" class="marble"></td>
+						<td id="o53" class="marble"></td>
+						<td id="o54" class="marble"></td>
+						<td id="o55" class="nomarble"></td>
+						<td id="o56" class="nomarble"></td>
+					  </tr>
+					  <tr>
+						<td id="o60" class="nomarble"></td>
+						<td id="o61" class="nomarble"></td>
+						<td id="o62" class="marble"></td>
+						<td id="o63" class="marble"></td>
+						<td id="o64" class="marble"></td>
+						<td id="o65" class="nomarble"></td>
+						<td id="o66" class="restart" onclick='reset();'></td>
+					  </tr>
+					  
+					</table>
+				  </center>
+				</div>
+				<div align="left" class="col-md-2">
+				 	 <td>   </td>
+				</div>
+			  </div>
+		
+			  
+	<script src="scripts/jquery-3.1.1.min.js"></script>
+    <script src="scripts/tether.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>  
+	 <script>
+    $(function() {
+      var board = [
+        [-1, -1, 1, 1, 1, -1, -1],
+        [-1, -1, 1, 1, 1, -1, -1],
+        [ 1,  1, 1, 1, 1,  1 , 1],
+        [ 1,  1, 1, 0, 1,  1 , 1],
+        [ 1,  1, 1, 1, 1,  1 , 1],
+        [-1, -1, 1, 1, 1, -1, -1],
+        [-1, -1, 1, 1, 1, -1, -1]
+      ];
+      var start = board.map(function(a) { return a.slice(0); });
+
+      var selected = '';
+      $("[id^='o']").on('click', function(event) {
+        if(selected && $(this).hasClass('marbleless')) {
+          jump(selected, this.id);
+        } else {
+          if(selected && selected != this.id) {
+            toggle($("#" + selected));
+          }
+          toggle($(this));
+        }
+      });
+
+      $('#o66').on('click', function(event) {
+        reset();
+      });
+
+      var reset = function() {
+        board = start.map(function(a) { return a.slice(0); });
+        draw();
+      };
+
+      var draw = function() {
+        selected = '';
+        for(var row = 0; row < board.length; row++) {
+          for(var col = 0; col < board[row].length; col++) {
+            var id = '#o' + row + col;
+            $(id).removeClass('marbleselected');
+            if(board[row][col] == 0) {
+              if(!$(id).hasClass('marbleless')) {
+                $(id).addClass('marbleless');
+                $(id).removeClass('marble');
+              }
+            } else if(board[row][col] == 1) {
+              if(!$(id).hasClass('marble')) {
+                $(id).addClass('marble');
+                $(id).removeClass('marbleless');
+              }
+            }
+          }
+        }
+      };
+
+      var jump = function(from, to) {
+        var from_row = parseInt(from[1]);
+        var from_col = parseInt(from[2]);
+        var to_row = parseInt(to[1]);
+        var to_col = parseInt(to[2]);
+        if(valid(from_row, from_col, to_row, to_col)) {
+          move(from_row, from_col, to_row, to_col);
+        }
+        draw();
+      };
+
+      var toggle = function(marble) {
+        if(marble.hasClass('marble')) {
+          marble.addClass('marbleselected');
+          marble.removeClass('marble');
+          selected = marble.attr('id');
+        } else if(marble.hasClass('marbleselected')) {
+          marble.addClass('marble');
+          marble.removeClass('marbleselected');
+          selected = '';
+        }
+      }
+
+      var valid = function(from_row, from_col, to_row, to_col) {
+        return((from_col == to_col && (Math.abs(to_row-from_row)==2) ||
+            from_row == to_row && (Math.abs(to_col-from_col)==2)) &&
+            board[from_row+((to_row-from_row)/2)][from_col+((to_col-from_col)/2)]==1 &&
+            board[from_row][from_col]==1 &&
+            board[to_row][to_col]==0);
+      };
+
+      var move = function(from_row, from_col, to_row, to_col) {
+        if(valid(from_row, from_col, to_row, to_col)) {
+          board[from_row][from_col]=0 
+          board[from_row+((to_row-from_row)/2)][from_col+((to_col-from_col)/2)]=0
+          board[to_row][to_col]=1
+        }
+      };
+    });
+    </script>		  
+		  
+		</tr>	
+		
+		
+		</table>
+			
+		 </div>	
+		</div>
+    
+</body></html>
