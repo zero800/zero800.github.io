@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        
+		<link href="../scripts/panes.css" rel="stylesheet" type="text/css">
+        <link href="../scripts/tablet.css" rel="stylesheet" type="text/css">        
+		<link href="../scripts/video-js.css" rel="stylesheet">
+		
+		
+		<style type="text/css">
+            /* Pane configuration */
+            .left.col { width: 85px; }
+            .right.col { left: 85px; right: 0; }
+            .header.row { height: 50px; line-height: 50px; }
+            .body.row { top: 50px; bottom: 0px; }
+            .footer.row { height: 0px; bottom: 0; line-height: 50px; }
+        </style>
+    </head>
+ 
+ <body>
+        <script src="../scripts/video-min.js"></script>
+        <script src="../scripts/pt-BR.js"></script>		
+		<script src="../scripts/plugin.min.js"></script>
+		<script src="../scripts/videojs-playlist-min.js"></script>				
+		
+		<div class="left col">
+            <div class="header row"> &nbsp;&nbsp;
+			 <a href="../geral.html">
+			<img border="0" src="../img/inicio.png" align="top" alt="Início" width="42" >
+			</a>
+			</div>
+            <div class="body row scroll-y">			
+				
+				
+				
+				<ul id="ul_li" class="listview">
+                    <li id="0" onClick="reply_click(0)" class="selected">Ipanema</li>
+					<li id="1" onClick="reply_click(1)">Reserva</li>
+					<li id="2" onClick="reply_click(2)">Camburi</li>
+					<li id="3" onClick="reply_click(3)">Pitangueiras</li>
+					<li id="4" onClick="reply_click(4)">04</li>
+					<li id="5" onClick="reply_click(5)">05</li>					
+					<li id="6" onClick="reply_click(6)">06</li>
+					<li id="7" onClick="reply_click(7)">07</li>
+					<li id="8" onClick="reply_click(8)">08</li>
+					<li id="9" onClick="reply_click(9)">09</li>
+					
+					<li id="10" onClick="reply_click(10)">10</li>
+					<li id="11" onClick="reply_click(11)">11</li>
+					<li id="12" onClick="reply_click(12)">12</li>
+					<li id="13" onClick="reply_click(13)">13</li>
+					<li id="14" onClick="reply_click(14)">14</li>
+					<li id="15" onClick="reply_click(15)">15</li>					
+					<li id="16" onClick="reply_click(16)">16</li>
+					<li id="17" onClick="reply_click(17)">17</li>
+					<li id="18" onClick="reply_click(18)">18</li>
+					<li id="19" onClick="reply_click(19)">19</li>
+					
+					<li id="20" onClick="reply_click(20)">20</li>
+					<li id="21" onClick="reply_click(21)">21</li>
+					<li id="22" onClick="reply_click(22)">22</li>
+					<li id="23" onClick="reply_click(23)">23</li>
+					<li id="24" onClick="reply_click(24)">24</li>
+					<li id="25" onClick="reply_click(25)">25</li>					
+					<li id="26" onClick="reply_click(26)">26</li>
+					<li id="27" onClick="reply_click(27)">27</li>
+					<li id="28" onClick="reply_click(28)">28</li>
+					<li id="29" onClick="reply_click(29)">29</li>
+					
+					<li id="30" onClick="reply_click(30)">30</li>
+					<li id="31" onClick="reply_click(31)">31</li>
+					<li id="32" onClick="reply_click(32)">32</li>
+					<li id="33" onClick="reply_click(33)">33</li>
+					<li id="34" onClick="reply_click(34)">34</li>
+					<li id="35" onClick="reply_click(35)">35</li>					
+					<li id="36" onClick="reply_click(36)">36</li>
+					<li id="37" onClick="reply_click(37)">37</li>
+					<li id="38" onClick="reply_click(38)">38</li>
+					<li id="39" onClick="reply_click(39)">39</li>
+					
+					<li id="40" onClick="reply_click(40)">40</li>
+					<li id="41" onClick="reply_click(41)">41</li>
+					<li id="42" onClick="reply_click(42)">42</li>
+					<li id="43" onClick="reply_click(43)">43</li>
+					<li id="44" onClick="reply_click(44)">44</li>
+					<li id="45" onClick="reply_click(45)">45</li>					
+					<li id="46" onClick="reply_click(46)">46</li>
+					<li id="47" onClick="reply_click(47)">47</li>
+					<li id="48" onClick="reply_click(48)">48</li>									
+							   
+                </ul>
+            </div>
+            
+        </div>
+        <div class="right col">
+            <div class="header row">&nbsp;&nbsp; RIO DE JANEIRO
+			 <img border="0" src="../img/mini.png" align="right" alt="Cameras do Brasil" width="42" >
+			</div>
+            <div class="body row">            		
+			
+				
+			<video autoplay id="example_video_1" class="video-js vjs-big-play-centered vjs-16-9" controls preload="auto" width="100%" poster="../img/padrao.png" data-setup="{}">  
+			</video>	
+			
+			<script>
+				   var videoList = [{
+				  sources: [{					
+					src: ("http://ipc-44.camerite.com/3dias/6611d7a0-791c-11e7-884a-adc53f3eda18.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 00 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://ipc-45.camerite.com/7dias/6c41c700-b028-11e7-a63f-63daa094e920.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 01 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://ipc-13.camerite.com/3dias/cbdd5630-c3fe-11e8-a081-cfce97f467fa.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 02 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://ipc-64.camerite.com/7dias/e7fbc670-3787-11e8-a56d-ddc8c039c419.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 03 */
+				  }],
+				  poster: 'img/padrao.png'   
+				}, {
+				  sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 04 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 05 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 06 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 07 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 08 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 09 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 10 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 11 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 12 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 13 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 14 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 15 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 16 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 17 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 18 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 19 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 20 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 21 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 22 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 23 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 24 */
+				  }],				
+				  poster: 'img/padrao.png'
+				}, {				
+				  sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 25 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 26 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 27 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 28 */
+				  }],
+				 poster: 'img/padrao.png'						
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 29 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 30 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 31 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 32 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 33 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 34 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 35 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 36 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 37 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 38 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 39 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 40 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 41 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 42 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 43 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 44 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 45 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 46 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 47 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 48 */
+				  }],
+				  poster: 'img/padrao.png'				
+				}];
+				
+				var player = videojs(document.querySelector('video'), {
+				  inactivityTimeout: 1200
+				});				
+				//player.playlist(videoList, 4);/// play video 5				
+				player.playlist(videoList);
+				player.playlist.autoadvance(0); // 0 = play all								
+				
+				
+				/* ADD PREVIOUS */
+				var Button = videojs.getComponent("Button");
+
+				// Extend default
+				var PrevButton = videojs.extend(Button, {				 
+				  constructor: function() {
+					Button.apply(this, arguments);				
+					this.addClass("vjs-icon-previous-item");
+					this.controlText("Previous");
+					
+				  },			
+
+				  handleClick: function() {
+				  
+				  const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
+					for (let i = 0; i < numItems; i++) {					
+					  if (document.getElementById(i).classList == 'selected' &&  i != 0){
+						document.getElementById(i).classList.remove('selected');
+						document.getElementById(i-1).classList.add('selected');	
+						i = numItems;
+					  } 				
+					}	
+					player.playlist.previous();
+				  }
+				});
+				
+				var NextButton = videojs.extend(Button, {				  
+				  constructor: function() {
+					Button.apply(this, arguments);
+				
+					this.addClass("vjs-icon-next-item");
+					this.controlText("Next");
+				  },
+
+				  handleClick: function() {
+					
+					const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
+					for (let i = 0; i < numItems; i++) {					
+					  if (document.getElementById(i).classList == 'selected' &&  i != numItems-1){
+						document.getElementById(i).classList.remove('selected');
+						document.getElementById(i+1).classList.add('selected');	
+						i = numItems;
+					  } 				
+					}			
+					player.playlist.next();
+				  }
+				});
+				
+				videojs.registerComponent("NextButton", NextButton);
+				videojs.registerComponent("PrevButton", PrevButton);				
+				player.getChild("controlBar").addChild("PrevButton", {}, 0);
+				player.getChild("controlBar").addChild("NextButton", {}, 2);
+				
+				function reply_click(clicked_id)
+				{							
+					const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
+					for (let i = 0; i < numItems; i++) {					
+						document.getElementById(i).classList.remove('selected');						
+					}	
+					document.getElementById(clicked_id).classList.add('selected');
+					player.playlist.currentItem(clicked_id); 
+				}
+			  </script>
+			               
+            </div>
+            
+        </div>       
+    
+</body></html>
