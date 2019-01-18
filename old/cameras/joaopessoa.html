@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)http://stevesanderson.github.io/fixed-height-layouts-demo/two-columns.html -->
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        
+		<style type="text/css">
+            /* Pane configuration */
+            .left.col { width: 85px; }
+            .right.col { left: 85px; right: 0; }
+            .header.row { height: 50px; line-height: 50px; }
+            .body.row { top: 50px; bottom: 0px; }
+            .footer.row { height: 0px; bottom: 0; line-height: 50px; }
+        </style>		
+		
+    </head>
+ 
+ <body>      		
+		
+		<script src="../scripts/style2-min.js"></script>
+		
+		<div class="left col">
+            <div class="header row"> &nbsp;&nbsp;
+			 <a href="../geral.html">
+			<img border="0" src="../img/inicio.png" align="top" alt="Início" width="42" >
+			</a>
+			</div>
+            <div class="body row scroll-y">			
+				
+				
+				
+				<ul id="ul_li" class="listview">
+                    <li id="0" onClick="reply_click(0)" class="selected">AV. PRES. EPITÁCIO PESSOA - AV. SEN. RUY CARNEIRO</li>
+					<li id="1" onClick="reply_click(1)">VIA EXPRESSA PADRE ZÉ</li>
+					<li id="2" onClick="reply_click(2)">AV. MIN. JOSE AMERICO DE ALMEIDA - AV. BARAO DE MAMANGUAPE</li>
+					<li id="3" onClick="reply_click(3)">AV. PRES. EPITACIO PESSOA (BUSTO DE TAMANDARE)</li>
+					<li id="4" onClick="reply_click(4)">AV. PRES. GETULIO VARGAS - AV. DOS TABAJARAS</li>
+					<li id="5" onClick="reply_click(5)">AV. PRES. EPITACIO PESSOA - AV. MARANHÃO</li>					
+					<li id="6" onClick="reply_click(6)">AV. PRES. EPITACIO PESSOA - R. PREFEITO JOSE LEITE</li>
+					<li id="7" onClick="reply_click(7)">AV. FLÁVIO RIBEIRO COUTINHO - AV. GAL. EDSON RAMALHO</li>
+					<li id="8" onClick="reply_click(8)">AV. GENERAL OSORIO - AV. GUEDES PEREIRA</li>
+					<li id="9" onClick="reply_click(9)">R. EMP. JOAO RODRIGUES ALVES - R. JOSE ALEXANDRE DE LIRA</li>
+					
+					<li id="10" onClick="reply_click(10)">AV. PRES. EPITACIO PESSOA - R. PAULINO PINTO</li>
+					<li id="11" onClick="reply_click(11)">PARQUE SOLON DE LUCENA - PE. MEIRA</li>
+					<li id="12" onClick="reply_click(12)">AV. MIN. JOSE A. DE ALMEIDA (ROTATORIA DO ALTIPLANO)</li>
+					<li id="13" onClick="reply_click(13)">AV. PRES. EPITÁCIO PESSOA - RUA DAS ACÁCIAS</li>
+					<li id="14" onClick="reply_click(14)">AV. SEN. RUY CARNEIRO - AV. ALMIRANTE TAMANDARE</li>
+					<li id="15" onClick="reply_click(15)">AV. SEN. RUY CARNEIRO - AV. MARIA ROSA</li>					
+					<li id="16" onClick="reply_click(16)">R. SANTO ELIAS - PARQUE SOLON DE LUCENA</li>
+					<li id="17" onClick="reply_click(17)">R. BANC. SERGIO GUERRA - R. ROSA LIMA DOS SANTOS 1</li>
+					<li id="18" onClick="reply_click(18)">R. BANC. SERGIO GUERRA - R. ROSA LIMA DOS SANTOS 2</li>
+					<li id="19" onClick="reply_click(19)">R. BANC. SERGIO GUERRA - R. ROSA LIMA DOS SANTOS 3</li>
+					
+					<li id="20" onClick="reply_click(20)">VIADULTO CRISTO REDENTOR</li>
+					<li id="21" onClick="reply_click(21)">AV. PRES. EPITÁCIO PESSOA - AV. GAL. BENTO DA GAMA</li>
+					<li id="22" onClick="reply_click(22)">PRACA JOAO PESSOA - PRACA 1817</li>
+					<li id="23" onClick="reply_click(23)">AV. DUARTE DA SILVEIRA - AV. MAXIMIANO DE FIGUEIREDO</li>
+					<li id="24" onClick="reply_click(24)">AV. JOAO MACHADO - R. AMERICO FALCÃO</li>
+					<li id="25" onClick="reply_click(25)">AV. CRUZ DAS ARMAS (FEIRA DE OITIZEIRO)</li>					
+					<li id="26" onClick="reply_click(26)">AV. CRUZ DAS ARMAS (MERCADO PUBLICO)</li>
+					<li id="27" onClick="reply_click(27)">AV. GOV. FLAVIO RIBEIRO COUTINHO - R. MANOEL ARRUDA CAVALCANTI</li>
+					<li id="28" onClick="reply_click(28)">AV MIN. JOSE AMERICO DE ALMEIDA - AV. RUI BARBOSA</li>
+					<li id="29" onClick="reply_click(29)">AV. CABO BRANCO - R. TAB. ANTONIO CARNEIRO</li>
+					
+					<li id="30" onClick="reply_click(30)">AV. JOSEFA TAVEIRA COM R. ELIAS PEREIRA DE ARAUJO</li>
+					<li id="31" onClick="reply_click(31)">AV PRES. EPITACIO PESSOA - AV AMAZONAS</li>
+					<li id="32" onClick="reply_click(32)">AV PRES. EPITACIO PESSOA - AV. TITO SILVA</li>
+					<li id="33" onClick="reply_click(33)">AV. PEDRO II - AV RUY BARBOSA</li>
+					<li id="34" onClick="reply_click(34)">AV. BOTO DE MENEZES - AV. BERRETO SOBRINHO</li>
+					<li id="35" onClick="reply_click(35)">AV. PRES. EPITACIO PESSOA - AV. MARIA CAETANO FERNANDES LIMA</li>					
+					<li id="36" onClick="reply_click(36)">AV. PRES. TANCREDO NEVES</li>
+					<li id="37" onClick="reply_click(37)">RUA FRANCISCO LONDRES - R CICERO MEIRELES</li>
+					<li id="38" onClick="reply_click(38)">AV. PEDRO II</li>
+					<li id="39" onClick="reply_click(39)">R. MACIEL PINHEIRO - AV. BARAO DO TRIUNFO</li>
+					
+					<li id="40" onClick="reply_click(40)">AV. HILTON SOUTO MAIOR (VIADUTO MANGABEIRA)</li>
+					<li id="41" onClick="reply_click(41)">AV. NEGO - SILVINO LOPES</li>
+					<li id="42" onClick="reply_click(42)">RUA MACIEL PINHEIRO - RUA PADRE AZEVEDO</li>
+					<li id="43" onClick="reply_click(43)">AV. DOM PEDRO II - PRINCESA ISABEL</li>
+					<li id="44" onClick="reply_click(44)">VIADUTO DO GEISEL</li>
+					<li id="45" onClick="reply_click(45)">AV. JOSEFA TAVEIRA - R. JULIO CIRILO</li>					
+					<li id="46" onClick="reply_click(46)">AV. JOSEFA TAVEIRA - R. MARIA JOS� CATEQUISTA(FEIRINHA)</li>
+					<li id="47" onClick="reply_click(47)">AV. JULIA FREIRE - R. PROF. SEVERINA MOURA</li>
+					<li id="48" onClick="reply_click(48)">AV. GOV. FLAVIO RIBEIRO COUTINHO - R. MIRIAN BARRETO RABELO</li>		
+					<li id="49" onClick="reply_click(49)">AV. DOM PEDRO I - R. DES. SOUTO MAIOR</li>		
+					
+					<li id="50" onClick="reply_click(50)">R. MARIÂNGELA LUCENA - R. FRANCISCO BARBOSA</li>
+					<li id="51" onClick="reply_click(51)">AV. GENERAL OSORIO - R. PEREGRINO DE CARVALHO</li>
+					<li id="52" onClick="reply_click(52)">R. ADALGISA C. CAVALCANTE - R. ABELARDO TARGINO DA FONSECA</li>
+					<li id="53" onClick="reply_click(53)">AV. RUY CARNEIRO - AV. PROF. MARIA SALES</li>
+					<li id="54" onClick="reply_click(54)">RUA FLODALDO PEIXOTO FILHO - RUA RADIALISTA NEWTON JUNIOR</li>
+					<li id="55" onClick="reply_click(55)">AV. MAXIMIANO DE FIGUEIREDO - AV. DOM PEDRO II</li>					
+					<li id="56" onClick="reply_click(56)">AV. VISCONDE DE PELOTAS - RUA BARÃO DE ABIAÍ</li>
+					<li id="57" onClick="reply_click(57)">AV. DOM PEDRO II - R. DIOGO VELHO</li>
+					<li id="58" onClick="reply_click(58)">AV. GAMA E MELO - R. CARDOSO VIEIRA</li>
+					<li id="59" onClick="reply_click(59)">AV. VASCO DA GAMA - AV. 1º DE MAIO</li>
+
+					<li id="60" onClick="reply_click(60)">R. ORESTE LISBOA (FUNAD)</li>
+					<li id="61" onClick="reply_click(61)">AV. HILTON SOUTO MAIOR - ROTATORIA DO CAIC</li>
+					<li id="62" onClick="reply_click(62)">AV. MONS. WALFREDO LEAL - AV. MAXIMIANO DE FIGUEIREDO</li>
+					<li id="63" onClick="reply_click(63)">AV. WALFREDO M. BRANDÃO - R. REJANE FREIRE</li>
+					<li id="64" onClick="reply_click(64)">AV. RANIERI MAZILLI</li>
+					<li id="65" onClick="reply_click(65)">R. RODRIGUES DE CARVALHO - R. MAL. ALMEIDA BARRETO</li>					
+					<li id="66" onClick="reply_click(66)">AV. JUSCELINO KUBITSCHEK - R. VALDEMAR NAZEAZENO</li>					
+							   
+                </ul>
+            </div>
+            
+        </div>
+        <div class="right col">
+            <div class="header row">&nbsp;&nbsp; JOÃO PESSOA - PB
+			 <img border="0" src="../img/mini.png" align="right" alt="Cameras do Brasil" width="42" >
+			</div>
+            <div class="body row">            		
+			
+				
+			<video autoplay id="example_video_1" class="video-js vjs-big-play-centered vjs-16-9" controls preload="auto" width="100%" poster="../img/padrao.png" data-setup="{}">  
+			</video>	
+			
+			<script>
+				   var videoList = [{
+				  sources: [{					
+					src: ("http://177.36.11.61:1935/live/01.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 00 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://177.36.11.61:1935/live/03.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 01 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://177.36.11.61:1935/live/04.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 02 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://177.36.11.61:1935/live/05.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 03 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://177.36.11.61:1935/live/06.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 04 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://177.36.11.61:1935/live/07.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 05 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://177.36.11.61:1935/live/08.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 06 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://177.36.11.61:1935/live/09.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 07 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://177.36.11.61:1935/live/10.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 08 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://177.36.11.61:1935/live/11.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 09 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://177.36.11.61:1935/live/12.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 10 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://177.36.11.61:1935/live/13.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 11 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://177.36.11.61:1935/live/14.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 12 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://177.36.11.61:1935/live/15.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 13 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://177.36.11.61:1935/live/16.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 14 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://177.36.11.61:1935/live/17.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 15 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://177.36.11.61:1935/live/18.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 16 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://177.36.11.61:1935/live/19.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 17 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://177.36.11.61:1935/live/19.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 18 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://177.36.11.61:1935/live/2	.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 19 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://177.36.11.61:1935/live/21.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 20 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://177.36.11.61:1935/live/22.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 21 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://177.36.11.61:1935/live/23.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 22 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://177.36.11.61:1935/live/24.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 23 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://177.36.11.61:1935/live/25.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 24 */
+				  }],				
+				  poster: 'img/padrao.png'
+				}, {				
+				  sources: [{
+					src: ("http://177.36.11.61:1935/live/26.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 25 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/27.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 26 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/28.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 27 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/29.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 28 */
+				  }],
+				 poster: 'img/padrao.png'						
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/30.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 29 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/31.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 30 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/32.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 31 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/33.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 32 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/34.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 33 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/35.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 34 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/36.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 35 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/37.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 36 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/38.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 37 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/40.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 38 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/42.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 39 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/43.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 40 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/44.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 41 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/45.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 42 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/46.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 43 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/48.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 44 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/49.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 45 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/50.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 46 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/51.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 47 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/52.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 48 */
+				  }],
+				  poster: 'img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/53.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 49 */
+				  }],
+				  poster: 'img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/54.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 50 */
+				  }],
+				  poster: 'img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/55.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 51 */
+				  }],
+				  poster: 'img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/56.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 52 */
+				  }],
+				  poster: 'img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/57.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 53 */
+				  }],
+				  poster: 'img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/58.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 54 */
+				  }],
+				  poster: 'img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/59.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 55 */
+				  }],
+				  poster: 'img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/60.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 56 */
+				  }],
+				  poster: 'img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/61.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 57 */
+				  }],
+				  poster: 'img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/62.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 58 */
+				  }],
+				  poster: 'img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/63.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 59 */
+				  }],
+				  poster: 'img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/64.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 60 */
+				  }],
+				  poster: 'img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/65.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 61 */
+				  }],
+				  poster: 'img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/66.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 62 */
+				  }],
+				  poster: 'img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/67.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 63 */
+				  }],
+				  poster: 'img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/68.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 64 */
+				  }],
+				  poster: 'img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/69.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 65 */
+				  }],
+				  poster: 'img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("http://177.36.11.61:1935/live/70.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 66 */
+				  }],
+				  poster: 'img/padrao.png'					
+				
+				}];
+				
+				var player = videojs(document.querySelector('video'), {
+				  inactivityTimeout: 1200
+				});				
+				//player.playlist(videoList, 4);/// play video 5				
+				player.playlist(videoList);
+				player.playlist.autoadvance(0); // 0 = play all								
+				
+				
+				/* ADD PREVIOUS */
+				var Button = videojs.getComponent("Button");
+
+				// Extend default
+				var PrevButton = videojs.extend(Button, {				 
+				  constructor: function() {
+					Button.apply(this, arguments);				
+					this.addClass("vjs-icon-previous-item");
+					this.controlText("Previous");
+					
+				  },			
+
+				  handleClick: function() {
+				  
+				  const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
+					for (let i = 0; i < numItems; i++) {					
+					  if (document.getElementById(i).classList == 'selected' &&  i != 0){
+						document.getElementById(i).classList.remove('selected');
+						document.getElementById(i-1).classList.add('selected');	
+						i = numItems;
+					  } 				
+					}	
+					player.playlist.previous();
+				  }
+				});
+				
+				var NextButton = videojs.extend(Button, {				  
+				  constructor: function() {
+					Button.apply(this, arguments);
+				
+					this.addClass("vjs-icon-next-item");
+					this.controlText("Next");
+				  },
+
+				  handleClick: function() {
+					
+					const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
+					for (let i = 0; i < numItems; i++) {					
+					  if (document.getElementById(i).classList == 'selected' &&  i != numItems-1){
+						document.getElementById(i).classList.remove('selected');
+						document.getElementById(i+1).classList.add('selected');	
+						i = numItems;
+					  } 				
+					}			
+					player.playlist.next();
+				  }
+				});
+				
+				videojs.registerComponent("NextButton", NextButton);
+				videojs.registerComponent("PrevButton", PrevButton);				
+				player.getChild("controlBar").addChild("PrevButton", {}, 0);
+				player.getChild("controlBar").addChild("NextButton", {}, 2);
+				
+				function reply_click(clicked_id)
+				{							
+					const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
+					for (let i = 0; i < numItems; i++) {					
+						document.getElementById(i).classList.remove('selected');						
+					}	
+					document.getElementById(clicked_id).classList.add('selected');
+					player.playlist.currentItem(clicked_id); 
+				}
+			  </script>
+			               
+            </div>
+            
+        </div>       
+    
+</body></html>

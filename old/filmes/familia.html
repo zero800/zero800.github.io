@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)http://stevesanderson.github.io/fixed-height-layouts-demo/two-columns.html -->
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        
+		<style type="text/css">
+            /* Pane configuration */
+            .left.col { width: 85px; }
+            .right.col { left: 85px; right: 0; }
+            .header.row { height: 50px; line-height: 50px; }
+            .body.row { top: 50px; bottom: 0px; }
+            .footer.row { height: 0px; bottom: 0; line-height: 50px; }
+        </style>		
+		
+    </head>
+ 
+ <body>      		
+		
+		<script src="../scripts/style2-min.js"></script>	
+		
+		<div class="left col">
+            <div class="header row"> &nbsp;&nbsp;
+			 <a href="../filmes.html">
+			<img border="0" src="../img/voltar.png" align="top" alt="Filmes" width="42" >
+			</a>
+			</div>
+            <div class="body row scroll-y">			
+				
+				
+				
+				<ul id="ul_li" class="listview">
+                    <li id="0" onClick="reply_click(0)" class="selected">PAIXÃO NA REALEZA</li>
+					<li id="1" onClick="reply_click(1)">UM SEQUESTRO DE NATAL</li>
+					<li id="2" onClick="reply_click(2)">AROMAS E SENSIBILIDADE</li>
+					<li id="3" onClick="reply_click(3)">UM NATAL PARA RECOMEÇAR</li>
+					<li id="4" onClick="reply_click(4)">DESENCALHANDO O SR. DARCY</li>
+					<li id="5" onClick="reply_click(5)">AJUDA PARA O NATAL</li>					
+					<li id="6" onClick="reply_click(6)">TE AMO PRA CACHORRO</li>
+					<li id="7" onClick="reply_click(7)">MENINA DOS OLHOS</li>
+					<li id="8" onClick="reply_click(8)">NA FRENTE DA CLASSE</li>
+					<li id="9" onClick="reply_click(9)">7 REGRAS DO AMOR</li>
+					<li id="10" onClick="reply_click(10)">UM AMOR PARA MEU AMOR</li>
+					<li id="11" onClick="reply_click(11)">LABIRINTO O DESAFIO FINAL</li>
+					<li id="12" onClick="reply_click(12)">MEU ROMANCE PERFEITO</li>
+					<li id="13" onClick="reply_click(13)">AMOR LAPIDADO</li>
+					<li id="14" onClick="reply_click(14)">A LUZ DIVINA</li>
+							   
+                </ul>
+            </div>
+            
+        </div>
+        <div class="right col">
+            <div class="header row">&nbsp;&nbsp; FAMÍLIA
+			 <img border="0" src="../img/mini.png" align="right" alt="Cameras do Brasil" width="42" >
+			</div>
+            <div class="body row">            		
+			
+				
+			<video autoplay id="example_video_1" class="video-js vjs-big-play-centered vjs-16-9" controls preload="auto" width="100%" poster="../img/padrao.png" data-setup="{}">  
+			</video>	
+			
+			<script>
+				   var videoList = [{
+				  sources: [{					
+					src: ("https://youtu.be/rk5372EJbe4") ,
+					type: 'video/youtube' /* 00 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/I79HfBTia08") ,
+					type: 'video/youtube' /* 01 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/VUKtWuQpnPE") ,
+					type: 'video/youtube' /* 02 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/JBao2-ZVrpY") ,
+					type: 'video/youtube' /* 03 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/SDTEgCZD_pA") ,
+					type: 'video/youtube' /* 04 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/yw9b2X-gp5M") ,
+					type: 'video/youtube' /* 05 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/yMR6W3ZQx3E") ,
+					type: 'video/youtube' /* 06 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/wurj-vBbdBM") ,
+					type: 'video/youtube' /* 07 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/m508cLdQkh4") ,
+					type: 'video/youtube' /* 08 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/2zDjEFdTziw") ,
+					type: 'video/youtube' /* 09 */
+				  }],
+				  poster: 'img/padrao.png'			
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/2qjhfw1d8JA") ,
+					type: 'video/youtube' /* 10 */
+				  }],
+				  poster: 'img/padrao.png'			
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/ZSWnuN4LuTk") ,
+					type: 'video/youtube' /* 11 */
+				  }],
+				  poster: 'img/padrao.png'		
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/EFM1b6cQ5Ow") ,
+					type: 'video/youtube' /* 12 */
+				  }],
+				  poster: 'img/padrao.png'		
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/28rZpaUQ2j0") ,
+					type: 'video/youtube' /* 13 */
+				  }],
+				  poster: 'img/padrao.png'		
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/dKPTtFQlwx4") ,
+					type: 'video/youtube' /* 14 */
+				  }],
+				  poster: 'img/padrao.png'		  
+				}];
+				
+				var player = videojs(document.querySelector('video'), {
+				  inactivityTimeout: 1200
+				});				
+				//player.playlist(videoList, 4);/// play video 5				
+				player.playlist(videoList);
+				player.playlist.autoadvance(0); // 0 = play all								
+				
+				
+				/* ADD PREVIOUS */
+				var Button = videojs.getComponent("Button");
+
+				// Extend default
+				var PrevButton = videojs.extend(Button, {				 
+				  constructor: function() {
+					Button.apply(this, arguments);				
+					this.addClass("vjs-icon-previous-item");
+					this.controlText("Previous");
+					
+				  },			
+
+				  handleClick: function() {
+				  
+				  const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
+					for (let i = 0; i < numItems; i++) {					
+					  if (document.getElementById(i).classList == 'selected' &&  i != 0){
+						document.getElementById(i).classList.remove('selected');
+						document.getElementById(i-1).classList.add('selected');	
+						i = numItems;
+					  } 				
+					}	
+					player.playlist.previous();
+				  }
+				});
+				
+				var NextButton = videojs.extend(Button, {				  
+				  constructor: function() {
+					Button.apply(this, arguments);
+				
+					this.addClass("vjs-icon-next-item");
+					this.controlText("Next");
+				  },
+
+				  handleClick: function() {
+					
+					const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
+					for (let i = 0; i < numItems; i++) {					
+					  if (document.getElementById(i).classList == 'selected' &&  i != numItems-1){
+						document.getElementById(i).classList.remove('selected');
+						document.getElementById(i+1).classList.add('selected');	
+						i = numItems;
+					  } 				
+					}			
+					player.playlist.next();
+				  }
+				});
+				
+				videojs.registerComponent("NextButton", NextButton);
+				videojs.registerComponent("PrevButton", PrevButton);				
+				player.getChild("controlBar").addChild("PrevButton", {}, 0);
+				player.getChild("controlBar").addChild("NextButton", {}, 2);
+				
+				function reply_click(clicked_id)
+				{							
+					const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
+					for (let i = 0; i < numItems; i++) {					
+						document.getElementById(i).classList.remove('selected');						
+					}	
+					document.getElementById(clicked_id).classList.add('selected');
+					player.playlist.currentItem(clicked_id); 
+				}
+			  </script>
+			               
+            </div>
+            
+        </div>       
+    
+</body></html>				

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)http://stevesanderson.github.io/fixed-height-layouts-demo/two-columns.html -->
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        
+		<style type="text/css">
+            /* Pane configuration */
+            .left.col { width: 85px; }
+            .right.col { left: 85px; right: 0; }
+            .header.row { height: 50px; line-height: 50px; }
+            .body.row { top: 50px; bottom: 0px; }
+            .footer.row { height: 0px; bottom: 0; line-height: 50px; }
+        </style>		
+		
+    </head>
+ 
+ <body>      		
+		
+		<script src="../scripts/style2-min.js"></script>		
+		
+		<div class="left col">
+            <div class="header row"> &nbsp;&nbsp;
+			 <a href="../iptv.html">
+			<img border="0" src="../img/voltar.png" align="top" alt="IPTV" width="42" >
+			</a>
+			</div>
+            <div class="body row scroll-y">			
+				
+				
+				
+				<ul id="ul_li" class="listview">
+                    <li id="0" onClick="reply_click(0)" class="selected">RADIO JORNAL RECIFE FM 90,3 AM 780</li>
+					<li id="1" onClick="reply_click(1)">TRANSAMÉRICA POP</li>
+					<li id="2" onClick="reply_click(2)">CBN RJ 92,5 FM</li>
+					<li id="3" onClick="reply_click(3)">CBN SP 90,5 FM</li>
+					<li id="4" onClick="reply_click(4)">CBN RIBEIRÃO PRETO</li>
+					<li id="5" onClick="reply_click(5)">JK FM 102.7 - DF</li>					
+					<li id="6" onClick="reply_click(6)">GAZETA 94.1 FM - AL</li>
+					<li id="7" onClick="reply_click(7)">CATVE FM FOZ 91.9 - PR</li>
+					<li id="8" onClick="reply_click(8)">Difusora FM 98.9 - MG</li>
+					<li id="9" onClick="reply_click(9)">RÁDIO DIFUSORA 560 AM - MG</li>			
+					
+					<li id="10" onClick="reply_click(10)">VILABELA FM 94,3 SERRA TALHADA - PE</li>
+					<li id="11" onClick="reply_click(11)">O DIA 100,5 FM - RJ</li>
+					<li id="12" onClick="reply_click(12)">CLUBE ARARAS 1460 AM - SP</li>
+					<li id="13" onClick="reply_click(13)">TRÊS RIOS 87,7 FM - RJ</li>
+					<li id="14" onClick="reply_click(14)">SERTANEJA 106,7 FM - SP</li>
+					<li id="15" onClick="reply_click(15)">TUPI 96.5 FM - RJ</li>					
+					<li id="16" onClick="reply_click(16)">WOCM AAA/ROCK 98.1 FM - USA</li>					
+					<li id="17" onClick="reply_click(17)">OVACION - PERU</li>					
+					
+							   
+                </ul>
+            </div>
+            
+        </div>
+        <div class="right col">
+            <div class="header row">&nbsp;&nbsp; RÁDIOS
+			 <img border="0" src="../img/mini.png" align="right" alt="Cameras do Brasil" width="42" >
+			</div>
+            <div class="body row">            		
+			
+				
+			<video autoplay id="example_video_1" class="video-js vjs-big-play-centered vjs-16-9" controls preload="auto" width="100%" poster="../img/padrao.png" data-setup="{}">  
+			</video>	
+			
+			<script>
+				   var videoList = [{
+				  sources: [{					
+					src: aeskey("ZXl5fTciImh7fX0jYGAjeGJhI25iYCNvfyJjaDw9In9saWRiZ2J/Y2xhIH9obmRraCBse39sIHtkaWhiIHpobyN+aX0ifWFsdGFkfnkjYD54NQ==") ,
+					type: 'application/x-mpegURL' /* 00 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: aeskey("ZXl5fTciInl/bGN+bGBof2RubCNuf2J+fmlkamR5bGEjbmJgI29/Nzw0PjgieX9sY35sfn09P2hpamgieX9sY35sfn09PyJ9YWx0YWR+eSNgPng1") ,
+					type: 'application/x-mpegURL' /* 01 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: aeskey("ZXl5fX43IiJ+eX9obGAjfmp/I2phYm9iI25iYCJlYX4ie05PQ19HIntOT0NfRyNgPng1") ,
+					type: 'application/x-mpegURL' /* 02 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: aeskey("ZXl5fX43IiJ+eX9obGAjfmp/I2phYm9iI25iYCJlYX4ie05PQ15dIntOT0NeXSNgPng1") ,
+					type: 'application/x-mpegURL' /* 03 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: aeskey("ZXl5fX43IiJ/eWB9I25pYyN4fXUjY2h5I29/Ijg4NTlSPCJgdF55f2hsYCN+aX0ifWFsdGFkfnkjYD54NQ==") ,
+					type: 'application/x-mpegURL' /* 04 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: aeskey("ZXl5fTciIn95YH0jbmljI3h9dSNjaHkjb38iOm5paVI/ImB0Xnl/aGxgI35pfSJ9YWx0YWR+eSNgPng1") ,
+					type: 'application/x-mpegURL' /* 05 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: aeskey("ZXl5fTciIjs/Izw+NSM1Izw4Nzw0Pjgif2xpZGJqbHdoeWxrYCJ/bGlkYmpsd2h5bGtgIn1hbHRhZH55I2A+eDU=") ,
+					type: 'application/x-mpegURL' /* 06 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: aeskey("ZXl5fTciInpiendsOSNubHl7aCNuYmAjb383PDQ+OCJ/bGlkYm5sYGh/bCJhZHtofnl/aGxgIn1hbHRhZH55I2A+eDU=") ,
+					type: 'application/x-mpegURL' /* 07 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: aeskey("ZXl5fX43IiJlYX4jb39sfmRhfnl/aGxgI25iYCNvfyJhZHtoImlka3h+Yn9sa2AiaWRreH5if2xrYCJ/aHpkY2kgOj89PSNgPng1") ,
+					type: 'application/x-mpegURL' /* 08 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: aeskey("ZXl5fX43IiJ+f3s9PyNvf2x+ZGF+eX9obGAjbmJgI29/ImFke2giaWRreH5if2xsYGxie2R7YiJpZGt4fmJ/bGxgbGJ7ZHtiImBiY2IjYD54NQ==") ,
+					type: 'application/x-mpegURL' /* 09 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: aeskey("ZXl5fTciIn55YHs/I2s4YGRpZGx6aG8jbmJgI29/IntkYWxvaGFsa2Aie2RhbG9oYWxrYCJ9YWx0YWR+eSNgPng1") ,
+					type: 'application/x-mpegURL' /* 10 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: aeskey("ZXl5fX43IiJuPzQ9PCB+YW99fiB+bGBvbHtkaWhifiNsZmxgbGR3aGkjY2h5ImFke2h5IktAYklkbFtkaWhiUjw5aTk1PT45O2tsPTlob25vOWs9Pjw6Pms/aWxoOj06ImNqf303YWR7aH55f2hsYCJ9YWx0YWR+eSNgPng1") ,
+					type: 'application/x-mpegURL' /* 11 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: aeskey("ZXl5fTciIjs/Izw+NSM1Izw4Nzw0Pjgif2xpZGJuYXhvaCJ/bGlkYm5heG9oIn1hbHRhZH55I2A+eDU=") ,
+					type: 'application/x-mpegURL' /* 12 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: aeskey("ZXl5fX43IiI4bDppODloPjhrNGk/I355f2hsYGFibmYjY2h5Inc7PTQgYWR7aCJ+eX9obGAifWFsdGFkfnkjYD54NQ==") ,
+					type: 'application/x-mpegURL' /* 13 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: aeskey("ZXl5fX43IiJ/eWB9I25pYyN4fXUjY2h5I29/Ij8+NTkiYHReeX9obGAjfml9In1hbHRhZH55I2A+eDU=") ,
+					type: 'application/x-mpegURL' /* 14 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://cdn.rj.assocrj.com.br/live//tupi-estudio-video06/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 15 */
+				  }],
+				  poster: 'img/padrao.png'							  
+				}, {
+				  sources: [{
+					src: ("https://5790d294af2dc.streamlock.net/8258/8258/playlist.m3u8	") ,
+					type: 'application/x-mpegURL' /* 16 */
+				  }],
+				  poster: 'img/padrao.png'  				
+				}, {
+				  sources: [{
+					src: aeskey("ZXl5fTciIm5pYz8jeGdnZGNsI25iYDc8ND44ImR9eXtie2xuZGJjPCJhZHtoYntsbmRiYzx5eyJ9YWx0YWR+eSNgPng1") ,
+					type: 'application/x-mpegURL' /* 17 */
+				  }],
+				  poster: 'img/padrao.png'  
+								
+				}];
+				
+				var player = videojs(document.querySelector('video'), {
+				  inactivityTimeout: 1200
+				});				
+				//player.playlist(videoList, 4);/// play video 5				
+				player.playlist(videoList);
+				player.playlist.autoadvance(0); // 0 = play all								
+				
+				
+				/* ADD PREVIOUS */
+				var Button = videojs.getComponent("Button");
+
+				// Extend default
+				var PrevButton = videojs.extend(Button, {				 
+				  constructor: function() {
+					Button.apply(this, arguments);				
+					this.addClass("vjs-icon-previous-item");
+					this.controlText("Previous");
+					
+				  },			
+
+				  handleClick: function() {
+				  
+				  const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
+					for (let i = 0; i < numItems; i++) {					
+					  if (document.getElementById(i).classList == 'selected' &&  i != 0){
+						document.getElementById(i).classList.remove('selected');
+						document.getElementById(i-1).classList.add('selected');	
+						i = numItems;
+					  } 				
+					}	
+					player.playlist.previous();
+				  }
+				});
+				
+				var NextButton = videojs.extend(Button, {				  
+				  constructor: function() {
+					Button.apply(this, arguments);
+				
+					this.addClass("vjs-icon-next-item");
+					this.controlText("Next");
+				  },
+
+				  handleClick: function() {
+					
+					const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
+					for (let i = 0; i < numItems; i++) {					
+					  if (document.getElementById(i).classList == 'selected' &&  i != numItems-1){
+						document.getElementById(i).classList.remove('selected');
+						document.getElementById(i+1).classList.add('selected');	
+						i = numItems;
+					  } 				
+					}			
+					player.playlist.next();
+				  }
+				});
+				
+				videojs.registerComponent("NextButton", NextButton);
+				videojs.registerComponent("PrevButton", PrevButton);				
+				player.getChild("controlBar").addChild("PrevButton", {}, 0);
+				player.getChild("controlBar").addChild("NextButton", {}, 2);
+				
+				function reply_click(clicked_id)
+				{							
+					const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
+					for (let i = 0; i < numItems; i++) {					
+						document.getElementById(i).classList.remove('selected');						
+					}	
+					document.getElementById(clicked_id).classList.add('selected');
+					player.playlist.currentItem(clicked_id); 
+				}
+			  </script>
+			               
+            </div>
+            
+        </div>       
+    
+</body></html>

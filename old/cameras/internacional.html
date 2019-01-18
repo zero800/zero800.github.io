@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)http://stevesanderson.github.io/fixed-height-layouts-demo/two-columns.html -->
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        
+		<style type="text/css">
+            /* Pane configuration */
+            .left.col { width: 85px; }
+            .right.col { left: 85px; right: 0; }
+            .header.row { height: 50px; line-height: 50px; }
+            .body.row { top: 50px; bottom: 0px; }
+            .footer.row { height: 0px; bottom: 0; line-height: 50px; }
+        </style>		
+		
+    </head>
+ 
+ <body>      		
+		
+		<script src="../scripts/style2-min.js"></script>
+		
+		<div class="left col">
+            <div class="header row"> &nbsp;&nbsp;
+			 <a href="../geral.html">
+			<img border="0" src="../img/inicio.png" align="top" alt="Início" width="42" >
+			</a>
+			</div>
+            <div class="body row scroll-y">			
+				
+				
+				
+				<ul id="ul_li" class="listview">
+                    <li id="0" onClick="reply_click(0)" class="selected">TIMES SQUARE 1 - NOVA YORK - USA</li>
+					<li id="1" onClick="reply_click(1)">TIMES SQUARE 2 - NOVA YORK - USA</li>
+					<li id="2" onClick="reply_click(2)">CATARATAS DO NIÁGARA - USA</li>
+					<li id="3" onClick="reply_click(3)">ARUBA – BEACH RESORT 1</li>
+					<li id="4" onClick="reply_click(4)">ARUBA – BEACH RESORT 2</li>
+					<li id="5" onClick="reply_click(5)">PUERTO DEPORTIVO EM FUENGIROLA - ESPANHA</li>					
+					<li id="6" onClick="reply_click(6)">MOSCOU - CITY RIVER - RUSSIA</li>
+					<li id="7" onClick="reply_click(7)">SANTUÁRIO DE FATIMA - PORTUGAL</li>
+					<li id="8" onClick="reply_click(8)">FRANKFURT - ALAEMAHA</li>
+					<li id="9" onClick="reply_click(9)">TEMBE ELEPHANT PARK -  ÁFRICA DO SUL</li>
+					
+					<li id="10" onClick="reply_click(10)">CN TOWER - TORONTO - CANADÁ</li>
+					<li id="11" onClick="reply_click(11)">CASA BRANCA</li>
+					<li id="12" onClick="reply_click(12)">AQUÁRIO DE TUBARÕES - BALTIMORE - USA</li>
+					<li id="13" onClick="reply_click(13)">BAR SLOPPY JOE'S - USA</li>		
+					<li id="14" onClick="reply_click(14)">SANTA MÔNICA BEACH - USA</li>	
+					<li id="15" onClick="reply_click(15)">PRAIA DE CANCÚN - MÉXICO</li>						
+					<li id="16" onClick="reply_click(16)">VENEZA - ITÁLIA</li>	
+					<li id="17" onClick="reply_click(17)">TORRE DE TOKYO - JAPÃO</li>	
+					<li id="18" onClick="reply_click(18)">SHIBUYA - JAPÃO</li>	
+					<li id="19" onClick="reply_click(19)">ESTAÇÃO ESPACIAL ISS 1</li>	
+					<li id="20" onClick="reply_click(20)">ESTAÇÃO ESPACIAL ISS 2</li>		
+					<li id="21" onClick="reply_click(21)">CAPELA EM LAS VEGAS</li>		
+					<li id="22" onClick="reply_click(22)">CHAWENG, KOH SAMUI, THAILÂNDIA</li>	
+					<li id="23" onClick="reply_click(23)">TIMES SQUARE 3 - NOVA YORK - USA</li>	
+							   
+                </ul>
+            </div>
+            
+        </div>
+        <div class="right col">
+            <div class="header row">&nbsp;&nbsp; INTERNACIONAL
+			 <img border="0" src="../img/mini.png" align="right" alt="Cameras do Brasil" width="42" >
+			</div>
+            <div class="body row">            		
+			
+				
+			<video autoplay id="example_video_1" class="video-js vjs-big-play-centered vjs-16-9" controls preload="auto" width="100%" poster="../img/padrao.png" data-setup="{}">  
+			</video>	
+			
+			<script>
+				   var videoList = [{
+				  sources: [{					
+					src: ("https://videos3.earthcam.com/fecnetwork/15294.flv/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 00 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://videos3.earthcam.com/fecnetwork/hdtimes10.flv/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 01 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://videos3.earthcam.com/fecnetwork/7382.flv/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 02 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://videos3.earthcam.com/fecnetwork/playalinda2.flv/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 03 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://videos3.earthcam.com/fecnetwork/playalinda1.flv/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 04 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://s14.ipcamlive.com/streams/0e5c12af1d8faa3ab/stream.m3u8") ,
+					type: 'application/x-mpegURL' /* 05 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://videos3.earthcam.com/fecnetwork/moscowHD1.flv/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 06 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://streamer-b02.videos.sapo.pt/live/santuario.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 07 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://62.113.221.8/danubeHotels-rtplive/camera1.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 08 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://stream.africam.com:1935/na/na.stream_source/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 09 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://videos3.earthcam.com/fecnetwork/9298.flv/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 10 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://wrclive-f.akamaihd.net/i/wrcb2_1@46880/master.m3u8") ,
+					type: 'application/x-mpegURL' /* 11 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://videos3.earthcam.com/fecnetwork/nabtrcam1.flv/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 12 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://56eaaf2a94c81.streamlock.net/sloppyjoes/sloppyjoes.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 13 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://edge04.hdontap.com/ingest02-hd1/santamonica_swellmagnet.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 14 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/jnpsfrHyAoA") ,
+					type: 'video/youtube' /* 15 */
+				  }],
+				  poster: 'img/padrao.png'				
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/vPbQcM4k1Ys") ,
+					type: 'video/youtube' /* 16 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/EAIVawti0CQ") ,
+					type: 'video/youtube' /* 17 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/PmrWwYTlAVQ") ,
+					type: 'video/youtube' /* 18 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/4993sBLAzGA") ,
+					type: 'video/youtube' /* 19 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/TBG3dHuzlbM") ,
+					type: 'video/youtube' /* 20 */
+				  }],
+				  poster: 'img/padrao.png'  
+				}, {
+				  sources: [{
+					src: ("https://videos3.earthcam.com/fecnetwork/5359.flv/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 21 */
+				  }],
+				  poster: 'img/padrao.png'  
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/mM93KAk4hy4") ,
+					type: 'video/youtube' /* 22 */
+				  }],
+				  poster: 'img/padrao.png'   
+				}, {
+				  sources: [{
+					src: ("https://video3.earthcam.com/fecnetwork/9974.flv/chunklist_w1366511516.m3u8") ,
+					type: 'application/x-mpegURL' /* 23 */
+				  }],
+				  poster: 'img/padrao.png'     
+				}];			
+				
+				
+				
+				var player = videojs(document.querySelector('video'), {
+				  inactivityTimeout: 1200
+				});				
+				//player.playlist(videoList, 4);/// play video 5				
+				player.playlist(videoList);
+				player.playlist.autoadvance(0); // 0 = play all								
+				
+				
+				/* ADD PREVIOUS */
+				var Button = videojs.getComponent("Button");
+
+				// Extend default
+				var PrevButton = videojs.extend(Button, {				 
+				  constructor: function() {
+					Button.apply(this, arguments);				
+					this.addClass("vjs-icon-previous-item");
+					this.controlText("Previous");
+					
+				  },			
+
+				  handleClick: function() {
+				  
+				  const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
+					for (let i = 0; i < numItems; i++) {					
+					  if (document.getElementById(i).classList == 'selected' &&  i != 0){
+						document.getElementById(i).classList.remove('selected');
+						document.getElementById(i-1).classList.add('selected');	
+						i = numItems;
+					  } 				
+					}	
+					player.playlist.previous();
+				  }
+				});
+				
+				var NextButton = videojs.extend(Button, {				  
+				  constructor: function() {
+					Button.apply(this, arguments);
+				
+					this.addClass("vjs-icon-next-item");
+					this.controlText("Next");
+				  },
+
+				  handleClick: function() {
+					
+					const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
+					for (let i = 0; i < numItems; i++) {					
+					  if (document.getElementById(i).classList == 'selected' &&  i != numItems-1){
+						document.getElementById(i).classList.remove('selected');
+						document.getElementById(i+1).classList.add('selected');	
+						i = numItems;
+					  } 				
+					}			
+					player.playlist.next();
+				  }
+				});
+				
+				videojs.registerComponent("NextButton", NextButton);
+				videojs.registerComponent("PrevButton", PrevButton);				
+				player.getChild("controlBar").addChild("PrevButton", {}, 0);
+				player.getChild("controlBar").addChild("NextButton", {}, 2);
+				
+				function reply_click(clicked_id)
+				{							
+					const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
+					for (let i = 0; i < numItems; i++) {					
+						document.getElementById(i).classList.remove('selected');						
+					}	
+					document.getElementById(clicked_id).classList.add('selected');
+					player.playlist.currentItem(clicked_id); 
+				}
+			  </script>
+			               
+            </div>
+            
+        </div>       
+    
+</body></html>

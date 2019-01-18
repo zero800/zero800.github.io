@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)http://stevesanderson.github.io/fixed-height-layouts-demo/two-columns.html -->
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        
+		<style type="text/css">
+            /* Pane configuration */
+            .left.col { width: 85px; }
+            .right.col { left: 85px; right: 0; }
+            .header.row { height: 50px; line-height: 50px; }
+            .body.row { top: 50px; bottom: 0px; }
+            .footer.row { height: 0px; bottom: 0; line-height: 50px; }
+        </style>		
+		
+    </head>
+ 
+ <body>      		
+		
+		<script src="../scripts/style2-min.js"></script>		
+		
+		<div class="left col">
+            <div class="header row"> &nbsp;&nbsp;
+			 <a href="../infantil.html">
+			<img border="0" src="../img/voltar.png" align="top" alt="Voltar" width="42" >
+			</a>
+			</div>
+            <div class="body row scroll-y">		
+				
+				
+				<ul id="ul_li" class="listview">
+                    <li id="0" onClick="reply_click(0)" class="selected">Curta Futebol</li>
+					<li id="1" onClick="reply_click(1)">Ep. 44</li>
+					<li id="2" onClick="reply_click(2)">Ep. 42</li>
+					<li id="3" onClick="reply_click(3)">Ep. 39</li>
+					<li id="4" onClick="reply_click(4)">Ep. 38</li>
+					<li id="5" onClick="reply_click(5)">Ep. 36</li>					
+					<li id="6" onClick="reply_click(6)">Ep. 33</li>
+					<li id="7" onClick="reply_click(7)">Ep. 31</li>
+					<li id="8" onClick="reply_click(8)">Ep. 29</li>
+					<li id="9" onClick="reply_click(9)">Ep. 27</li>
+					
+					<li id="10" onClick="reply_click(10)">Ep. 26</li>
+					<li id="11" onClick="reply_click(11)">Ep. 25</li>
+					<li id="12" onClick="reply_click(12)">Ep. 22</li>
+					<li id="13" onClick="reply_click(13)">Ep. 21</li>											
+					<li id="14" onClick="reply_click(14)">Ep. 20</li>											
+					<li id="15" onClick="reply_click(15)">Ep. 19</li>											
+					<li id="16" onClick="reply_click(16)">Ep. 18</li>											
+					<li id="17" onClick="reply_click(17)">Ep. 17</li>											
+					<li id="18" onClick="reply_click(18)">Ep. 06</li>											
+					<li id="19" onClick="reply_click(19)">Ep. 03</li>											
+							   
+                </ul>
+            </div>
+            
+        </div>
+        <div class="right col">
+            <div class="header row">&nbsp;&nbsp; Masha e o Urso
+			 <img border="0" src="../img/mini.png" align="right" alt="Cameras do Brasil" width="42" >
+			</div>
+            <div class="body row">            		
+			
+				
+			<video autoplay id="example_video_1" class="video-js vjs-big-play-centered vjs-16-9" controls preload="auto" width="100%" poster="../img/padrao.png" data-setup="{}">  
+			</video>	
+			
+			<script>
+				   var videoList = [{
+				  sources: [{					
+					src: ("https://youtu.be/e4SYGxYou4o") ,
+					type: 'video/youtube' /* 00 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/KcyszNFPFts") ,
+					type: 'video/youtube' /* 01 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/_NxK0zfY5kY") ,
+					type: 'video/youtube' /* 02 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/RLzw3ICTIHM") ,  
+					type: 'video/youtube' /* 03 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/oGkXEEckfdw") ,
+					type: 'video/youtube' /* 04 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/4cvgTuAaMDM") ,
+					type: 'video/youtube' /* 05 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/C0TVACGxEoY") ,
+					type: 'video/youtube' /* 06 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/wZe6du4thlg") ,
+					type: 'video/youtube' /* 07 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/iyoNdMCmJbU") ,
+					type: 'video/youtube' /* 08 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/U5rlnWSu90o") ,
+					type: 'video/youtube' /* 09 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/qKKKAlMc-hA") ,
+					type: 'video/youtube' /* 10 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/8EYtbauBTU0") ,
+					type: 'video/youtube' /* 11 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/f3DWNhsEfMQ") ,
+					type: 'video/youtube' /* 12 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/9zjjth1Y8pQ") ,
+					type: 'video/youtube' /* 13 */
+				  }],
+				  poster: 'img/padrao.png'
+				
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/fNmjyvltbhg") ,
+					type: 'video/youtube' /* 14 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/PKH2wWExiBo") ,
+					type: 'video/youtube' /* 15 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/nj4ufViVnu0") ,
+					type: 'video/youtube' /* 16 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/cTUTv7hRqUk") ,
+					type: 'video/youtube' /* 17 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/JHlT5lVcmWE") ,
+					type: 'video/youtube' /* 18 */
+				  }],
+				  poster: 'img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/RN0EIYL03Ac") ,
+					type: 'video/youtube' /* 19 */
+				  }],
+				  poster: 'img/padrao.png'
+				  
+				}];
+				
+				var player = videojs(document.querySelector('video'), {
+				  inactivityTimeout: 1200
+				});				
+				//player.playlist(videoList, 4);/// play video 5				
+				player.playlist(videoList);
+				player.playlist.autoadvance(0); // 0 = play all								
+				
+				
+				/* ADD PREVIOUS */
+				var Button = videojs.getComponent("Button");
+
+				// Extend default
+				var PrevButton = videojs.extend(Button, {				 
+				  constructor: function() {
+					Button.apply(this, arguments);				
+					this.addClass("vjs-icon-previous-item");
+					this.controlText("Previous");
+					
+				  },			
+
+				  handleClick: function() {
+				  
+				  const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
+					for (let i = 0; i < numItems; i++) {					
+					  if (document.getElementById(i).classList == 'selected' &&  i != 0){
+						document.getElementById(i).classList.remove('selected');
+						document.getElementById(i-1).classList.add('selected');	
+						i = numItems;
+					  } 				
+					}	
+					player.playlist.previous();
+				  }
+				});
+				
+				var NextButton = videojs.extend(Button, {				  
+				  constructor: function() {
+					Button.apply(this, arguments);
+				
+					this.addClass("vjs-icon-next-item");
+					this.controlText("Next");
+				  },
+
+				  handleClick: function() {
+					
+					const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
+					for (let i = 0; i < numItems; i++) {					
+					  if (document.getElementById(i).classList == 'selected' &&  i != numItems-1){
+						document.getElementById(i).classList.remove('selected');
+						document.getElementById(i+1).classList.add('selected');	
+						i = numItems;
+					  } 				
+					}			
+					player.playlist.next();
+				  }
+				});
+				
+				videojs.registerComponent("NextButton", NextButton);
+				videojs.registerComponent("PrevButton", PrevButton);				
+				player.getChild("controlBar").addChild("PrevButton", {}, 0);
+				player.getChild("controlBar").addChild("NextButton", {}, 2);
+				
+				function reply_click(clicked_id)
+				{							
+					const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
+					for (let i = 0; i < numItems; i++) {					
+						document.getElementById(i).classList.remove('selected');						
+					}	
+					document.getElementById(clicked_id).classList.add('selected');
+					player.playlist.currentItem(clicked_id); 
+				}
+			  </script>
+			               
+            </div>
+            
+        </div>       
+    
+</body></html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)http://stevesanderson.github.io/fixed-height-layouts-demo/two-columns.html -->
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        
+		<link href="main.css" rel="stylesheet" type="text/css">	
+		<link href="j1.css" rel="stylesheet" type="text/css">
+        <link href="j2.css" rel="stylesheet" type="text/css">  	
+				
+		
+		<style type="text/css">
+            /* Pane configuration */
+            .left.col { width: 85px; }
+            .right.col { left: 85px; right: 0; }
+            .header.row { height: 50px; line-height: 50px; }
+            .body.row { top: 50px; bottom: 0px; }
+            .footer.row { height: 0px; bottom: 0; line-height: 50px; }
+        </style>		
+		
+    </head>
+ 
+ <body>     
+		
+		<div class="left col">
+            <div class="header row"> &nbsp;&nbsp;
+			 <a href="../../jogos.html">
+			<img border="0" src="../../img/voltar.png" align="top" alt="Jogos" width="42" >
+			</a>
+			</div>
+            <div class="body row scroll-y">							
+				
+				<ul id="ul_li" class="listview">
+                    <li onclick="location.href='../../geral.html'"> CÂMERAS <br> AO VIVO </li>
+					<li onclick="location.href='../../transito.html'"> TRÂNSITO </li>
+					<li onclick="location.href='../../iptv.html'"> CANAIS IPTV <br> E RÁDIOS</li>
+					<li onclick="location.href='../../filmes.html'"> FILMES DO YOUTUBE </li>	
+					<li onclick="location.href='../../infantil.html'"> INFANTIL </li>	
+					<li onclick="location.href='../../jogos.html'" class="selected">JOGOS</li>
+					<li onclick="location.href='../../novidades.html'">NOVIDADES</li>
+					<li>&nbsp; <br> &nbsp; </li>
+					<li>&nbsp; <br> &nbsp; </li>
+					<li>&nbsp; <br> &nbsp; </li>
+					<li>&nbsp; <br> &nbsp; </li>
+					<li>&nbsp; <br> &nbsp; </li>
+					<li>&nbsp; <br> &nbsp; </li>
+					<li>&nbsp; <br> &nbsp; </li>
+					<li>&nbsp; <br> &nbsp; </li>
+					<li>&nbsp; <br> &nbsp; </li>
+					<li>&nbsp; <br> &nbsp; </li>				
+					
+                </ul>
+            </div>
+            
+        </div>
+        <div class="right col">
+            <div class="header row">&nbsp;&nbsp; 2048
+			 <img border="0" src="../../img/mini.png" align="right" alt="Cameras do Brasil" width="42" >
+			</div>
+            <div class="body row">          		
+
+		<table class="menu" align="center" >		
+		<tr>
+		
+		
+		 <td align="left">
+		   
+			  <div class="scores-container">
+				<div class="score-container">0</div>
+				<div class="best-container">0</div>
+			  </div>	
+
+			 <div>
+				&nbsp;
+			  </div>	
+			
+			<div align="center">	
+			  <a align="center" class="restart-button">Novo Jogo</a>			 
+			</div>	
+
+			 <div>
+				<br><br><br><br><br><br><br><br><br>
+				&nbsp;
+			  </div>	
+		
+			
+		  </td>	
+		  
+		<td align="center">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		
+		  </td>	  
+		
+		<td align="center">
+		 ◄<br><br><br>◄			
+		  </td>		
+		
+		
+		  <td align="left" >
+			
+			
+			<div align="center">			
+			▲&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▲		
+			</div >
+			
+			
+			<div class="game-container">			  
+			  <div class="game-message">
+				<p></p>	
+				<div class="lower">
+				<a class="keep-playing-button">Continuar</a>
+				  <a class="retry-button">Recomeçar</a>
+				</div>
+			  </div>
+					
+			  <div class="grid-container">
+				<div class="grid-row">
+				  <div class="grid-cell"></div>
+				  <div class="grid-cell"></div>
+				  <div class="grid-cell"></div>
+				  <div class="grid-cell"></div>
+				</div>
+				<div class="grid-row">
+				  <div class="grid-cell"></div>
+				  <div class="grid-cell"></div>
+				  <div class="grid-cell"></div>
+				  <div class="grid-cell"></div>
+				</div>
+				<div class="grid-row">
+				  <div class="grid-cell"></div>
+				  <div class="grid-cell"></div>
+				  <div class="grid-cell"></div>
+				  <div class="grid-cell"></div>
+				</div>
+				<div class="grid-row">
+				  <div class="grid-cell"></div>
+				  <div class="grid-cell"></div>
+				  <div class="grid-cell"></div>
+				  <div class="grid-cell"></div>
+				</div>
+			  </div>
+			  
+			  <div class="tile-container">				
+			  </div>
+
+			</div>
+			
+			
+			<div align="center">
+			▼&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼
+			</div >
+			
+		  </td>     
+		 
+		 <td align="left">
+		  ►<br><br><br>►						
+		  </td>		
+		  
+		  
+		</tr>	
+		
+		
+		</table>
+			
+
+  <script src="js/bind_polyfill.js"></script>
+  <script src="js/classlist_polyfill.js"></script>
+  <script src="js/animframe_polyfill.js"></script>
+  <script src="js/keyboard_input_manager.js"></script>
+  <script src="js/html_actuator.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/tile.js"></script>
+  <script src="js/local_storage_manager.js"></script>
+  <script src="js/game_manager.js"></script>
+  <script src="js/application.js"></script>
+			
+  
+    
+</body></html>
