@@ -624,11 +624,10 @@
     //
 
    
-	document.write(unescape("%3Cscript src='http://gledson01.github.io/old/plugin.min.js' type='text/javascript'%3E%3C/script%3E"));
 	
-	document.write(unescape("<link href='http://gledson01.github.io/old/panes.css' rel='stylesheet' type='text/css'>"));
-	document.write(unescape("<link href='http://gledson01.github.io/old/tablet.css' rel='stylesheet' type='text/css'>"));	
-	document.write(unescape("<script src='http://gledson01.github.io/old/plugin.min.js'></script>"));
+	document.write("<link href='http://gledson01.github.io/old/panes.css' rel='stylesheet' type='text/css'>");
+	document.write("<link href='http://gledson01.github.io/old/tablet.css' rel='stylesheet' type='text/css'>");	
+	document.write("<script src='http://gledson01.github.io/old/plugin.min.js'></script>");
 	
 
    function drawBoardToCanvas(canvas, ctx, board, opt, draggingPeg, drawInvalidHoles)
