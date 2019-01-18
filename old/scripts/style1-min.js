@@ -1,1 +1,1299 @@
-!function(t){t.misohena||(t.misohena={}),t.misohena.js_pegsolitaire||(t.misohena.js_pegsolitaire={});var e=t.misohena.js_pegsolitaire,n=-1,i=-1,o=50;function r(t){(function(){this.pushPeg=function(t){return this.setPegExists(t,!0),this},this.pullPeg=function(t){return this.setPegExists(t,!1),this},this.movePeg=function(t,e){if(this.hasPeg(t)&&this.hasEmptyHole(e)){var n=this.getDirFromToDist2(t,e);if(n!=i){var o=this.getAdjacent(t,n),r=this.getAdjacent(o,n);if(this.hasPeg(o))return this.pullPeg(t),this.pullPeg(o),this.pushPeg(r),!0}}return!1},this.undoMovePeg=function(t,e){if(this.hasEmptyHole(t)&&this.hasPeg(e)){var n=this.getDirFromToDist2(t,e);if(n!=i){var o=this.getAdjacent(t,n),r=this.getAdjacent(o,n);if(this.hasEmptyHole(o))return this.pushPeg(t),this.pushPeg(o),this.pullPeg(r),!0}}return!1},this.canMoveFrom=function(t){if(this.hasPeg(t))for(var e=0;e<this.getDirCount();++e)if(this.canMoveDir(t,e))return!0;return!1},this.canMoveFromTo=function(t,e){return!(!this.hasPeg(t)||!this.hasEmptyHole(e))&&this.hasPeg(this.getAdjacent(t,this.getDirFromToDist2(t,e)))},this.canMoveDir=function(t,e){var n=this.getAdjacent(t,e),i=this.getAdjacent(n,e);return this.hasPeg(t)&&this.hasPeg(n)&&this.hasEmptyHole(i)},this.getDirFromTo=function(t,e){for(var n=0;n<this.getDirCount();++n)for(var o=this.getAdjacent(t,n);this.hasValidHole(o);){if(o==e)return n;o=this.getAdjacent(o,n)}return i},this.getDirFromToDist2=function(t,e){if(this.hasValidHole(t)&&this.hasValidHole(e))for(var n=0;n<this.getDirCount();++n)if(this.getAdjacent(this.getAdjacent(t,n),n)==e)return n;return i},this.findHoleAtPosition=function(t,e,i,o){i||(i=.5);for(var r=this.getHoleCount(),a=0;a<r;++a)if(o||this.hasValidHole(a)){var s=this.getHoleLayoutPositionX(a)-t,u=this.getHoleLayoutPositionY(a)-e;if(s*s+u*u<i*i)return a}return n},this.getPegCount=function(){for(var t=this.getHoleCount(),e=0,n=0;n<t;++n)this.hasPeg(n)&&++e;return e},this.isSolved=function(){return 1==this.getPegCount()},this.isEnd=function(){for(var t=this.getHoleCount(),e=0;e<t;++e)if(this.hasPeg(e)&&this.canMoveFrom(e))return!1;return!0},this.eachHole=function(t,e){for(var n=this.getHoleCount(),i=0;i<n;++i)(e||this.hasValidHole(i))&&t(i)}}).call(this),this.getHoleCount=function(){return t.length},this.hasValidHole=function(e){return void 0!==t[e]},this.hasEmptyHole=function(e){return!1===t[e]},this.hasPeg=function(e){return!0===t[e]},this.setHoleState=function(e,n){e>=0&&e<t.length&&(t[e]="boolean"==typeof n?n:void 0)},this.getHoleState=function(e){return t[e]},this.setPegExists=function(e,n){return this.hasValidHole(e)&&(t[e]=!0===n),this},this.setHoleOpen=function(e,n){return e>=0&&e<t.length&&(t[e]=!n&&void 0),this},this.clear=function(){for(var e=0;e<t.length;++e)this.setHoleState(e,void 0);return this},this.boreHoleAll=function(){for(var e=0;e<t.length;++e)this.setHoleOpen(e,!0);return this},this.fillPegAll=function(){for(var e=0;e<t.length;++e)this.setPegExists(e,!0);return this},this.getHolesString=function(){return r.convertHolesToString(t)}}function a(t,e,i){function o(e){return e%t}function s(e){return Math.floor(e/t)}i||(i=new Array(t*e)),r.call(this,i),this.xy=function(i,o){return i>=0&&i<t&&o>=0&&o<e?i+o*t:n},this.getAdjacent=function(i,r){if(this.hasValidHole(i))switch(r){case 0:return o(i)+1<t?i+1:n;case 1:return s(i)+1<e?i+t:n;case 2:return o(i)>0?i-1:n;case 3:return s(i)>0?i-t:n}return n},this.getDirCount=function(){return 4},this.getHoleLayoutPositionX=function(t){return o(t)},this.getHoleLayoutPositionY=function(t){return s(t)},this.getLayoutSizeX=function(){return t-1},this.getLayoutSizeY=function(){return e-1},this.getWidth=function(){return t},this.getHeight=function(){return e},this.getSize=function(){return Math.max(t,e)},this.getType=function(){return a.TYPEID},this.toString=function(){return this.getType()+" "+t+" "+e+" "+this.getHolesString()},this.copyFrom=function(n,i,o){for(var r=0;r<e;++r)for(var a=0;a<t;++a)this.setHoleState(this.xy(a,r),n.getHoleState(n.xy(i+a,o+r)))},this.fillRect=function(e,n,o,r,a){if(o<=0||r<=0)return this;for(var s=e+n*t,u=r;u>0;--u){for(var l=o;l>0;--l)i[s]=a,++s;s+=t-o}return this}}function s(t,e,i){function o(i,o){return i>=0&&o>=0&&i<t&&o<e?i+o*t:n}function r(e){return e%t}function u(e){return Math.floor(e/t)}a.call(this,t,e,i),this.getAdjacent=function(t,e){if(this.hasValidHole(t)){var i=r(t),a=u(t);switch(e){case 0:return o(i+1,a);case 1:return o(0==(1&a)?i:i+1,a+1);case 2:return o(0==(1&a)?i-1:i,a+1);case 3:return o(i-1,a);case 4:return o(0==(1&a)?i-1:i,a-1);case 5:return o(0==(1&a)?i:i+1,a-1)}}return n},this.getDirCount=function(){return 6},this.getHoleLayoutPositionX=function(t){return r(t)+.5*(1&u(t))},this.getHoleLayoutPositionY=function(t){return u(t)},this.getLayoutSizeX=function(){return t-1+(e>1?.5:0)},this.getLayoutSizeY=function(){return e-1},this.getType=function(){return s.TYPEID},this.toString=function(){return this.getType()+" "+t+" "+e+" "+this.getHolesString()}}function u(t,e){function i(e){return e>=0&&e<t?e*(e+1)/2:n}function o(t){return Math.floor((Math.sqrt(1+8*t)-1)/2)}function a(t){var e=o(t);return{x:t-i(e),y:e}}e||(e=new Array(t*(t+1)/2)),r.call(this,e),this.xy=function(e,o){return r=e,(a=o)>=0&&a<t&&r>=0&&r<=a?i(a)+r:n;var r,a},this.getAdjacent=function(e,i){if(this.hasValidHole(e)){var o=a(e),r=o.y+1;switch(i){case 0:return o.x+1<r?e+1:n;case 1:return o.y+1<t?e+r+1:n;case 2:return o.y+1<t?e+r:n;case 3:return o.x>0?e-1:n;case 4:return o.x>0&&o.y>0?e-r:n;case 5:return o.x+1<r&&o.y>0?e-r+1:n}}return n},this.getDirCount=function(){return 6},this.getHoleLayoutPositionX=function(e){var n=a(e);return.5*(t-1)-.5*n.y+n.x},this.getHoleLayoutPositionY=function(t){return o(t)},this.getLayoutSizeX=function(){return t-1},this.getLayoutSizeY=function(){return t-1},this.getWidth=function(){return t},this.getHeight=function(){return t},this.getSize=function(){return t},this.getType=function(){return u.TYPEID},this.toString=function(){return this.getType()+" "+t+" "+this.getHolesString()},this.copyFrom=function(e,n,i){for(var o=0;o<t;++o)for(var r=0;r<o+1;++r)this.setHoleState(this.xy(r,o),e.getHoleState(e.xy(n+r,i+o)))}}function l(t){function e(t,e){var n=parseInt(e[1],10),i=parseInt(e[2],10),a=e[3];return n>=0&&n<o&&i>=0&&i<o&&a.length==n*i?new t(n,i,r.convertStringToHoles(a)):null}var n,i,l,c,h=t.split(/\s+/);switch(h[0]){case a.TYPEID:return e(a,h);case s.TYPEID:return e(s,h);case u.TYPEID:return n=u,i=h,l=parseInt(i[1],10),c=i[2],l>=0&&l<o&&c.length==l*(l+1)/2?new n(l,r.convertStringToHoles(c)):null;default:return null}}function c(){var t=new a(7,7);return t.fillRect(2,0,3,7,!0),t.fillRect(0,2,7,3,!0),t.pullPeg(t.xy(3,3)),t}function h(){var t=new a(7,7);return t.fillRect(2,0,3,7,!0),t.fillRect(0,2,7,3,!0),t.fillRect(1,1,5,5,!0),t.pullPeg(t.xy(3,3)),t}function d(){var t=new u(5);return t.boreHoleAll(),t.fillPegAll(),t.pullPeg(t.xy(0,0)),t}function f(){var t=new s(9,9);return t.fillRect(2,0,5,1,!0),t.fillRect(1,1,6,1,!0),t.fillRect(1,2,7,1,!0),t.fillRect(0,3,8,1,!0),t.fillRect(0,4,9,1,!0),t.fillRect(0,5,8,1,!0),t.fillRect(1,6,7,1,!0),t.fillRect(1,7,6,1,!0),t.fillRect(2,8,5,1,!0),t.pullPeg(t.xy(4,4)),t}function g(){var t=new s(5,5);return t.fillRect(1,0,3,1,!0),t.fillRect(1,1,2,1,!0),t.fillRect(0,2,5,1,!0),t.fillRect(0,3,4,1,!0),t.fillRect(1,4,1,1,!0),t.fillRect(3,4,1,1,!0),t.pullPeg(t.xy(2,2)),t}function p(){var t=new a(3,1);return t.boreHoleAll(),t.fillPegAll(),t.pullPeg(t.xy(0,0)),t}function v(){var t=new a(4,1);return t.boreHoleAll(),t.fillPegAll(),t.pullPeg(t.xy(1,0)),t}function P(){var t=new a(3,3);return t.fillRect(0,0,3,1,!0),t.fillRect(1,1,1,2,!0),t.pullPeg(t.xy(2,0)),t}function H(){var t=[];this.add=function(e,n){t.push({from:e,to:n})},this.undo=function(e){if(t.length>0){var n=t.pop();e.undoMovePeg(n.from,n.to)}},this.getMoveCount=function(){return t.length},this.clear=function(){t.splice(0,t.length)}}function y(t){var e=new H,i={paddingLeft:24,paddingTop:24,paddingRight:24,paddingBottom:24,holeSpanX:48,holeSpanY:48,holeRadius:18,pegRadius:15},o=document.createElement("canvas");function r(){!function(t,e,n,i,o,r){e.clearRect(0,0,t.width,t.height);var a=i.paddingLeft,s=i.paddingTop,u=i.holeSpanX,l=i.holeSpanY,c=i.holeRadius,h=i.pegRadius;r&&n.eachHole(function(t){if(!n.hasValidHole(t)){var i=a+n.getHoleLayoutPositionX(t)*u,o=s+n.getHoleLayoutPositionY(t)*l;e.beginPath(),e.moveTo(i-h,o),e.lineTo(i+h,o),e.moveTo(i,o-h),e.lineTo(i,o+h),e.strokeStyle="black",e.lineWidth=1,e.stroke()}},!0),n.eachHole(function(t){var i=a+n.getHoleLayoutPositionX(t)*u,r=s+n.getHoleLayoutPositionY(t)*l;e.beginPath(),e.arc(i,r,c,0,2*Math.PI,!1),o&&t==o.getDstHoleId()&&n.canMoveFromTo(o.getHoleId(),t)?(e.strokeStyle="red",e.lineWidth=3):(e.strokeStyle="black",e.lineWidth=1),e.stroke()}),n.eachHole(function(t){if(n.hasPeg(t)){var i=a+n.getHoleLayoutPositionX(t)*u,r=s+n.getHoleLayoutPositionY(t)*l;o&&t==o.getHoleId()&&(i+=o.getDeltaX(),r+=o.getDeltaY()),e.beginPath(),e.arc(i,r,h,0,2*Math.PI,!1),e.fillStyle="black",e.fill()}})}(o,o.getContext("2d"),t,i,s,p()==d)}function a(n,i){var a;t.movePeg(n,i)&&(e.add(n,i),r(),(a=document.createEvent("HTMLEvents")).initEvent("boardmoved",!0,!1),o.dispatchEvent(a))}o.setAttribute("width",i.paddingLeft+t.getLayoutSizeX()*i.holeSpanX+i.paddingRight),o.setAttribute("height",i.paddingTop+t.getLayoutSizeY()*i.holeSpanY+i.paddingBottom);var s=null;function u(e,n){return t.findHoleAtPosition((e.x-i.paddingLeft)/i.holeSpanX,(e.y-i.paddingTop)/i.holeSpanY,void 0,n)}function l(){this.leaveMode=function(){this.onMouseLeave()},this.onMouseDown=function(e){var i=T(o,e),a=u(i);t.hasPeg(a)&&(s=new function(t,e){var i={x:0,y:0},o=n;this.getHoleId=function(){return t},this.setMousePosition=function(t,n){i.x=t.x-e.x,i.y=t.y-e.y,o=n},this.getDeltaX=function(){return i.x},this.getDeltaY=function(){return i.y},this.getDstHoleId=function(){return o}}(a,i),r())},this.onMouseMove=function(t){if(s){var e=T(o,t),n=u(e);s.setMousePosition(e,n),r()}},this.onMouseUp=function(e){if(s){var n=s.getDstHoleId();t.hasEmptyHole(n)&&a(s.getHoleId(),n),s=null,r()}},this.onMouseLeave=function(t){s&&(s=null,r())}}function c(){var e=null;this.leaveMode=function(){this.onMouseLeave()},this.onMouseDown=function(n){var i=u(T(o,n),!0);if(i>=0&&i<t.getHoleCount()){var a=t.getHoleState(i),s=void 0===a||!0!==a&&void 0;t.setHoleState(i,s),r(),e=s}},this.onMouseMove=function(n){if(null!==e){var i=u(T(o,n),!0);i>=0&&i<t.getHoleCount()&&(t.setHoleState(i,e),r())}},this.onMouseUp=function(t){null!==e&&(e=null)},this.onMouseLeave=function(t){null!==e&&(e=null)}}var h="Playing",d="Editing",f=new l,g=h;function p(){return g}function v(t){f.onMouseDown(t)}function P(t){f.onMouseMove(t)}function y(t){f.onMouseUp(t)}return o.addEventListener("mousedown",v,!1),o.addEventListener("mousemove",P,!1),o.addEventListener("mouseup",y,!1),o.addEventListener("mouseleave",function(t){f.onMouseLeave(t)},!1),o.addEventListener("touchstart",function(t){v(t.touches[0]),t.preventDefault()},!1),o.addEventListener("touchmove",function(t){P(t.touches[0]),t.preventDefault()},!1),o.addEventListener("touchend",function(t){y(),t.preventDefault()},!1),o.pegsolitaire={update:r,undo:function(){e.undo(t),r()},history:e,board:t,setMode:function(t){var e=t==h?l:t==d?c:null;e&&(f.leaveMode(),f=new e,g=t,r())},getMode:p,MODE_PLAY:h,MODE_EDIT:d},r(),o}function m(){return[{id:"English",ctor:c,title:"English Style(33 holes)"},{id:"European",ctor:h,title:"European Style(37 holes)"},{id:"Triangular5",ctor:d,title:"Triangular5(15 holes)"},{id:"Hexagonal5",ctor:f,title:"Hexagonal5(61 holes)"},{id:"Propeller",ctor:g,title:"Propeller(16 holes)"},{id:"Minimum",ctor:p,title:"Minimum(3 holes)"},{id:"4Holes",ctor:v,title:"4Holes(4 holes)"},{id:"5Holes",ctor:P,title:"5Holes(5 holes)"},{id:"Easy Pinwheel",str:"R 4 4 __P_OPP__PPP_P__",title:"Easy Pinwheel(8 holes)"},{id:"Banzai7",str:"H 3 3 OPOPP__PP",title:"Banzai7(7 holes)"},{id:"Megaphone",str:"H 4 4 _P__PPPP__PP__O_",title:"Megaphone(8 holes)"},{id:"Owl",str:"H 4 4 _PPPPOOP_PPP_PP_",title:"Owl(12 holes)"},{id:"Star",str:"H 4 5 __O_PPPP_PPPPPPP__P_",title:"Star(13 holes)"},{id:"Arrow9",str:"H 4 4 __P_OPP__PPP_PP_",title:"Arrow9(9 holes)"}]}function E(t){t||(t={});var e=t.catalog||m();t.boardText&&e.splice(0,0,{id:"Default",ctor:function(){return l(t.boardText)},title:"Default"});var n=x("div"),i=x("div",n),o={},r=null;if(!t.disableCatalogSelect){r=x("select",i);for(var c=0;c<e.length;++c){var h=x("option",r);h.setAttribute("value",e[c].id),h.appendChild(document.createTextNode(e[c].title)),o[e[c].id]=e[c].ctor||function(t){return function(){return l(t)}}(e[c].str)}}t.disableNewGame||M(i,"New Game",H),t.disableUndo||M(i,"Undo",function(){v&&(v.pegsolitaire.undo(),p())}),t.disableEdit||M(i,"Edit",function(){if(v.pegsolitaire.setMode(v.pegsolitaire.MODE_EDIT),p(),S)return;M(S=x("div",n),"Play",function(){v.pegsolitaire.setMode(v.pegsolitaire.MODE_PLAY),p(),S.parentNode.removeChild(S),S=null}),t.enableShare&&M(S,"Share",function(){var e=x("div",S);e.appendChild(b("Share:")),x("br",e),e.appendChild(b("URL:")),x("br",e);var n=window.location.protocol+"//"+window.location.host+window.location.pathname,i=x("input",e);if(i.setAttribute("type","text"),i.value=n+"?p="+v.pegsolitaire.board.toString().replace(/ /g,"+"),x("br",e),t.scriptURL){e.appendChild(b("Embed Script:")),x("br",e);var o=x("textarea",e);o.setAttribute("rows","2"),o.value="<script src='"+t.scriptURL+"'><\/script>\n<script>misohena.js_pegsolitaire.insertGameBoxBeforeCurrentScript({\n  boardText:'"+v.pegsolitaire.board.toString()+"'\n});\n<\/script>",x("br",e)}M(e,"Close",function(){e.parentNode.removeChild(e)})});M(S,"Export",function(){var t=x("div",S);t.appendChild(document.createTextNode("Export:"));var e=x("input",t);e.setAttribute("type","text"),e.value=v.pegsolitaire.board.toString(),M(t,"Close",function(){t.parentNode.removeChild(t)})}),M(S,"Import",function(){var t=x("div",S);t.appendChild(document.createTextNode("Import:"));var e=x("input",t);function n(){t.parentNode.removeChild(t)}e.setAttribute("type","text"),M(t,"OK",function(){P(l(e.value)),n()}),M(t,"Cancel",n)}),M(S,"Clear History",function(){v&&(v.pegsolitaire.history.clear(),p())}),M(S,"Clear Board",function(){v&&(v.pegsolitaire.board.clear(),v.pegsolitaire.update(),p())}),M(S,"Resize",function(){var t=[{id:a.TYPEID,title:"Rectangular",pget:function(t){return["w",t.getWidth(),"h",t.getHeight()]},creator:function(t){return new a(t.w,t.h)}},{id:s.TYPEID,title:"HexGrid",pget:function(t){return["w",t.getWidth(),"h",t.getHeight()]},creator:function(t){return new s(t.w,t.h)}},{id:u.TYPEID,title:"Triangular",pget:function(t){return["size",t.getSize()]},creator:function(t){return new u(t.size)}}],e={},n=x("div",S);n.appendChild(document.createTextNode("Resize:"));for(var i=x("select",n),o=0;o<t.length;++o){var r=t[o];e[r.id]=r;var l=x("option",i);l.setAttribute("value",r.id),l.appendChild(b(r.title))}i.addEventListener("change",function(t){f()},!1);var c=x("span",n),h=[],d=null;function f(){var t=e[i.value];if(t){for(;c.firstChild;)c.removeChild(c.firstChild);var n=t.pget(v.pegsolitaire.board);n.push("dx"),n.push(0),n.push("dy"),n.push(0);for(var o=[],r=0;r<n.length;r+=2){c.appendChild(b(n[r]+":"));var a=x("input",c);a.setAttribute("type","number"),a.style.width="3em",a.value=n[r+1],o.push({name:n[r],elem:a})}h=o,d=t}}function g(){n.parentNode.removeChild(n)}i.value=v.pegsolitaire.board.getType(),f(),M(n,"OK",function(){if(d){for(var t={},e=0;e<h.length;++e)t[h[e].name]=parseInt(h[e].elem.value,10);var n=d.creator(t);n.copyFrom(v.pegsolitaire.board,-t.dx,-t.dy),P(n),v.pegsolitaire.setMode(v.pegsolitaire.MODE_EDIT),g()}}),M(n,"Cancel",g)})});var d=x("div",n),f=x("span",d);d.appendChild(document.createTextNode(" "));var g=x("span",d);function p(){if(v){f.innerHTML="Moves:"+v.pegsolitaire.history.getMoveCount();var t=v.pegsolitaire.board;g.innerHTML=v.pegsolitaire.getMode()==v.pegsolitaire.MODE_EDIT?"Editing":t.isSolved()?"Solved!":t.isEnd()?"End Game":"Playing"}}var v=null;function P(t){if(t){var e=y(t);v?(v.parentNode.insertBefore(e,v),v.parentNode.removeChild(v)):n.appendChild(e),(v=e).addEventListener("boardmoved",E,!1),p()}}function H(){var t=r?o[r.value]:e.length>0?e[0].ctor:null;t&&P(t())}function E(t){p()}var S=null;return H(),n}function S(){for(var t=document;t&&"script"!=t.nodeName.toLowerCase();)t=t.lastChild;return t}function T(t,e){var n=t.getBoundingClientRect();return{x:e.clientX-n.left,y:e.clientY-n.top}}function x(t,e){var n=document.createElement(t);return e&&e.appendChild(n),n}function M(t,e,n){var i=x("input",t);return i.setAttribute("type","button"),i.setAttribute("value",e),i.addEventListener("click",n,!1),i}function b(t){return document.createTextNode(t)}r.convertHolesToString=function(t){for(var e="",n=0;n<t.length;++n){var i=t[n];e+=!0===i?"P":!1===i?"O":"_"}return e},r.convertStringToHoles=function(t){for(var e=[],n=0;n<t.length;++n){var i=t.charAt(n);e.push("P"==i||"O"!=i&&void 0)}return e},e.RectangularBoard=a,a.TYPEID="R",e.HexGridBoard=s,s.TYPEID="H",e.TriangularBoard=u,u.TYPEID="T",e.createEnglishBoard=c,e.createEuropeanBoard=h,e.createTriangular5Board=d,e.createHexagonal5Board=f,e.createMinimumBoard=p,e.create4HolesBoard=v,e.create5HolesBoard=P,e.History=H,document.write("<link href='http://gledson01.github.io/old/panes.css' rel='stylesheet' type='text/css'>"),document.write("<link href='http://gledson01.github.io/old/tablet.css' rel='stylesheet' type='text/css'>"),document.write("<script src='http://gledson01.github.io/old/plugin.min.js'><\/script>"),e.createCanvasView=y,e.getBoardCatalog=m,e.createGameBox=E,e.insertGameBoxBeforeCurrentScript=function(t){var e=S(),n=E(t);return e.parentNode.insertBefore(n,e),n},e.getLastScriptNode=S,e.getQueryParams=function(){var t={},e=document.location.search.substr(1);if(e.length>0)for(var n=e.split("&"),i=0;i<n.length;++i){var o=n[i].split("=");t[o[0]]=decodeURI(o[1].replace(/\+/g," "))}return t}}(this);
+(function(global){
+    if(!global.misohena){global.misohena = {};}
+    if(!global.misohena.js_pegsolitaire){global.misohena.js_pegsolitaire = {};}
+    var mypkg = global.misohena.js_pegsolitaire;
+
+
+    //
+    // Model
+    //
+
+    var INVALID_HOLE_ID = -1;
+    var INVALID_DIR = -1;
+
+    var MAX_BOARD_SIZE = 50;
+
+    function BoardBase()
+    {
+        this.pushPeg = function(holeId){
+            this.setPegExists(holeId, true);
+            return this;
+        };
+        this.pullPeg = function(holeId){
+            this.setPegExists(holeId, false);
+            return this;
+        };
+        this.movePeg = function(fromId, toId){
+            if(this.hasPeg(fromId) && this.hasEmptyHole(toId)){
+                var dir = this.getDirFromToDist2(fromId, toId);
+                if(dir != INVALID_DIR){
+                    var nextId = this.getAdjacent(fromId, dir);
+                    var nextNextId = this.getAdjacent(nextId, dir);
+                    if(this.hasPeg(nextId)){
+                        this.pullPeg(fromId);
+                        this.pullPeg(nextId);
+                        this.pushPeg(nextNextId);
+                        return true;
+                    }
+                }
+            }
+            return false;
+        };
+        this.undoMovePeg = function(fromId, toId){
+            if(this.hasEmptyHole(fromId) && this.hasPeg(toId)){
+                var dir = this.getDirFromToDist2(fromId, toId);
+                if(dir != INVALID_DIR){
+                    var nextId = this.getAdjacent(fromId, dir);
+                    var nextNextId = this.getAdjacent(nextId, dir);
+                    if(this.hasEmptyHole(nextId)){
+                        this.pushPeg(fromId);
+                        this.pushPeg(nextId);
+                        this.pullPeg(nextNextId);
+                        return true;
+                    }
+                }
+            }
+            return false;
+        };
+        this.canMoveFrom = function(fromId){
+            if(this.hasPeg(fromId)){
+                for(var dir = 0; dir < this.getDirCount(); ++dir){
+                    if(this.canMoveDir(fromId, dir)){
+                        return true;
+                    }
+                }
+            }
+            return false;
+        };
+        this.canMoveFromTo = function(fromId, toId){
+            if(this.hasPeg(fromId) && this.hasEmptyHole(toId)){
+                return this.hasPeg(
+                    this.getAdjacent(fromId,
+                                     this.getDirFromToDist2(fromId, toId)));
+            }
+            return false;
+        };
+        this.canMoveDir = function(fromId, dir){
+            var nextId = this.getAdjacent(fromId, dir);
+            var nextNextId = this.getAdjacent(nextId, dir);
+            return this.hasPeg(fromId) &&
+                this.hasPeg(nextId) &&
+                this.hasEmptyHole(nextNextId);
+        };
+        this.getDirFromTo = function(fromId, toId){
+            for(var dir = 0; dir < this.getDirCount(); ++dir){
+                var id = this.getAdjacent(fromId, dir);
+                while(this.hasValidHole(id)){
+                    if(id == toId){
+                        return dir;
+                    }
+                    id = this.getAdjacent(id, dir);
+                }
+            }
+            return INVALID_DIR;
+        };
+        this.getDirFromToDist2 = function(fromId, toId){
+            if(this.hasValidHole(fromId) && this.hasValidHole(toId)){
+                for(var dir = 0; dir < this.getDirCount(); ++dir){
+                    var nextNextId = this.getAdjacent(this.getAdjacent(fromId, dir), dir);
+                    if(nextNextId == toId){
+                        return dir;
+                    }
+                }
+            }
+            return INVALID_DIR;
+        };
+        this.findHoleAtPosition = function(x, y, r, includingInvalidHoles){
+            if(!r){ r = 0.5;}
+            var count = this.getHoleCount();
+            for(var id = 0; id < count; ++id){
+                if(includingInvalidHoles || this.hasValidHole(id)){
+                    var dx = this.getHoleLayoutPositionX(id) - x;
+                    var dy = this.getHoleLayoutPositionY(id) - y;
+                    if(dx*dx+dy*dy < r*r){
+                        return id;
+                    }
+                }
+            }
+            return INVALID_HOLE_ID;
+        };
+        this.getPegCount = function(){
+            var holeCount = this.getHoleCount();
+            var pegCount = 0;
+            for(var id = 0; id < holeCount; ++id){
+                if(this.hasPeg(id)){
+                    ++pegCount;
+                }
+            }
+            return pegCount;
+        };
+        this.isSolved = function(){
+            return this.getPegCount() == 1;
+        };
+        this.isEnd = function(){
+            var holeCount = this.getHoleCount();
+            for(var id = 0; id < holeCount; ++id){
+                if(this.hasPeg(id)){
+                    if(this.canMoveFrom(id)){
+                        return false;
+                    }
+                }
+            }
+            return true;
+        };
+        this.eachHole = function(fun, includingInvalidHoles){
+            var holeCount = this.getHoleCount();
+            for(var id = 0; id < holeCount; ++id){
+                if(includingInvalidHoles || this.hasValidHole(id)){
+                    fun(id);
+                }
+            }
+        };
+    }
+   
+	
+	
+	function GridBoardBase(holes)
+    {
+        BoardBase.call(this);
+
+        // Board Interface
+
+        this.getHoleCount = function(){
+            return holes.length;
+        };
+        this.hasValidHole = function(holeId){
+            return holes[holeId] !== undefined;
+        };
+        this.hasEmptyHole = function(holeId){
+            return holes[holeId] === false;
+        };
+        this.hasPeg = function(holeId){
+            return holes[holeId] === true;
+        };
+
+        this.setHoleState = function(holeId, stateUndefinedOrFlaseOrTrue){
+            if(holeId >= 0 && holeId < holes.length){
+                holes[holeId] = typeof(stateUndefinedOrFlaseOrTrue) == "boolean" ? stateUndefinedOrFlaseOrTrue : undefined;
+            }
+        };
+        this.getHoleState = function(holeId){
+            return holes[holeId];
+        };
+        this.setPegExists = function(holeId, peg){
+            if(this.hasValidHole(holeId)){
+                holes[holeId] = peg === true;
+            }
+            return this;
+        };
+        this.setHoleOpen = function(holeId, open){
+            if(holeId >= 0 && holeId < holes.length){
+                if(open){
+                    holes[holeId] = false;
+                }
+                else{
+                    holes[holeId] = undefined;
+                }
+            }
+            return this;
+        };
+        this.clear = function(){
+           for(var id = 0; id < holes.length; ++id){
+                this.setHoleState(id, undefined);
+            }
+            return this;
+        };
+        this.boreHoleAll = function(){
+           for(var id = 0; id < holes.length; ++id){
+                this.setHoleOpen(id, true);
+            }
+            return this;
+         };
+        this.fillPegAll = function(){
+            for(var id = 0; id < holes.length; ++id){
+                this.setPegExists(id, true);
+            }
+            return this;
+        };
+        this.getHolesString = function(){
+            return GridBoardBase.convertHolesToString(holes);
+        };
+    }
+    GridBoardBase.convertHolesToString = function(holes){
+        var str = "";
+        for(var id = 0; id < holes.length; ++id){
+            var h = holes[id];
+            str += h === true ? "P" : h === false ? "O" : "_";
+        }
+        return str;
+    };
+    GridBoardBase.convertStringToHoles = function(str){
+        var holes = [];
+        for(var i = 0; i < str.length; ++i){
+            var c = str.charAt(i);
+            holes.push(c == "P" ? true : c == "O" ? false : undefined);
+        }
+        return holes;
+    };
+
+
+    mypkg.RectangularBoard = RectangularBoard;
+    function RectangularBoard(w, h, holes)
+    {
+        // ex) w=6, h=3
+        // 0  1  2  3  4  5
+        // 6  7  8  9  10 11
+        // 12 13 14 15 16 17
+        if(!holes) { holes = new Array(w*h);}
+        GridBoardBase.call(this, holes);
+
+        // Board Interface
+
+        this.xy = function(x, y){
+            if(x >= 0 && x < w && y >= 0 && y < h){
+                return x + y * w;
+            }
+            else{
+                return INVALID_HOLE_ID;
+            }
+        };
+        this.getAdjacent = function(holeId, dir){
+            if(this.hasValidHole(holeId)){
+                switch(dir){
+                case 0: return toX(holeId)+1 < w ? holeId+1 : INVALID_HOLE_ID;
+                case 1: return toY(holeId)+1 < h ? holeId+w : INVALID_HOLE_ID;
+                case 2: return toX(holeId) > 0 ? holeId-1 : INVALID_HOLE_ID;
+                case 3: return toY(holeId) > 0 ? holeId-w : INVALID_HOLE_ID;
+                }
+            }
+            return INVALID_HOLE_ID;
+        };
+        this.getDirCount = function(){
+            return 4;
+        };
+        this.getHoleLayoutPositionX = function(holeId){
+            return toX(holeId);
+        };
+        this.getHoleLayoutPositionY = function(holeId){
+            return toY(holeId);
+        };
+        this.getLayoutSizeX = function(){
+            return w-1;
+        };
+        this.getLayoutSizeY = function(){
+            return h-1;
+        };
+        this.getWidth = function(){ return w;};
+        this.getHeight = function(){ return h;};
+        this.getSize = function(){ return Math.max(w, h);};
+        this.getType = function(){ return RectangularBoard.TYPEID;};
+        this.toString = function(){
+            return this.getType() + " " + w + " " + h + " " + this.getHolesString();
+        };
+        this.copyFrom = function(from, left, top){
+            for(var y = 0; y < h; ++y){
+                for(var x = 0; x < w; ++x){
+                    this.setHoleState(this.xy(x, y), from.getHoleState(from.xy(left+x, top+y)));
+                }
+            }
+        };
+
+        // Rectangular Only
+
+        this.fillRect = function(rectX, rectY, rectW, rectH, state){
+            if(rectW <= 0 || rectH <= 0){
+                return this;
+            }
+            var holeId = rectX + rectY * w;
+            for(var yc = rectH; yc > 0; --yc){
+                for(var xc = rectW; xc > 0; --xc){
+                    holes[holeId] = state;
+                    ++holeId;
+                }
+                holeId += w - rectW;
+            }
+            return this;
+        };
+
+        function toX(holeId){ return holeId % w;}
+        function toY(holeId){ return Math.floor(holeId / w);}
+    }
+    RectangularBoard.TYPEID = "R";
+
+    mypkg.HexGridBoard = HexGridBoard;
+    function HexGridBoard(w, h, holes)
+    {
+        // ex)w=4,h=3
+        // 0  1  2  3
+        //  4  5  6  7
+        // 8  9 10 11
+        RectangularBoard.call(this, w, h, holes);
+
+        // Board Interface
+        this.getAdjacent = function(holeId, dir){
+            if(this.hasValidHole(holeId)){
+                var x = toX(holeId);
+                var y = toY(holeId);
+                switch(dir){
+                case 0: return fromXY(x+1,y);
+                case 1: return (y&1)==0 ? fromXY(x,y+1) : fromXY(x+1,y+1);
+                case 2: return (y&1)==0 ? fromXY(x-1,y+1) : fromXY(x,y+1);
+                case 3: return fromXY(x-1,y);
+                case 4: return (y&1)==0 ? fromXY(x-1,y-1) : fromXY(x,y-1);
+                case 5: return (y&1)==0 ? fromXY(x,y-1) : fromXY(x+1,y-1);
+                }
+            }
+            return INVALID_HOLE_ID;
+        };
+        this.getDirCount = function(){
+            return 6;
+        };
+        this.getHoleLayoutPositionX = function(holeId){
+            return toX(holeId) + (toY(holeId) & 1) * 0.5;
+        };
+        this.getHoleLayoutPositionY = function(holeId){
+            return toY(holeId);
+        };
+        this.getLayoutSizeX = function(){
+            return (w-1) + (h > 1 ? 0.5 : 0);
+        };
+        this.getLayoutSizeY = function(){
+            return h-1;
+        };
+        this.getType = function(){ return HexGridBoard.TYPEID;};
+        this.toString = function(){
+            return this.getType() + " " + w + " " + h + " " + this.getHolesString();
+        };
+
+        //
+
+        function fromXY(x, y){
+            return (x >= 0 && y >= 0 && x < w && y < h) ? x+y*w : INVALID_HOLE_ID;
+        }
+        function toX(holeId){ return holeId % w;}
+        function toY(holeId){ return Math.floor(holeId / w);}
+    }
+    HexGridBoard.TYPEID = "H";
+
+    mypkg.TriangularBoard = TriangularBoard;
+    function TriangularBoard(size, holes)
+    {
+        // ex)size=4
+        //    0
+        //   1 2
+        //  3 4 5
+        // 6 7 8 9
+        if(!holes) { holes = new Array((size*(size+1))/2);}
+        GridBoardBase.call(this, holes);
+
+        // Board Interface
+
+        this.xy = function(x, y){
+            return xyToId(x, y);
+        };
+        this.getAdjacent = function(holeId, dir){
+            if(this.hasValidHole(holeId)){
+                var pos = idToXY(holeId);
+                var w = pos.y + 1;
+                switch(dir){
+                case 0: return pos.x+1 < w ? holeId+1 : INVALID_HOLE_ID;
+                case 1: return pos.y+1 < size ? holeId+w+1 : INVALID_HOLE_ID;
+                case 2: return pos.y+1 < size ? holeId+w : INVALID_HOLE_ID;
+                case 3: return pos.x > 0 ? holeId-1 : INVALID_HOLE_ID;
+                case 4: return pos.x > 0 && pos.y > 0 ? holeId-w : INVALID_HOLE_ID;
+                case 5: return pos.x+1 < w && pos.y > 0 ? holeId-w+1 : INVALID_HOLE_ID;
+                }
+            }
+            return INVALID_HOLE_ID;
+        };
+        this.getDirCount = function(){
+            return 6;
+        };
+        this.getHoleLayoutPositionX = function(holeId){
+            var pos = idToXY(holeId);
+            return (size-1)*0.5 - pos.y*0.5 + pos.x;
+        };
+        this.getHoleLayoutPositionY = function(holeId){
+            return idToY(holeId);
+        };
+        this.getLayoutSizeX = function(){
+            return size-1;
+        };
+        this.getLayoutSizeY = function(){
+            return size-1;
+        };
+        this.getWidth = function(){ return size;};
+        this.getHeight = function(){ return size;};
+        this.getSize = function(){ return size;};
+        this.getType = function(){ return TriangularBoard.TYPEID;};
+        this.toString = function(){
+            return this.getType() + " " + size + " " + this.getHolesString();
+        };
+        this.copyFrom = function(from, left, top){
+            for(var y = 0; y < size; ++y){
+                for(var x = 0; x < y+1; ++x){
+                    this.setHoleState(this.xy(x, y), from.getHoleState(from.xy(left+x, top+y)));
+                }
+            }
+        };
+
+        //
+
+        function yToId(y){
+            if(y >= 0 && y < size){
+                return y*(y+1)/2;
+            }
+            else{
+                return INVALID_HOLE_ID;
+            }
+        }
+        function xyToId(x, y){
+            if(y >= 0 && y < size && x >= 0 && x <= y){
+                return yToId(y) + x;
+            }
+            else{
+                return INVALID_HOLE_ID;
+            }
+        }
+        function idToY(holeId){
+            return Math.floor((Math.sqrt(1 + 8*holeId) - 1)/2);
+        }
+        function idToXY(holeId){
+            var y = idToY(holeId);
+            var x = holeId - yToId(y);
+            return {x:x, y:y};
+        }
+        function idToX(holeId){
+            var y = idToY(holeId);
+            return holeId - yToId(y);
+        }
+    }
+    TriangularBoard.TYPEID = "T";
+
+    function parseBoard(str)
+    {
+        function createBoardWidthHeight(ctor, lines){
+            var w = parseInt(lines[1], 10);
+            var h = parseInt(lines[2], 10);
+            var holesStr = lines[3];
+            if(!(w >= 0 && w < MAX_BOARD_SIZE) || !(h >= 0 && h < MAX_BOARD_SIZE) || holesStr.length != w*h){
+                return null;
+            }
+            var holes = GridBoardBase.convertStringToHoles(holesStr);
+            return new ctor(w, h, holes);
+        }
+        function createBoardTriangle(ctor, lines){
+            var size = parseInt(lines[1], 10);
+            var holesStr = lines[2];
+            if(!(size >= 0 && size < MAX_BOARD_SIZE) || holesStr.length != (size*(size+1))/2){
+                return null;
+            }
+            var holes = GridBoardBase.convertStringToHoles(holesStr);
+            return new ctor(size, holes);
+        }
+        var lines = str.split(/\s+/);
+        var ctor;
+        var args = [];
+        switch(lines[0]){
+        case RectangularBoard.TYPEID:
+            return createBoardWidthHeight(RectangularBoard, lines);
+        case HexGridBoard.TYPEID:
+            return createBoardWidthHeight(HexGridBoard, lines);
+        case TriangularBoard.TYPEID:
+            return createBoardTriangle(TriangularBoard, lines);
+        default:
+            return null;
+        }
+    }
+
+    mypkg.createEnglishBoard = createEnglishBoard;
+    function createEnglishBoard()
+    {
+        var board = new RectangularBoard(7,7);
+        board.fillRect(2,0,3,7, true);
+        board.fillRect(0,2,7,3, true);
+        board.pullPeg(board.xy(3,3));
+        return board;
+    }
+
+    mypkg.createEuropeanBoard = createEuropeanBoard;
+    function createEuropeanBoard()
+    {
+        var board = new RectangularBoard(7,7);
+        board.fillRect(2,0,3,7, true);
+        board.fillRect(0,2,7,3, true);
+        board.fillRect(1,1,5,5, true);
+        board.pullPeg(board.xy(3,3));
+        return board;
+    }
+
+    mypkg.createTriangular5Board = createTriangular5Board;
+    function createTriangular5Board()
+    {
+        var board = new TriangularBoard(5);
+        board.boreHoleAll();
+        board.fillPegAll();
+        board.pullPeg(board.xy(0,0));
+        return board;
+    }
+
+    mypkg.createHexagonal5Board = createHexagonal5Board;
+    function createHexagonal5Board()
+    {
+        var board = new HexGridBoard(9, 9);
+        board.fillRect(2,0,5,1, true);
+        board.fillRect(1,1,6,1, true);
+        board.fillRect(1,2,7,1, true);
+        board.fillRect(0,3,8,1, true);
+        board.fillRect(0,4,9,1, true);
+        board.fillRect(0,5,8,1, true);
+        board.fillRect(1,6,7,1, true);
+        board.fillRect(1,7,6,1, true);
+        board.fillRect(2,8,5,1, true);
+        board.pullPeg(board.xy(4,4));
+        return board;
+    }
+
+    function createPropellerBoard()
+    {
+        var board = new HexGridBoard(5, 5);
+        board.fillRect(1,0,3,1, true);
+        board.fillRect(1,1,2,1, true);
+        board.fillRect(0,2,5,1, true);
+        board.fillRect(0,3,4,1, true);
+        board.fillRect(1,4,1,1, true);
+        board.fillRect(3,4,1,1, true);
+        board.pullPeg(board.xy(2,2));
+        return board;
+    }
+
+    mypkg.createMinimumBoard = createMinimumBoard;
+    function createMinimumBoard()
+    {
+        var board = new RectangularBoard(3,1);
+        board.boreHoleAll();
+        board.fillPegAll();
+        board.pullPeg(board.xy(0,0));
+        return board;
+    }
+
+    mypkg.create4HolesBoard = create4HolesBoard;
+    function create4HolesBoard()
+    {
+        var board = new RectangularBoard(4,1);
+        board.boreHoleAll();
+        board.fillPegAll();
+        board.pullPeg(board.xy(1,0));
+        return board;
+    }
+
+    mypkg.create5HolesBoard = create5HolesBoard;
+    function create5HolesBoard()
+    {
+        var board = new RectangularBoard(3,3);
+        board.fillRect(0,0,3,1, true);
+        board.fillRect(1,1,1,2, true);
+        board.pullPeg(board.xy(2,0));
+        return board;
+    }
+
+
+    mypkg.History = History;
+    function History()
+    {
+        var moves = [];
+        this.add = function(from, to){
+            moves.push({from:from, to:to});
+        };
+        this.undo = function(board){
+            if(moves.length > 0){
+                var lastMove = moves.pop();
+                board.undoMovePeg(lastMove.from, lastMove.to);
+            }
+        };
+        this.getMoveCount = function(){return moves.length;};
+        this.clear = function(){
+            moves.splice(0, moves.length);
+        };
+    }
+
+
+
+    //
+    // View/Control
+    //
+
+   
+	document.write(unescape("%3Cscript src='http://gledson01.github.io/old/plugin.min.js' type='text/javascript'%3E%3C/script%3E"));
+	
+	document.write(unescape("<link href='http://gledson01.github.io/old/panes.css' rel='stylesheet' type='text/css'>"));
+	document.write(unescape("<link href='http://gledson01.github.io/old/tablet.css' rel='stylesheet' type='text/css'>"));	
+	document.write(unescape("<script src='http://gledson01.github.io/old/plugin.min.js'></script>"));
+	
+
+   function drawBoardToCanvas(canvas, ctx, board, opt, draggingPeg, drawInvalidHoles)
+    {
+        ctx.clearRect(0,0,canvas.width, canvas.height);
+        var left = opt.paddingLeft;
+        var top = opt.paddingTop;
+        var holeSpanX = opt.holeSpanX;
+        var holeSpanY = opt.holeSpanY;
+        var holeRadius = opt.holeRadius;
+        var pegRadius = opt.pegRadius;
+
+        // Invalid Holes
+        if(drawInvalidHoles){
+            board.eachHole(function(holeId){
+                if(!board.hasValidHole(holeId)){
+                    var holeX = left + board.getHoleLayoutPositionX(holeId) * holeSpanX;
+                    var holeY = top  + board.getHoleLayoutPositionY(holeId) * holeSpanY;
+                    ctx.beginPath();
+                    ctx.moveTo(holeX-pegRadius, holeY);
+                    ctx.lineTo(holeX+pegRadius, holeY);
+                    ctx.moveTo(holeX, holeY-pegRadius);
+                    ctx.lineTo(holeX, holeY+pegRadius);
+                    ctx.strokeStyle = "black";
+                    ctx.lineWidth = 1;
+                    ctx.stroke();
+                }
+            }, true);
+        }
+
+        // Hole
+        board.eachHole(function(holeId){
+            var holeX = left + board.getHoleLayoutPositionX(holeId) * holeSpanX;
+            var holeY = top  + board.getHoleLayoutPositionY(holeId) * holeSpanY;
+            ctx.beginPath();
+            ctx.arc(holeX, holeY, holeRadius, 0, Math.PI*2, false);
+            if(draggingPeg && holeId == draggingPeg.getDstHoleId() && board.canMoveFromTo(draggingPeg.getHoleId(), holeId)){
+                ctx.strokeStyle = "red";
+                ctx.lineWidth = 3;
+            }
+            else{
+                ctx.strokeStyle = "black";
+                ctx.lineWidth = 1;
+            }
+            ctx.stroke();
+        });
+
+        // Peg
+        board.eachHole(function(holeId){
+            if(board.hasPeg(holeId)){
+                var pegX = left + board.getHoleLayoutPositionX(holeId) * holeSpanX;
+                var pegY = top  + board.getHoleLayoutPositionY(holeId) * holeSpanY;
+                if(draggingPeg && holeId == draggingPeg.getHoleId()){
+                    pegX += draggingPeg.getDeltaX();
+                    pegY += draggingPeg.getDeltaY();
+                }
+                ctx.beginPath();
+                ctx.arc(pegX, pegY, pegRadius, 0, Math.PI*2, false);
+                ctx.fillStyle = "black";
+                ctx.fill();
+            }
+        });
+    }
+
+    mypkg.createCanvasView = createCanvasView;
+    function createCanvasView(board)
+    {
+        var history = new History();
+        var HOLE_SPAN = 48;
+        var opt = {
+            paddingLeft: HOLE_SPAN*0.5,
+            paddingTop: HOLE_SPAN*0.5,
+            paddingRight: HOLE_SPAN*0.5,
+            paddingBottom: HOLE_SPAN*0.5,
+            holeSpanX: HOLE_SPAN,
+            holeSpanY: HOLE_SPAN,
+            holeRadius: HOLE_SPAN*0.375,
+            pegRadius: HOLE_SPAN*0.3125
+        };
+
+        var canvas = document.createElement("canvas");
+        canvas.setAttribute("width", opt.paddingLeft + board.getLayoutSizeX() * opt.holeSpanX + opt.paddingRight);
+        canvas.setAttribute("height", opt.paddingTop + board.getLayoutSizeY() * opt.holeSpanY + opt.paddingBottom);
+
+        function update()
+        {
+            drawBoardToCanvas(
+                canvas,
+                canvas.getContext("2d"),
+                board,
+                opt,
+                draggingPeg,
+                getMode() == MODE_EDIT ? true : false);
+        }
+
+        //
+        // Board
+        //
+
+        function move(fromId, toId)
+        {
+            if(board.movePeg(fromId, toId)){
+                history.add(fromId, toId);
+                update();
+                fireBoardMovedEvent();
+            }
+        }
+        function undo()
+        {
+            history.undo(board);
+            update();
+        }
+        function fireBoardMovedEvent()
+        {
+            var ev = document.createEvent("HTMLEvents");
+            ev.initEvent("boardmoved", true, false);
+            canvas.dispatchEvent(ev);
+        }
+
+        //
+        // Input
+        //
+
+        var draggingPeg = null;
+        function DraggingPeg(holeId, initialMousePos)
+        {
+            var deltaPos = {x:0, y:0};
+            var dstHoleId = INVALID_HOLE_ID;
+
+            this.getHoleId = function() { return holeId;};
+            this.setMousePosition = function(pos, dstId) {
+                deltaPos.x = pos.x - initialMousePos.x;
+                deltaPos.y = pos.y - initialMousePos.y;
+                dstHoleId = dstId;
+            };
+            this.getDeltaX = function(){ return deltaPos.x;};
+            this.getDeltaY = function(){ return deltaPos.y;};
+            this.getDstHoleId = function(){ return dstHoleId;};
+        }
+
+        function mousePosToHoleId(xy, includingInvalidHoles)
+        {
+            return board.findHoleAtPosition(
+                (xy.x - opt.paddingLeft) / opt.holeSpanX,
+                (xy.y - opt.paddingTop) / opt.holeSpanY,
+                undefined,
+                includingInvalidHoles);
+        }
+
+        function PlayingMode()
+        {
+            this.leaveMode = function()
+            {
+                this.onMouseLeave();
+            };
+            this.onMouseDown = function(ev)
+            {
+                var pos = getMouseEventPositionOnElement(canvas, ev);
+                var holeId = mousePosToHoleId(pos);
+                if(board.hasPeg(holeId)){
+                    draggingPeg = new DraggingPeg(holeId, pos);
+                    update();
+                }
+            };
+            this.onMouseMove = function(ev)
+            {
+                if(draggingPeg){
+                    var pos = getMouseEventPositionOnElement(canvas, ev);
+                    var holeId = mousePosToHoleId(pos);
+                    draggingPeg.setMousePosition(pos, holeId);
+                    update();
+                }
+            };
+            this.onMouseUp = function(ev)
+            {
+                if(draggingPeg){
+                    var dstHoleId = draggingPeg.getDstHoleId();
+                    if(board.hasEmptyHole(dstHoleId)){
+                        move(draggingPeg.getHoleId(), dstHoleId);
+                    }
+                    draggingPeg = null;
+                    update();
+                }
+            };
+            this.onMouseLeave = function(ev)
+            {
+                if(draggingPeg){
+                    draggingPeg = null;
+                    update();
+                }
+            };
+        }
+        function EditingMode()
+        {
+            var lastHoleState = null;
+
+            this.leaveMode = function()
+            {
+                this.onMouseLeave();
+            };
+            this.onMouseDown = function(ev)
+            {
+                var pos = getMouseEventPositionOnElement(canvas, ev);
+                var holeId = mousePosToHoleId(pos, true);
+                if(holeId >= 0 && holeId < board.getHoleCount()){
+                    var oldHoleState = board.getHoleState(holeId);
+                    var newHoleState =
+                            oldHoleState === undefined ? true :
+                            oldHoleState === true ? false :
+                            undefined;
+                    board.setHoleState(holeId, newHoleState);
+                    update();
+                    lastHoleState = newHoleState;
+                }
+            };
+            this.onMouseMove = function(ev)
+            {
+                if(lastHoleState !== null){
+                    var pos = getMouseEventPositionOnElement(canvas, ev);
+                    var holeId = mousePosToHoleId(pos, true);
+                    if(holeId >= 0 && holeId < board.getHoleCount()){
+                        board.setHoleState(holeId, lastHoleState);
+                        update();
+                    }
+                }
+            };
+            this.onMouseUp = function(ev)
+            {
+                if(lastHoleState !== null){
+                    lastHoleState = null;
+                }
+            };
+            this.onMouseLeave = function(ev)
+            {
+                if(lastHoleState !== null){
+                    lastHoleState = null;
+                }
+            };
+        }
+        var MODE_PLAY = "Playing";
+        var MODE_EDIT = "Editing";
+        var modeObj = new PlayingMode();
+        var modeName = MODE_PLAY;
+        function setMode(modeStr)
+        {
+            var modeCtor =
+                    modeStr==MODE_PLAY ? PlayingMode :
+                    modeStr==MODE_EDIT ? EditingMode :
+                    null;
+            if(!modeCtor){
+                return;
+            }
+            modeObj.leaveMode();
+            modeObj = new modeCtor();
+            modeName = modeStr;
+            update();
+        }
+        function getMode()
+        {
+            return modeName;
+        }
+
+
+        function onMouseDown(ev){ modeObj.onMouseDown(ev);}
+        function onMouseMove(ev){ modeObj.onMouseMove(ev);}
+        function onMouseUp(ev){ modeObj.onMouseUp(ev);}
+        function onMouseLeave(ev){ modeObj.onMouseLeave(ev);}
+        function onTouchStart(ev)
+        {
+            onMouseDown(ev.touches[0]);
+            ev.preventDefault();
+        }
+        function onTouchMove(ev)
+        {
+            onMouseMove(ev.touches[0]);
+            ev.preventDefault();
+        }
+        function onTouchEnd(ev)
+        {
+            onMouseUp();
+            ev.preventDefault();
+        }
+
+        canvas.addEventListener("mousedown", onMouseDown, false);
+        canvas.addEventListener("mousemove", onMouseMove, false);
+        canvas.addEventListener("mouseup", onMouseUp, false);
+        canvas.addEventListener("mouseleave", onMouseLeave, false);
+        canvas.addEventListener("touchstart", onTouchStart, false);
+        canvas.addEventListener("touchmove", onTouchMove, false);
+        canvas.addEventListener("touchend", onTouchEnd, false);
+
+        // Public Interface
+
+        canvas.pegsolitaire = {
+            update: update,
+            undo: undo,
+            history: history,
+            board: board,
+            setMode: setMode,
+            getMode: getMode,
+            MODE_PLAY: MODE_PLAY,
+            MODE_EDIT: MODE_EDIT
+        };
+
+        update();
+        return canvas;
+    }
+
+    mypkg.getBoardCatalog = getBoardCatalog;
+    function getBoardCatalog(){
+        return [
+            {id:"English", ctor:createEnglishBoard, title:"English Style(33 holes)"},
+            {id:"European", ctor:createEuropeanBoard, title:"European Style(37 holes)"},
+            {id:"Triangular5", ctor:createTriangular5Board, title:"Triangular5(15 holes)"},
+            {id:"Hexagonal5", ctor:createHexagonal5Board, title:"Hexagonal5(61 holes)"},
+            {id:"Propeller", ctor:createPropellerBoard, title:"Propeller(16 holes)"},
+            {id:"Minimum", ctor:createMinimumBoard, title:"Minimum(3 holes)"},
+            {id:"4Holes", ctor:create4HolesBoard, title:"4Holes(4 holes)"},
+            {id:"5Holes", ctor:create5HolesBoard, title:"5Holes(5 holes)"},
+            {id:"Easy Pinwheel", str:"R 4 4 __P_OPP__PPP_P__", title:"Easy Pinwheel(8 holes)"},
+            {id:"Banzai7", str:"H 3 3 OPOPP__PP", title:"Banzai7(7 holes)"},
+            {id:"Megaphone", str:"H 4 4 _P__PPPP__PP__O_", title:"Megaphone(8 holes)"},
+            {id:"Owl", str:"H 4 4 _PPPPOOP_PPP_PP_", title:"Owl(12 holes)"},
+            {id:"Star", str:"H 4 5 __O_PPPP_PPPPPPP__P_", title:"Star(13 holes)"},
+            {id:"Arrow9", str:"H 4 4 __P_OPP__PPP_PP_", title:"Arrow9(9 holes)"}
+        ];
+    };
+
+    mypkg.createGameBox = createGameBox;
+    function createGameBox(opt)
+    {
+        if(!opt){
+            opt = {};
+        }
+
+        var catalog = opt.catalog || getBoardCatalog();
+        if(opt.boardText){
+            catalog.splice(0, 0, {id:"Default", ctor:function(){return parseBoard(opt.boardText);}, title:"Default"});
+        }
+
+        var gameDiv = newElem("div");
+
+        // control
+
+        var controlDiv = newElem("div", gameDiv);
+
+        var boardCtors = {};
+        var selectBoard = null;
+        if(!opt.disableCatalogSelect){
+            selectBoard = newElem("select", controlDiv);
+            for(var i = 0; i < catalog.length; ++i){
+                var option = newElem("option", selectBoard);
+                option.setAttribute("value", catalog[i].id);
+                option.appendChild(document.createTextNode(catalog[i].title));
+                boardCtors[catalog[i].id] = catalog[i].ctor ||
+                    (function(str){
+                        return function(){return parseBoard(str);};
+                    })(catalog[i].str);
+            }
+        }
+
+        if(!opt.disableNewGame){
+            newButton(controlDiv, "New Game", newGame);
+        }
+        if(!opt.disableUndo){
+            newButton(controlDiv, "Undo", undo);
+        }
+        if(!opt.disableEdit){
+            newButton(controlDiv, "Edit", edit);
+        }
+
+        // status
+
+        var statusDiv = newElem("div", gameDiv);
+        var spanMoves = newElem("span", statusDiv);
+        statusDiv.appendChild(document.createTextNode(" "));
+        var spanGameState = newElem("span", statusDiv);
+
+        function updateStatus(){
+            if(currentCanvas){
+                spanMoves.innerHTML = "Moves:" + currentCanvas.pegsolitaire.history.getMoveCount();
+                var board = currentCanvas.pegsolitaire.board;
+                spanGameState.innerHTML =
+                    currentCanvas.pegsolitaire.getMode() == currentCanvas.pegsolitaire.MODE_EDIT ? "Editing" :
+                    board.isSolved() ? "Solved!" :
+                    board.isEnd() ? "End Game" :
+                    "Playing";
+            }
+        }
+
+        // canvas
+
+        var currentCanvas = null;
+
+        function newBoard(board){
+            if(board){
+                var newCanvas = createCanvasView(board);
+                if(currentCanvas){
+                    currentCanvas.parentNode.insertBefore(newCanvas, currentCanvas);
+                    currentCanvas.parentNode.removeChild(currentCanvas);
+                }
+                else{
+                    gameDiv.appendChild(newCanvas);
+                }
+                currentCanvas = newCanvas;
+
+                currentCanvas.addEventListener("boardmoved", onBoardMoved, false);
+                updateStatus();
+            }
+        }
+        function newGame(){
+            var creator =
+                    selectBoard ? boardCtors[selectBoard.value] :
+                    catalog.length > 0 ? catalog[0].ctor :
+                    null;
+            if(creator){
+                newBoard(creator());
+            }
+        }
+        function undo(){
+            if(currentCanvas){
+                currentCanvas.pegsolitaire.undo();
+                updateStatus();
+            }
+        }
+        function onBoardMoved(ev){
+            updateStatus();
+        }
+
+        // Editor
+        var editorDiv = null;
+        function edit(){
+            currentCanvas.pegsolitaire.setMode(currentCanvas.pegsolitaire.MODE_EDIT);
+            updateStatus();
+
+            if(editorDiv){
+                return;
+            }
+
+            editorDiv = newElem("div", gameDiv);
+            newButton(editorDiv, "Play", function(){
+                currentCanvas.pegsolitaire.setMode(currentCanvas.pegsolitaire.MODE_PLAY);
+                updateStatus();
+                editorDiv.parentNode.removeChild(editorDiv);
+                editorDiv = null;
+            });
+            if(opt.enableShare){
+                newButton(editorDiv, "Share", function(){
+                    var dlg = newElem("div", editorDiv);
+                    dlg.appendChild(newTextNode("Share:"));
+                    newElem("br", dlg);
+                    dlg.appendChild(newTextNode("URL:"));
+                    newElem("br", dlg);
+                    var pageURL = window.location.protocol + "//" + window.location.host + window.location.pathname;
+                    var urlText = newElem("input", dlg);
+                    urlText.setAttribute("type", "text");
+                    urlText.value = pageURL + "?p=" + currentCanvas.pegsolitaire.board.toString().replace(/ /g, "+");
+                    newElem("br", dlg);
+                    if(opt.scriptURL){
+                        dlg.appendChild(newTextNode("Embed Script:"));
+                        newElem("br", dlg);
+                        var embedText = newElem("textarea", dlg);
+                        embedText.setAttribute("rows", "2");
+                        embedText.value =
+                            "<script src='" + opt.scriptURL + "'></script>\n"+
+                            "<script>misohena.js_pegsolitaire.insertGameBoxBeforeCurrentScript({\n"+
+                            "  boardText:'" + currentCanvas.pegsolitaire.board.toString() + "'\n"+
+                            "});\n"+
+                            "</script>";
+                        newElem("br", dlg);
+                    }
+                    newButton(dlg, "Close", function(){
+                        closeDlg();
+                    });
+                    function closeDlg(){
+                        dlg.parentNode.removeChild(dlg);
+                    }
+                });
+            }
+            newButton(editorDiv, "Export", function(){
+                var dlg = newElem("div", editorDiv);
+                dlg.appendChild(document.createTextNode("Export:"));
+                var text = newElem("input", dlg);
+                text.setAttribute("type", "text");
+                text.value = currentCanvas.pegsolitaire.board.toString();
+                newButton(dlg, "Close", function(){
+                    closeDlg();
+                });
+                function closeDlg(){
+                    dlg.parentNode.removeChild(dlg);
+                }
+            });
+            newButton(editorDiv, "Import", function(){
+                var dlg = newElem("div", editorDiv);
+                dlg.appendChild(document.createTextNode("Import:"));
+                var text = newElem("input", dlg);
+                text.setAttribute("type", "text");
+                newButton(dlg, "OK", function(){
+                    importBoard(text.value);
+                    closeDlg();
+                });
+                newButton(dlg, "Cancel", closeDlg);
+                function importBoard(str){
+                    newBoard(parseBoard(str));
+                }
+                function closeDlg(){
+                    dlg.parentNode.removeChild(dlg);
+                }
+            });
+            newButton(editorDiv, "Clear History", function(){
+                if(currentCanvas){
+                    currentCanvas.pegsolitaire.history.clear();
+                    updateStatus();
+                }
+            });
+            newButton(editorDiv, "Clear Board", function(){
+                if(currentCanvas){
+                    currentCanvas.pegsolitaire.board.clear();
+                    currentCanvas.pegsolitaire.update();
+                    updateStatus();
+                }
+            });
+            newButton(editorDiv, "Resize", function(){
+                var BOARD_TYPES = [
+                    {id:RectangularBoard.TYPEID, title:"Rectangular", pget:function(b){return ["w", b.getWidth(), "h", b.getHeight()];}, creator: function(props){return new RectangularBoard(props.w, props.h);}},
+                    {id:HexGridBoard.TYPEID, title:"HexGrid", pget: function(b){return ["w", b.getWidth(), "h", b.getHeight()];}, creator: function(props){return new HexGridBoard(props.w, props.h);}},
+                    {id:TriangularBoard.TYPEID, title:"Triangular", pget: function(b){return ["size", b.getSize()];}, creator: function(props){return new TriangularBoard(props.size);}}
+                ];
+                var BOARD_TYPES_DIC = {};
+
+                var dlg = newElem("div", editorDiv);
+                dlg.appendChild(document.createTextNode("Resize:"));
+                var selectType = newElem("select", dlg);
+                for(var oi = 0; oi < BOARD_TYPES.length; ++oi){
+                    var bt = BOARD_TYPES[oi];
+                    BOARD_TYPES_DIC[bt.id] = bt;
+                    var option = newElem("option", selectType);
+                    option.setAttribute("value", bt.id);
+                    option.appendChild(newTextNode(bt.title));
+                }
+                selectType.addEventListener("change", function(ev){
+                    updatePropElem();
+                }, false);
+                var propElem = newElem("span", dlg);
+                var propInputs = [];
+                var currBoardType = null;
+                function updatePropElem(){
+                    var newBoardType = BOARD_TYPES_DIC[selectType.value];
+                    if(!newBoardType){
+                        return;
+                    }
+                    while(propElem.firstChild){propElem.removeChild(propElem.firstChild);}
+
+                    var props = newBoardType.pget(currentCanvas.pegsolitaire.board);
+                    props.push("dx");
+                    props.push(0);
+                    props.push("dy");
+                    props.push(0);
+                    var inputs = [];
+
+                    for(var pi = 0; pi < props.length; pi += 2){
+                        propElem.appendChild(newTextNode(props[pi] + ":"));
+                        var input = newElem("input", propElem);
+                        input.setAttribute("type", "number");
+                        input.style.width = "3em";
+                        input.value = props[pi+1];
+                        inputs.push({name:props[pi], elem:input});
+                    }
+                    propInputs = inputs;
+                    currBoardType = newBoardType;
+                }
+                selectType.value = currentCanvas.pegsolitaire.board.getType();
+                updatePropElem();
+
+                newButton(dlg, "OK", function(){
+                    if(!currBoardType){
+                        return;
+                    }
+                    var props = {};
+                    for(var ii = 0; ii < propInputs.length; ++ii){
+                        props[propInputs[ii].name] = parseInt(propInputs[ii].elem.value, 10);
+                    }
+                    var board = currBoardType.creator(props);
+                    board.copyFrom(currentCanvas.pegsolitaire.board, -props.dx, -props.dy);
+
+                    newBoard(board);
+                    currentCanvas.pegsolitaire.setMode(currentCanvas.pegsolitaire.MODE_EDIT);
+                    closeDlg();
+                });
+                newButton(dlg, "Cancel", closeDlg);
+
+                function closeDlg(){
+                    dlg.parentNode.removeChild(dlg);
+                }
+            });
+        }
+
+        newGame();
+        return gameDiv;
+    }
+
+    mypkg.insertGameBoxBeforeCurrentScript = insertGameBoxBeforeCurrentScript;
+    function insertGameBoxBeforeCurrentScript(opt)
+    {
+        var script = getLastScriptNode();
+        var gameBox = createGameBox(opt);
+        script.parentNode.insertBefore(gameBox, script);
+        return gameBox;
+    }
+
+
+    //
+    // HTML Utility
+    //
+    mypkg.getLastScriptNode = getLastScriptNode;
+    function getLastScriptNode()
+    {
+        var n = document;
+        while(n && n.nodeName.toLowerCase() != "script") { n = n.lastChild;}
+        return n;
+    }
+
+    function getMouseEventPositionOnElement(elem, ev)
+    {
+        var rect = elem.getBoundingClientRect();
+        return {x:ev.clientX - rect.left, y:ev.clientY - rect.top};
+    }
+
+    function newElem(tagName, parentNode)
+    {
+        var elem = document.createElement(tagName);
+        if(parentNode){
+            parentNode.appendChild(elem);
+        }
+        return elem;
+    }
+    function newButton(parentNode, value, onClick)
+    {
+        var button = newElem("input", parentNode);
+        button.setAttribute("type", "button");
+        button.setAttribute("value", value);
+        button.addEventListener("click", onClick, false);
+        return button;
+    }
+    function newTextNode(text)
+    {
+        return document.createTextNode(text);
+    }
+
+    mypkg.getQueryParams = getQueryParams;
+    function getQueryParams()
+    {
+        var result = {};
+        var q = document.location.search.substr(1);
+        if(q.length > 0){
+            var ps = q.split("&");
+            for(var pi = 0; pi < ps.length; ++pi){
+                var nv = ps[pi].split("=");
+                result[nv[0]] = decodeURI(nv[1].replace(/\+/g, " "));
+            }
+        }
+        return result;
+    }
+
+})(this);
+
+
+
