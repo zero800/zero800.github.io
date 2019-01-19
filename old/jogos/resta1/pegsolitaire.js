@@ -656,12 +656,12 @@
             ctx.beginPath();
             ctx.arc(holeX, holeY, holeRadius, 0, Math.PI*2, false);
             if(draggingPeg && holeId == draggingPeg.getDstHoleId() && board.canMoveFromTo(draggingPeg.getHoleId(), holeId)){
-                ctx.strokeStyle = "#F00";
+                ctx.strokeStyle = "#FF0";
                 ctx.lineWidth = 3;
             }
             else{
-                ctx.strokeStyle = "white";
-                ctx.lineWidth = 1;
+                ctx.strokeStyle = "#A0F";
+                ctx.lineWidth = 3;
             }
             ctx.stroke();
         });
@@ -687,7 +687,7 @@
     function createCanvasView(board)
     {
         var history = new History();
-        var HOLE_SPAN = 34;
+        var HOLE_SPAN = 40;
         var opt = {
             paddingLeft: HOLE_SPAN*0.5,
             paddingTop: HOLE_SPAN*0.5,
@@ -1002,7 +1002,7 @@
 
         function updateStatus(){
             if(currentCanvas){
-                spanMoves.innerHTML = "<font color='#0CF'>► </font>" + currentCanvas.pegsolitaire.history.getMoveCount();
+                spanMoves.innerHTML = "<font color='#A0F'>► </font>" + currentCanvas.pegsolitaire.history.getMoveCount();
                 var board = currentCanvas.pegsolitaire.board;
                 spanGameState.innerHTML =
                     currentCanvas.pegsolitaire.getMode() == currentCanvas.pegsolitaire.MODE_EDIT ? "Editando" :
