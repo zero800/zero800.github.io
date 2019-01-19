@@ -687,7 +687,7 @@
     function createCanvasView(board)
     {
         var history = new History();
-        var HOLE_SPAN = 48;
+        var HOLE_SPAN = 34;
         var opt = {
             paddingLeft: HOLE_SPAN*0.5,
             paddingTop: HOLE_SPAN*0.5,
