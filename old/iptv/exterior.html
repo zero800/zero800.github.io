@@ -48,6 +48,8 @@
 					<li id="11" onClick="reply_click(11)">INDIEWAVE</li>
 					<li id="12" onClick="reply_click(12)">STARGAZE MUSIC</li>
 					<li id="13" onClick="reply_click(13)">CALIFORNIA MUSIC CHANNEL</li>
+					<li id="14" onClick="reply_click(14)">NHK WORLD</li>
+					<li id="15" onClick="reply_click(15)">FRANCE 24</li>
 					
 				
 							   
@@ -150,6 +152,19 @@
 					type: 'application/x-mpegURL' /* 13 */
 				  }],
 				  poster: 'img/padrao.png'   
+				 }, {
+				  sources: [{
+					src: ("https://nhkwtvglobal-i.akamaihd.net/hls/live/263941/nhkwtvglobal/index_1180.m3u8") ,
+					type: 'application/x-mpegURL' /* 14 */
+				  }],
+				  poster: 'img/padrao.png'   
+				  }, {
+				  sources: [{
+					src: ("http://f24hls-i.akamaihd.net/hls/live/221193/F24_EN_LO_HLS/master_900.m3u8") ,
+					type: 'application/x-mpegURL' /* 15 */
+				  }],
+				  poster: 'img/padrao.png'   
+				  
 				}];
 				
 				var player = videojs(document.querySelector('video'), {
