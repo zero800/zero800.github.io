@@ -1195,15 +1195,15 @@ video::-webkit-media-text-track-display {
 
 @-webkit-keyframes vjs-spinner-fade {
   0% {
-    border-top-color: #73859f; }
+    border-top-color: #09f; }
   20% {
-    border-top-color: #73859f; }
+    border-top-color: #09f; }
   35% {
-    border-top-color: white; }
+    border-top-color: #0ff; }
   60% {
-    border-top-color: #73859f; }
+    border-top-color: #09f; }
   100% {
-    border-top-color: #73859f; } }
+    border-top-color: #09f; } }
 
 .vjs-chapters-button .vjs-menu ul {
   width: 24em; }
