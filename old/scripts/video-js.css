@@ -248,14 +248,16 @@
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-next-item:before {
-    content: "\f11f"; }
+    font-size: 2em; 
+	content: "\f11f"; }
 
 .vjs-icon-previous-item {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-previous-item:before {
-    content: "\f120"; }
+    font-size: 2em;
+	content: "\f120"; }
 
 .video-js {
   display: block;
