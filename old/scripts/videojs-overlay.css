@@ -32,4 +32,5 @@
   background-image: url('3.png');
   background-position: right;
   background-repeat: no-repeat; 
+  opacity: 0.7;
   display: block;}
