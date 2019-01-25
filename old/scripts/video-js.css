@@ -451,7 +451,7 @@ body.vjs-full-window {
   position: absolute;
   right: 0;
   top: 0.5em;
-  z-index: 2; }
+  z-index: 3; }
 
 .video-js .vjs-modal-dialog {
   background: rgba(0, 0, 0, 0.8);
@@ -465,7 +465,7 @@ body.vjs-full-window {
   font-size: 1.2em;
   line-height: 1.5;
   padding: 20px 24px;
-  z-index: 1; }
+  z-index: 2; }
 
 .vjs-menu-button {
   cursor: pointer; }
@@ -598,6 +598,7 @@ body.vjs-full-window {
   left: 0;
   right: 0;
   height: 3.0em;
+  z-index: 2;
   background-color: #2B333F;
   background-color: rgba(43, 51, 63, 0.7); }
 
@@ -710,7 +711,7 @@ body.vjs-full-window {
     position: absolute;
     right: -0.5em;
     top: -0.333333333333333em;
-    z-index: 1; }
+    z-index: 2; }
 
 .video-js .vjs-load-progress {
   background: rgba(115, 133, 159, 0.5); }
@@ -731,7 +732,7 @@ body.vjs-full-window {
   position: absolute;
   top: -3.4em;
   visibility: hidden;
-  z-index: 1; }
+  z-index: 2; }
 
 .video-js .vjs-progress-holder:focus .vjs-time-tooltip {
   display: none; }
@@ -751,7 +752,7 @@ body.vjs-full-window {
   width: 1px;
   height: 100%;
   background-color: #000;
-  z-index: 1; }
+  z-index: 2; }
 
 .vjs-no-flex .vjs-progress-control .vjs-mouse-display {
   z-index: 0; }
