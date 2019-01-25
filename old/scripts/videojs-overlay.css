@@ -6,7 +6,7 @@
  */
 .video-js .vjs-overlay{color:#fff;position:absolute;text-align:center}
 .video-js .vjs-overlay-no-background{max-width:33%}
-.video-js .vjs-overlay-background{padding-top:2.5em; padding-bottom: 2.5em; padding-right:3.2em;padding-left:3.2em ;width:33%}
+.video-js .vjs-overlay-background{padding-top:2.5em; padding-bottom: 2.5em; padding-right:3.5em;padding-left:3.5em ;width:33%}
 .video-js .vjs-overlay-top-left{top:-1.3em;left:1.2em}
 .video-js .vjs-overlay-top{left:50%;margin-left:-16.5%;top:5px}
 .video-js .vjs-overlay-top-right{right:2.5em;top:1.4em}
