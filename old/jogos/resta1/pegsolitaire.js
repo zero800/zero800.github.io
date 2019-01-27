@@ -657,7 +657,7 @@
             ctx.arc(holeX, holeY, holeRadius, 0, Math.PI*2, false);
             if(draggingPeg && holeId == draggingPeg.getDstHoleId() && board.canMoveFromTo(draggingPeg.getHoleId(), holeId)){
                 ctx.strokeStyle = "#FF0";
-                ctx.lineWidth = 3;
+                ctx.lineWidth = 7;
             }
             else{
                 ctx.strokeStyle = "#90F";
