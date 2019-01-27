@@ -12,6 +12,8 @@
   // setup
   var cache = {};
 
+/*
+
   // setup the audio context
   var ctx = null,
     usingWebAudio = true,
@@ -31,6 +33,9 @@
     usingWebAudio = false;
     noAudio = true;
   }
+  
+*/  usingWebAudio = false,
+    noAudio = true;
 
   // create a master gain node
   if (usingWebAudio) {

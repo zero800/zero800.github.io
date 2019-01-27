@@ -287,7 +287,7 @@ fSpider.UISettings = (function (UISettings, $, ko, undefined) {
                     this.save();
                 }
             },
-            time: {
+/*            time: {
                 elementId: 'time-display',
                 id: 'time-display-modal',
                 title: 'Time',
@@ -305,7 +305,7 @@ fSpider.UISettings = (function (UISettings, $, ko, undefined) {
                 expanded: function () {
                     this.save();
                 }
-            },
+            }, */
             game: {
                 elementId: 'game-ctrls-wrap',
                 id: 'game-ctrls-modal',
