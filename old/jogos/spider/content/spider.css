@@ -175,8 +175,7 @@
 /* Global Options Dlg */
 
 #global-settings-open-wrap {
-    position: absolute;
-    background: black;
+    position: absolute;    
     opacity: 0.8;
     border-radius: .5em;
     pointer-events: auto;
@@ -207,10 +206,10 @@
 #global-options-dlg {
     opacity: 0.9;
     position: absolute;
-    width: 11em;
-    height: 23em;
+    width: 8em;
+    height: 18em;
     z-index: 1001;
-    background: black;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#181818), color-stop(100%,#000));
     border-radius: .75em;
     padding: .3em;
     color: white;
@@ -258,13 +257,24 @@
 
 .global-options-section legend {
     font-size: 1em;
-    color: white;
+    color: yellow;
     display: block;
 }
 
 .global-options-section button {
     width: 100%;
+	color: white;
+	font-weight: bold;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
+
+.global-options-section button:hover  {
+    width: 100%;
+	color: white;
+	font-weight: bold;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
 
 /* Global Options Dlg */
 
@@ -272,13 +282,12 @@
 /* http://www.bestcssbuttongenerator.com/ */
 button {
     border-radius: .3em;
-    background-color: #191919;
-    color: white;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(100%,#00c8ff), color-stop(0%,#002244));
     border: gray solid .1em;
 }
 
 button:hover {
-    background-color: black;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(100%,#ffaa00), color-stop(0%,#662200));
 }
 
 button:disabled {

@@ -62,7 +62,7 @@ fSpider.SpiderBoard = (function (SpiderBoard, Kinetic, undefined) {
             height: 999999
         });
         this.winText = new Kinetic.Text({
-            text: 'You won! Congratulations.',
+            text: 'Você Venceu, Parabéns!',
             fill: 'white',
             fontSize: 20,
             visible: false
