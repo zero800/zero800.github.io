@@ -47,7 +47,7 @@ fSpider.Card = (function (Card, Kinetic, undefined) {
     };
     Card.prototype.activeBorderProps = {
         'visible': true,
-        'stroke': '#0ee',
+        'stroke': '#09e',
         'strokeWidth': 4,
         'cornerRadius': 6,
         'fill': '',
@@ -56,8 +56,8 @@ fSpider.Card = (function (Card, Kinetic, undefined) {
     };
     Card.prototype.hoverBorderProps = {
         'visible': true,
-        'stroke': '#0cc',
-        'strokeWidth': 1.25,
+        'stroke': '#08d',
+        'strokeWidth': 2,
         'cornerRadius': 4,
         'fill': '',
         'opacity': 1,

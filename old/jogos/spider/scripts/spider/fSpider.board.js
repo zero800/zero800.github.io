@@ -170,7 +170,7 @@ fSpider.SpiderBoard = (function (SpiderBoard, Kinetic, undefined) {
     };
 
     //static fields
-    SpiderBoard.BOARD_MARGIN = { l: 5, r: 5, t: 5, b: 5 };
+    SpiderBoard.BOARD_MARGIN = { l: 5, r: 5, t: 15, b: 5 };
     SpiderBoard.TABLEAU_PILE_MARGIN = { l: 6, r: 6, t: 6, b: 0 };
     SpiderBoard.STOCK_PILE_MARGIN = { l: 0, r: 100, t: 0, b: 0 };
     SpiderBoard.FOUNDATION_PILES_MARGIN = { l: 150, r: 0, t: 0, b: 0 };
