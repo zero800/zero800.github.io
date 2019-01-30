@@ -207,7 +207,7 @@
     opacity: 0.9;
     position: absolute;
     width: 8em;
-    height: 18em;
+    height: 20em;
     z-index: 1001;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#181818), color-stop(100%,#000));
     border-radius: .75em;
@@ -287,6 +287,10 @@ button {
 }
 
 button:hover {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(100%,#ffaa00), color-stop(0%,#662200));
+}
+
+button:active {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(100%,#ffaa00), color-stop(0%,#662200));
 }
 

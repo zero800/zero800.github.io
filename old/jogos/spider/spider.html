@@ -70,6 +70,10 @@
                 <button id="avancar">Anvançar</button>
             </div>		
             <div class="clear"></div>
+             <div style="text-align: center;">
+                <button id="sair">Sair</button>
+            </div>		
+			<div class="clear"></div>
         </fieldset>  	
        
     </div>
@@ -235,6 +239,11 @@ fSpider.initOptionsPane = function (settings) {
 	 $('#avancar').on('click', function () {       
         fSpider.closeOptionsPane();	
 		fSpider.board.redo();		
+    });	
+	
+	 $('#sair').on('click', function () {       
+        fSpider.closeOptionsPane();	
+		location.href='../../jogos.html';		
     });	
 
     $('#dim-overlay').on('click', function () {
