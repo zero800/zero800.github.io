@@ -213,28 +213,28 @@ fSpider.initOptionsPane = function (settings) {
     });
 
     $('#1naipe').on('click', function () {       
-        fSpider.board.startGame(true, 0); 
-		fSpider.closeOptionsPane();	
+        fSpider.closeOptionsPane();	
+		fSpider.board.startGame(true, 0); 		
     });
 	
 	 $('#2naipes').on('click', function () {       
-        fSpider.board.startGame(true, 1); 
-		fSpider.closeOptionsPane();	
+        fSpider.closeOptionsPane();	
+		fSpider.board.startGame(true, 1); 		
     });
 	
 	 $('#4naipes').on('click', function () {       
-        fSpider.board.startGame(true, 2); 
-		fSpider.closeOptionsPane();	
+        fSpider.closeOptionsPane();	
+		fSpider.board.startGame(true, 2);		
     });
 	
 	 $('#voltar').on('click', function () {       
-        fSpider.board.undo();
-		fSpider.closeOptionsPane();	
+        fSpider.closeOptionsPane();	
+		fSpider.board.undo();		
     });
 		
 	 $('#avancar').on('click', function () {       
-        fSpider.board.redo();
-		fSpider.closeOptionsPane();	
+        fSpider.closeOptionsPane();	
+		fSpider.board.redo();		
     });	
 
     $('#dim-overlay').on('click', function () {
