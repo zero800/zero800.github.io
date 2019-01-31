@@ -16,15 +16,20 @@ body { font-family: 'Helvetica Neue', Arial, Sans-Serif; }
 }
 
 a:link {
-color: #0ef;
+color: #0cf;
 }
 a:visited {
-color: #0ef;
+color: #fa0;
 }
 
 a:active {
-color: #f80;
+color: #4f0;
 }
+
+a:link 
+{ 
+text-decoration:none; 
+} 
 
 
 .listview { padding: 0; margin: 0; font-weight: bold; color: #FFF; }
