@@ -2,7 +2,7 @@
 
 body { font-family: 'Helvetica Neue', Arial, Sans-Serif; }
 .header, .footer {
-    font-size: 1.3em; font-weight: bold; color: #FFF; padding: 0; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;	
+    font-size: 1.3em; font-weight: bold; color: #ee0; padding: 0; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;	
     background: -webkit-gradient(linear, left top, left bottom, color-stop(100%,#07131a), color-stop(0%,#585e66));
    
 }
