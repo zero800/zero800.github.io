@@ -186,7 +186,7 @@ fSpider.GameSettings = (function (GameSettings, $, ko, undefined) {
         animate: true,
         volume: 1,
         difficulty: GameSettings.prototype.DIFFICULTIES.ONE_SUIT,
-        animTime: 150,
+        animTime: 130,
         animDelay: 0
     };
 

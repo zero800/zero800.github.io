@@ -62,9 +62,12 @@ fSpider.SpiderBoard = (function (SpiderBoard, Kinetic, undefined) {
             height: 999999
         });
         this.winText = new Kinetic.Text({
-            text: 'Você Venceu, Parabéns!',
-            fill: 'white',
-            fontSize: 20,
+            text: 'Desafio Completo, Parabéns!',            
+			shadowColor: 'black',
+			shadowBlur: 10,
+			shadowOffset: [10, 10],				
+			fill: 'white',
+            fontSize: 40,
             visible: false
         });
         this.pilesLayer = new Kinetic.Layer();
@@ -170,7 +173,7 @@ fSpider.SpiderBoard = (function (SpiderBoard, Kinetic, undefined) {
     };
 
     //static fields
-    SpiderBoard.BOARD_MARGIN = { l: 5, r: 5, t: 30, b: 5 };
+    SpiderBoard.BOARD_MARGIN = { l: 5, r: 5, t: 36, b: 5 };
     SpiderBoard.TABLEAU_PILE_MARGIN = { l: 6, r: 6, t: 6, b: 0 };
     SpiderBoard.STOCK_PILE_MARGIN = { l: 0, r: 100, t: 0, b: 0 };
     SpiderBoard.FOUNDATION_PILES_MARGIN = { l: 150, r: 0, t: 0, b: 0 };
