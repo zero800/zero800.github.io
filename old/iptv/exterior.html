@@ -34,14 +34,14 @@
             <div class="body row scroll-y">					
 				
 				<ul id="ul_li" class="listview">
-                    <li id="0" onClick="reply_click(0)" class="selected">TELEPAVIA</li>
-					<li id="1" onClick="reply_click(1)">CANALE 10</li>
+                    <li id="0" onClick="reply_click(0)" class="selected">MELODY CHANNEL</li>
+					<li id="1" onClick="reply_click(1)">CANAL 26 ARGENTINA</li>
 					<li id="2" onClick="reply_click(2)">CARINA TV</li>
 					<li id="3" onClick="reply_click(3)">RADIO IGLESIAS</li>
 					<li id="4" onClick="reply_click(4)">DUBAI SPORTS</li>
 					<li id="5" onClick="reply_click(5)">RAI MOVIE</li>					
 					<li id="6" onClick="reply_click(6)">TELE MILANO</li>
-					<li id="7" onClick="reply_click(7)">SUPER TV</li>
+					<li id="7" onClick="reply_click(7)">TELPIN 2 ARGENTINA</li>
 					<li id="8" onClick="reply_click(8)">RAI PREMIUM</li>
 					<li id="9" onClick="reply_click(9)">TVT</li>
 					<li id="10" onClick="reply_click(10)">SUMMER VIDEOS</li>
@@ -50,6 +50,8 @@
 					<li id="13" onClick="reply_click(13)">CALIFORNIA MUSIC CHANNEL</li>
 					<li id="14" onClick="reply_click(14)">NHK WORLD</li>
 					<li id="15" onClick="reply_click(15)">FRANCE 24</li>
+					<li id="16" onClick="reply_click(16)">TELEPAVIA</li>
+					<li id="17" onClick="reply_click(17)">CANALE 10</li>
 					
 				
 							   
@@ -58,7 +60,7 @@
             
         </div>
         <div class="right col">
-            <div class="header row">&nbsp;&nbsp; IPTV INTERNACIONAL
+            <div class="header row">&nbsp;&nbsp; IPTV - Internacional
 			 <img border="0" src="../img/mini.png" align="right" alt="Cameras do Brasil" width="42" >
 			</div>
             <div class="body row">            		
@@ -70,13 +72,13 @@
 			<script>
 				   var videoList = [{
 				  sources: [{					
-					src: ("http://wms.shared.streamshow.it:1935/telepavia/telepavia/live.m3u8") ,
+					src: ("http://186.155.200.118:1935/live/MelodyChannel/playlist.m3u8") ,
 					type: 'application/x-mpegURL' /* 00 */
 				  }],
 				  poster: '../img/padrao.png'
 				}, {
 				  sources: [{
-					src: ("http://37.187.142.147:1935/ch10live/high.stream/live.m3u8") ,
+					src: ("http://live-edge01.telecentro.net.ar:1935/live/26hd-720/livestream.m3u8") ,
 					type: 'application/x-mpegURL' /* 01 */
 				  }],
 				  poster: '../img/padrao.png'
@@ -112,7 +114,7 @@
 				  poster: '../img/padrao.png'
 				}, {
 				  sources: [{
-					src: ("http://wms.shared.streamshow.it:1935/supertv/supertv/live.m3u8") ,
+					src: ("http://201.219.100.30:1935/telpintv/ttv.stream_720p/playlist.m3u8") ,
 					type: 'application/x-mpegURL' /* 07 */
 				  }],
 				  poster: '../img/padrao.png'
@@ -164,8 +166,21 @@
 					type: 'application/x-mpegURL' /* 15 */
 				  }],
 				  poster: '../img/padrao.png'   
-				  
+				  }, {
+				  sources: [{
+					src: ("http://wms.shared.streamshow.it:1935/telepavia/telepavia/live.m3u8") ,
+					type: 'application/x-mpegURL' /* 16 */
+				  }],
+				  poster: '../img/padrao.png' 
+				 }, {
+				  sources: [{
+					src: ("http://37.187.142.147:1935/ch10live/high.stream/live.m3u8") ,
+					type: 'application/x-mpegURL' /* 17 */
+				  }],
+				  poster: '../img/padrao.png' 
+				
 				}];
+				
 				
 				var player = videojs(document.querySelector('video'), {
 				  inactivityTimeout: 1200
