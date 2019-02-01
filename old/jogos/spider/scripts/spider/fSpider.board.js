@@ -176,7 +176,7 @@ fSpider.SpiderBoard = (function (SpiderBoard, Kinetic, undefined) {
     SpiderBoard.BOARD_MARGIN = { l: 5, r: 5, t: 36, b: 5 };
     SpiderBoard.TABLEAU_PILE_MARGIN = { l: 6, r: 6, t: 6, b: 0 };
     SpiderBoard.STOCK_PILE_MARGIN = { l: 0, r: 80, t: 0, b: -20 };
-    SpiderBoard.FOUNDATION_PILES_MARGIN = { l: 150, r: 0, t: 0, b: 0 };
+    SpiderBoard.FOUNDATION_PILES_MARGIN = { l: 150, r: 0, t: 0, b: -20 };
     SpiderBoard.ORIGINAL_DIMENSIONS = { w: 960, h: 580 };
     SpiderBoard.PLAYER_ACTIONS = {
         'none': 0,
