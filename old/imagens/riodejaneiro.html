@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        
+		<link href="../scripts/panes.css" rel="stylesheet" type="text/css">
+        <link href="../scripts/tablet.css" rel="stylesheet" type="text/css">        
+		<link href="../scripts/video-js.css" rel="stylesheet">
+		
+		
+		<style type="text/css">
+            /* Pane configuration */
+			.limpo {background-color: #000; top: 50px; bottom: 0px; left: 0; right: 0; overflow: hidden; position: absolute;}
+			.left.col { width: 85px; }
+            .right.col { left: 85px; right: 0; }
+            .header.row { height: 50px; line-height: 50px; }
+            .body.row { top: 50px; bottom: 0px; }
+            .footer.row { height: 0px; bottom: 0; line-height: 50px; }
+        </style>
+    </head>
+ 
+ <body>       	
+		
+		<div class="left col">
+            <div class="header row"> &nbsp;&nbsp;
+			 <a href="../imagens.html">
+			<img border="0" src="../img/voltar.png" align="top" alt="Voltar" width="42" >
+			</a>
+			</div>
+            <div class="body row scroll-y">				
+				
+				<ul id="ul_li" class="listview">
+                    <li id="0" onClick="reply_click(0,'http://cnetzm02.censanet.com.br/cgi-bin-zm/nph-zms?mode=jpeg&format=swf&user=cftv&monitor=5&i=')">Beira Rio</li>
+					<li id="1" onClick="reply_click(1,'http://187.63.100.121/cgi-bin-zm/nph-zms?mode=jpeg&format=swf&user=cftv&monitor=17&i=')">Beira Valão</li>
+					<li id="2" onClick="reply_click(2,'http://cnetzm02.censanet.com.br/cgi-bin-zm/nph-zms?mode=jpeg&format=swf&user=cftv&monitor=36&i=')">Farol</li>
+					<li id="3" onClick="reply_click(3,'http://187.63.100.121/cgi-bin-zm/nph-zms?mode=jpeg&format=swf&user=cftv&monitor=35&i=')">Farol Marinha</li>
+					<li id="4" onClick="reply_click(4,'http://cnetzm02.censanet.com.br/cgi-bin-zm/nph-zms?mode=jpeg&format=swf&user=cftv&monitor=29&i=')">Formosa</li>
+					<li id="5" onClick="reply_click(5,'http://187.63.100.121/cgi-bin-zm/nph-zms?mode=jpeg&format=swf&user=cftv&monitor=15&i=')">Mercado Municipal</li>				
+					<li id="6" onClick="reply_click(6,'http://cnetzm02.censanet.com.br/cgi-bin-zm/nph-zms?mode=jpeg&format=swf&user=cftv&monitor=6&i=')">Pelinca</li>
+				    <li id="7" onClick="reply_click(7,'http://187.63.100.121/cgi-bin-zm/nph-zms?mode=jpeg&format=swf&user=cftv&monitor=7&i=')">Ponte da Lapa</li>
+					<li id="8" onClick="reply_click(8,'http://cnetzm02.censanet.com.br/cgi-bin-zm/nph-zms?mode=jpeg&format=swf&user=cftv&monitor=32&i=')">Ponte de Ferro</li>
+					<li id="9" onClick="reply_click(9,'http://187.63.100.121/cgi-bin-zm/nph-zms?mode=jpeg&format=swf&user=cftv&monitor=4&i=')">Sen. Tarcisio Miranda</li>
+					
+					<li id="10" onClick="reply_click(10,'http://cnetzm02.censanet.com.br/cgi-bin-zm/nph-zms?mode=jpeg&format=swf&user=cftv&monitor=16&i=')">Shopping Popular</li>
+					<li id="11" onClick="reply_click(11,'http://187.63.100.121/cgi-bin-zm/nph-zms?mode=jpeg&format=swf&user=cftv&monitor=18&i=')">Trevo do Índio</li>				
+												   
+                </ul>
+            </div>
+            
+        </div>
+        <div class="right col">
+            <div class="header row">&nbsp;&nbsp; Rio de Janeiro - RJ
+			 <img border="0" src="../img/mini.png" align="right" alt="Cameras do Brasil" width="42" >
+			</div>
+            <div class="limpo" align="middle">    
+			
+			<img id="camera" align="middle" height="100%" src="../img/padrao.png">
+						
+			 <script>
+				
+				function reply_click(num, clicked_id)
+				{	
+					
+					var image = document.getElementById("camera");
+					image.src = "../img/carregando.gif";
+					
+					var downloadingImage = new Image();
+					downloadingImage.onerror = function() {
+					  image.src = "../img/erro.png";
+					};
+					downloadingImage.onload = function(){
+						image.src = this.src;   
+					};					
+					downloadingImage.src = clicked_id;					
+					
+					const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
+					for (let i = 0; i < numItems; i++) {					
+						document.getElementById(i).classList.remove('selected');						
+					}	
+					document.getElementById(num).classList.add('selected');			
+					
+				}
+			  </script>
+			               
+            </div>
+            
+        </div>       
+    
+</body></html>
