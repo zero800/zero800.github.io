@@ -45,9 +45,9 @@ iframe {
 
 #play-area {
     position: absolute;
-    top: 33%;
-    left: 50%;
-    width: 600px;
+    top: 40%;
+    left: 50%;    
+	width: 600px;
     height: 700px;
     margin-left: -300px;
     margin-top: -350px;
