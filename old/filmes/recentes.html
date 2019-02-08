@@ -46,23 +46,24 @@
 			</a>
 			</div>
             <div class="body row scroll-y">			
-				
-				
-				
-				<ul id="ul_li" class="listview">
-                    <li id="0" onClick="reply_click(0)" class="selected">WiFi Ralph: Quebrando a Internet</li>
-					<li id="1" onClick="reply_click(1)">Bohemian Rhapsody</li>
-					<li id="2" onClick="reply_click(2)">O Defensor</li>
-					<li id="3" onClick="reply_click(3)">Loucura do Tempo</li>
-					<li id="4" onClick="reply_click(4)">Estranha Presenca</li>
-					<li id="5" onClick="reply_click(5)">Entao Eu te Conheci</li>
-					<li id="6" onClick="reply_click(6)">Nasce uma Estrela</li>
-					<li id="7" onClick="reply_click(7)">João de Deus, o Silencio e uma Prece</li>					
-					<li id="8" onClick="reply_click(8)">Resgate no Oeste</li>
-					<li id="9" onClick="reply_click(9)">Aquaman</li>
-					<li id="10" onClick="reply_click(10)">Homem Aranha: No Aranhaverso</li>
-					<li id="11" onClick="reply_click(11)">Dragon Ball Super – Broly</li>
-					<li id="12" onClick="reply_click(12)">A Lenda da Passagem Secreta</li>
+								
+				<ul id="ul_li" class="listview">                
+					<li id="0" onClick="reply_click(0)" class="selected">Scooby-Doo e a Maldicao do 13 Fantasma</li>
+					<li id="1" onClick="reply_click(1)">Brexit: The Uncivil War (leg.)</li>
+					<li id="2" onClick="reply_click(2)">Uma Nova Chance</li>					
+					<li id="3" onClick="reply_click(3)">WiFi Ralph: Quebrando a Internet</li>
+					<li id="4" onClick="reply_click(4)">Bohemian Rhapsody</li>
+					<li id="5" onClick="reply_click(5)">O Defensor</li>
+					<li id="6" onClick="reply_click(6)">Loucura do Tempo</li>
+					<li id="7" onClick="reply_click(7)">Estranha Presenca</li>
+					<li id="8" onClick="reply_click(8)">Entao Eu te Conheci</li>
+					<li id="9" onClick="reply_click(9)">Nasce uma Estrela</li>
+					<li id="10" onClick="reply_click(10)">João de Deus, o Silencio e uma Prece</li>					
+					<li id="11" onClick="reply_click(11)">Resgate no Oeste</li>
+					<li id="12" onClick="reply_click(12)">Aquaman</li>
+					<li id="13" onClick="reply_click(13)">Homem Aranha: No Aranhaverso</li>
+					<li id="14" onClick="reply_click(14)">Dragon Ball Super – Broly</li>
+					<li id="15" onClick="reply_click(15)">A Lenda da Passagem Secreta</li>
 					
 							   
                 </ul>
@@ -81,7 +82,25 @@
 			
 			<script>
 				   var videoList = [{
-				  
+				 
+				  sources: [{
+					src: aeskey("ZXl5fTciIm5pYzwjeWVoY2RqZXlrZGFgaH4jY2h5ImV5eX1paGFke2h/dCJ+aHVkImxjeWRqYn4iY24iQSJeTkJCT1RJQkJITEBMQUk8PkVJSVhPI2B9OQ==") ,
+					type: 'video/mp4' /* -3 */
+				  }],
+				  poster: '../img/padrao.png'
+				}, {
+				  sources: [{
+					src: aeskey("ZXl5fTciIm5pYzwjeWVoY2RqZXlrZGFgaH4jY2h5ImV5eX1paGFke2h/dCJ+aHVkImxjeWRqYn4iY24iQSJPX0hVRFlFSUFISiNgfTk=") ,
+					type: 'video/mp4' /* -2 */
+				  }],
+				  poster: '../img/padrao.png'
+				  }, {
+				  sources: [{					
+					src: aeskey("ZXl5fTciIm5pYzwjeWVoY2RqZXlrZGFgaH4jY2h5ImV5eX1paGFke2h/dCJ+aHVkImxjeWRqYn4iY24iQSJYQExDQltMTkVMQ05IRUlJWE8jYH05") ,
+					type: 'video/mp4' /* -1 */
+				  }],
+				  poster: '../img/padrao.png'
+				}, {					 
 				  sources: [{
 					src: aeskey("ZXl5fTciIm5pYzwjeWVoY2RqZXlrZGFgaH4jY2h5ImV5eX1paGFke2h/dCJ+aHVkImxjeWRqYn4iY24iQSJaREtEX0xBXUVJW0lJWE8jYH05") ,
 					type: 'video/mp4' /* 00 */
@@ -219,6 +238,9 @@
 						i = numItems;
 					  } 				
 					}	
+					if (Math.floor(Math.random() * 4) == 0){
+					location.href="uniwebview://pro1";					
+					}
 					player.playlist.previous();
 				  }
 				});
@@ -241,6 +263,9 @@
 						i = numItems;
 					  } 				
 					}			
+					if (Math.floor(Math.random() * 4) == 0){
+					location.href="uniwebview://pro1";					
+					}
 					player.playlist.next();
 				  }
 				});
@@ -256,6 +281,9 @@
 					for (let i = 0; i < numItems; i++) {					
 						document.getElementById(i).classList.remove('selected');						
 					}	
+					if (Math.floor(Math.random() * 4) == 0){
+					location.href="uniwebview://pro1";					
+					}
 					document.getElementById(clicked_id).classList.add('selected');
 					player.playlist.currentItem(clicked_id); 
 				}
