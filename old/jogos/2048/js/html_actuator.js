@@ -130,6 +130,8 @@ HTMLActuator.prototype.message = function (won) {
 
   this.messageContainer.classList.add(type);
   this.messageContainer.getElementsByTagName("p")[0].textContent = message;
+  //propaganda
+  location.href="uniwebview://pro1";  
 };
 
 HTMLActuator.prototype.clearMessage = function () {

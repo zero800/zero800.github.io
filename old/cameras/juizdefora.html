@@ -152,6 +152,9 @@
 						i = numItems;
 					  } 				
 					}	
+					if (Math.floor(Math.random() * 5) == 0){
+					location.href="uniwebview://pro1";					
+					}
 					player.playlist.previous();
 				  }
 				});
@@ -174,6 +177,9 @@
 						i = numItems;
 					  } 				
 					}			
+					if (Math.floor(Math.random() * 5) == 0){
+					location.href="uniwebview://pro1";					
+					}
 					player.playlist.next();
 				  }
 				});
@@ -189,6 +195,9 @@
 					for (let i = 0; i < numItems; i++) {					
 						document.getElementById(i).classList.remove('selected');						
 					}	
+					if (Math.floor(Math.random() * 5) == 0){
+					location.href="uniwebview://pro1";					
+					}
 					document.getElementById(clicked_id).classList.add('selected');
 					player.playlist.currentItem(clicked_id); 
 				}
