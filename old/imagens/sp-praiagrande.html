@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)http://stevesanderson.github.io/fixed-height-layouts-demo/two-columns.html -->
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134118723-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-134118723-1');
+		</script>		
+		
+		<link href="../scripts/panes.css" rel="stylesheet" type="text/css">
+        <link href="../scripts/tablet.css" rel="stylesheet" type="text/css">        
+		<link href="../scripts/video-js.css" rel="stylesheet">
+		
+		
+		<style type="text/css">
+            /* Pane configuration */
+			.limpo {background-color: #000; top: 50px; bottom: 0px; left: 0; right: 0; overflow: hidden; position: absolute;}
+			.left.col { width: 85px; }
+            .right.col { left: 85px; right: 0; }
+            .header.row { height: 50px; line-height: 50px; }
+            .body.row { top: 50px; bottom: 0px; }
+            .footer.row { height: 0px; bottom: 0; line-height: 50px; }
+        </style>
+    </head>
+ 
+ <body>       	
+		
+		<div class="left col">
+            <div class="header row"> &nbsp;&nbsp;
+			  <a href="../imagens/saopaulo.html">
+			<img border="0" src="../img/voltar.png" align="top" alt="Voltar" width="42" >
+			</a>
+			</div>
+            <div class="body row scroll-y">				
+				
+				<ul id="ul_li" class="listview">
+                     <li id="0" onClick="reply_click(0,'http://cameras.praiagrande.sp.gov.br/aovivo/get-snapshot/CAM_INTERNET_4)">00</li>
+					<li id="1" onClick="reply_click(1,'')">01</li>
+					<li id="2" onClick="reply_click(2,'')">02</li>
+					<li id="3" onClick="reply_click(3,'')">03</li>
+					<li id="4" onClick="reply_click(4,'')">04</li>
+					<li id="5" onClick="reply_click(5,'')">05</li>				
+					<li id="6" onClick="reply_click(6,'')">06</li>
+				    <li id="7" onClick="reply_click(7,'')">07</li>
+					<li id="8" onClick="reply_click(8,'')">08</li>
+					<li id="9" onClick="reply_click(9,'')">09</li>
+					
+					<li id="10" onClick="reply_click(10,'')">10</li>
+					<li id="11" onClick="reply_click(11,'')">11</li>
+					<li id="12" onClick="reply_click(12,'')">12</li>
+					<li id="13" onClick="reply_click(13,'')">13</li>
+					<li id="14" onClick="reply_click(14,'')">14</li>
+					<li id="15" onClick="reply_click(15,'')">15</li>				
+					<li id="16" onClick="reply_click(16,'')">16</li>
+				    <li id="17" onClick="reply_click(17,'')">17</li>
+					<li id="18" onClick="reply_click(18,'')">18</li>
+					<li id="19" onClick="reply_click(19,'')">19</li>
+						
+					
+                </ul>
+            </div>
+            
+        </div>
+        <div class="right col">
+            <div class="header row">&nbsp;&nbsp; Praia Grande - SP
+			<a href="../cameras/saopaulo.html">			
+			<img border="0" src="../img/mini.png" align="right" alt="Img." width="42" > </a>
+			</div>
+            <div class="limpo" align="middle">    
+			
+			<img id="camera" align="middle" height="100%" src="../img/padrao.png">
+						
+			 <script>
+				
+				function reply_click(num, clicked_id)
+				{	
+					
+					var image = document.getElementById("camera");
+					image.src = "../img/carregando.gif";
+					
+					var downloadingImage = new Image();
+					downloadingImage.onerror = function() {
+					  image.src = "../img/erro.png";
+					};
+					downloadingImage.onload = function(){
+						image.src = this.src;   
+					};					
+					downloadingImage.src = clicked_id;					
+					
+					const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
+					for (let i = 0; i < numItems; i++) {					
+						document.getElementById(i).classList.remove('selected');						
+					}	
+					document.getElementById(num).classList.add('selected');
+					
+					if (Math.floor(Math.random() * 10) == 0){
+					location.href="uniwebview://pro1";					
+					}	
+					
+				}
+			  </script>
+			               
+            </div>
+            
+        </div>       
+    
+</body></html>
