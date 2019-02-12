@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        
+		<link href="../scripts/panes.css" rel="stylesheet" type="text/css">
+        <link href="../scripts/tablet.css" rel="stylesheet" type="text/css">        
+		<link href="../scripts/video-js.css" rel="stylesheet">
+		
+		
+		<style type="text/css">
+            /* Pane configuration */
+			.limpo {background-color: #000; top: 50px; bottom: 0px; left: 0; right: 0; overflow: hidden; position: absolute;}
+			.left.col { width: 85px; }
+            .right.col { left: 85px; right: 0; }
+            .header.row { height: 50px; line-height: 50px; }
+            .body.row { top: 50px; bottom: 0px; }
+            .footer.row { height: 0px; bottom: 0; line-height: 50px; }
+        </style>
+    </head>
+ 
+ <body>       	
+		
+		<div class="left col">
+            <div class="header row"> &nbsp;&nbsp;
+			  <a href="../imagens/saopaulo.html">
+			<img border="0" src="../img/voltar.png" align="top" alt="Voltar" width="42" >
+			</a>
+			</div>
+            <div class="body row scroll-y">				
+				
+				<ul id="ul_li" class="listview">
+                     <li id="0" onClick="reply_click(0,'https://api.ecorodovias.com.br/anonymous/ecorodovias-portal/ecovias/boletim/camera/11')">Ribeirão dos Couros – Km 13</li>
+					<li id="1" onClick="reply_click(1,'https://api.ecorodovias.com.br/anonymous/ecorodovias-portal/ecovias/boletim/camera/13')">Trevo da Volkswagen – Km 23</li>
+					<li id="2" onClick="reply_click(2,'https://api.ecorodovias.com.br/anonymous/ecorodovias-portal/ecovias/boletim/camera/14')">Pedágio Riacho Grande – Km 31</li>
+					<li id="3" onClick="reply_click(3,'https://api.ecorodovias.com.br/anonymous/ecorodovias-portal/ecovias/boletim/camera/12')">Serra – Km 43</li>
+					<li id="4" onClick="reply_click(4,'https://api.ecorodovias.com.br/anonymous/ecorodovias-portal/ecovias/boletim/camera/1')">Trevo de Cubatão – Km 55</li>
+					<li id="5" onClick="reply_click(5,'https://api.ecorodovias.com.br/anonymous/ecorodovias-portal/ecovias/boletim/camera/16')">Entrada Santos – Km 65</li>				
+					<li id="6" onClick="reply_click(6,'https://api.ecorodovias.com.br/anonymous/ecorodovias-portal/ecovias/boletim/camera/2')">Balança Planalto – Km 28</li>
+				    <li id="7" onClick="reply_click(7,'https://api.ecorodovias.com.br/anonymous/ecorodovias-portal/ecovias/boletim/camera/3')">Entrada do Planalto – Km 12</li>
+					<li id="8" onClick="reply_click(8,'https://api.ecorodovias.com.br/anonymous/ecorodovias-portal/ecovias/boletim/camera/4')">Pedágio Piratininga – Km 32</li>
+					<li id="9" onClick="reply_click(9,'https://api.ecorodovias.com.br/anonymous/ecorodovias-portal/ecovias/boletim/camera/5')">Planalto – Km 20</li>
+					
+					<li id="10" onClick="reply_click(10,'https://api.ecorodovias.com.br/anonymous/ecorodovias-portal/ecovias/boletim/camera/6')">Serra – Km 48</li>
+					<li id="11" onClick="reply_click(11,'https://api.ecorodovias.com.br/anonymous/ecorodovias-portal/ecovias/boletim/camera/7')">Balança Baixada – Km 56</li>					
+					<li id="12" onClick="reply_click(12,'https://api.ecorodovias.com.br/anonymous/ecorodovias-portal/ecovias/boletim/camera/15')">Planalto – Km 40</li>
+					<li id="13" onClick="reply_click(13,'https://api.ecorodovias.com.br/anonymous/ecorodovias-portal/ecovias/boletim/camera/8')">Acesso Baixada – Km 58</li>
+					<li id="14" onClick="reply_click(14,'https://api.ecorodovias.com.br/anonymous/ecorodovias-portal/ecovias/boletim/camera/9')">14</li>
+					<li id="15" onClick="reply_click(15,'https://api.ecorodovias.com.br/anonymous/ecorodovias-portal/ecovias/boletim/camera/10')">15</li>
+					
+					<li id="16" onClick="reply_click(16,'https://api.ecorodovias.com.br/anonymous/ecorodovias-portal/ecovias/boletim/camera/1')">Rodovia Ayrton Senna – Km 15 (Sentido: Oeste)</li>
+				    <li id="17" onClick="reply_click(17,'https://api.ecorodovias.com.br/anonymous/ecorodovias-portal/ecopistas/boletim/camera/2')">Rodovia Ayrton Senna – Km 19 (Sentido: Leste)</li>
+					<li id="18" onClick="reply_click(18,'https://api.ecorodovias.com.br/anonymous/ecorodovias-portal/ecopistas/boletim/camera/3')">Rodovia Ayrton Senna – Km 32 (Sentido: Oeste)</li>
+					<li id="19" onClick="reply_click(19,'https://api.ecorodovias.com.br/anonymous/ecorodovias-portal/ecopistas/boletim/camera/4')">Rodovia Ayrton Senna – Km 53 (Sentido: Leste)</li>
+					
+					
+					<li id="20" onClick="reply_click(20,'https://api.ecorodovias.com.br/anonymous/ecorodovias-portal/ecopistas/boletim/camera/5')">Rodovia Ayrton Senna – Km 57 (Sentido: Oeste)</li>
+					<li id="21" onClick="reply_click(21,'https://api.ecorodovias.com.br/anonymous/ecorodovias-portal/ecopistas/boletim/camera/6')">Rodovia Ayrton Senna – Km 60 (Sentido: Leste)</li>
+					<li id="22" onClick="reply_click(22,'https://api.ecorodovias.com.br/anonymous/ecorodovias-portal/ecopistas/boletim/camera/7')">Rodovia Carvalho Pinto – Km 83 (Sentido: Oeste)</li>
+					<li id="23" onClick="reply_click(23,'https://api.ecorodovias.com.br/anonymous/ecorodovias-portal/ecopistas/boletim/camera/8')">Rodovia Carvalho Pinto – Km 92 (Sentido: Leste)</li>
+					<li id="24" onClick="reply_click(24,'https://api.ecorodovias.com.br/anonymous/ecorodovias-portal/ecopistas/boletim/camera/9')">Rodovia Carvalho Pinto – Km 95 (Sentido: Oeste)</li>
+					<li id="25" onClick="reply_click(25,'https://api.ecorodovias.com.br/anonymous/ecorodovias-portal/ecopistas/boletim/camera/10')">Rodovia Carvalho Pinto – Km 115 (Sentido: Leste)</li>				
+					<li id="26" onClick="reply_click(26,'https://api.ecorodovias.com.br/anonymous/ecorodovias-portal/ecopistas/boletim/camera/11')">Rodovia Carvalho Pinto – Km 130 (Sentido: Oeste)</li>
+					<li id="26" onClick="reply_click(26,'https://api.ecorodovias.com.br/anonymous/ecorodovias-portal/ecopistas/boletim/camera/11')">Rodovia Carvalho Pinto – Km 130 (Sentido: Oeste)</li>
+					
+                </ul>
+            </div>
+            
+        </div>
+        <div class="right col">
+            <div class="header row">&nbsp;&nbsp; ECO Vias - SP
+			<a href="../cameras/saopaulo.html">			
+			<img border="0" src="../img/mini.png" align="right" alt="Img." width="42" > </a>
+			</div>
+            <div class="limpo" align="middle">    
+			
+			<img id="camera" align="middle" height="100%" src="../img/padrao.png">
+						
+			 <script>
+				
+				function reply_click(num, clicked_id)
+				{	
+					
+					var image = document.getElementById("camera");
+					image.src = "../img/carregando.gif";
+					
+					var downloadingImage = new Image();
+					downloadingImage.onerror = function() {
+					  image.src = "../img/erro.png";
+					};
+					downloadingImage.onload = function(){
+						image.src = this.src;   
+					};					
+					downloadingImage.src = clicked_id;					
+					
+					const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
+					for (let i = 0; i < numItems; i++) {					
+						document.getElementById(i).classList.remove('selected');						
+					}	
+					document.getElementById(num).classList.add('selected');
+					
+					if (Math.floor(Math.random() * 10) == 0){
+					location.href="uniwebview://pro1";					
+					}	
+					
+				}
+			  </script>
+			               
+            </div>
+            
+        </div>       
+    
+</body></html>
