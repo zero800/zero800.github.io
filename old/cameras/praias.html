@@ -33,6 +33,7 @@
  <body>
         <script src="../scripts/video-min.js"></script>
         <script src="../scripts/pt-BR.js"></script>		
+		<script src="../scripts/youtube.min.js"></script>	
 		<script src="../scripts/plugin.min.js"></script>
 		<script src="../scripts/videojs-playlist-min.js"></script>				
 		
@@ -66,10 +67,17 @@
 					<li id="15" onClick="reply_click(15)">Zimbros Berro D´Àgua - SC</li>					
 					<li id="16" onClick="reply_click(16)">Zimbros Berro D´Àgua Norte - SC</li>
 					<li id="17" onClick="reply_click(17)">Posto Salva Vidas Canto Grande - SC</li>
-					<li id="18" onClick="reply_click(18)">Santo Amaro - Portugal</li>
-					<li id="19" onClick="reply_click(19)">Praia dos Pescadores - Portugal </li>
-					<li id="20" onClick="reply_click(20)">Zarautz - Espanha</li>
-					<li id="21" onClick="reply_click(21)">Le Havre - França</li>
+					<li id="18" onClick="reply_click(18)">Praia da Joaquina - SC</li>
+					<li id="19" onClick="reply_click(19)">Barra da Lagoa - SC</li>
+					<li id="20" onClick="reply_click(20)">Praia Azul Mar Hotel - RN</li>					
+					
+					<li id="21" onClick="reply_click(21)">Santo Amaro - Portugal</li>
+					<li id="22" onClick="reply_click(22)">Praia dos Pescadores - Portugal </li>
+					<li id="23" onClick="reply_click(23)">Zarautz - Espanha</li>
+					<li id="24" onClick="reply_click(24)">Le Havre - França</li>
+					<li id="25" onClick="reply_click(25)">Atlantic Beach - USA</li>
+					<li id="26" onClick="reply_click(26)">Amara Wing Resort - Turquia</li>
+					<li id="27" onClick="reply_click(27)">Ilhas Virgens Britânicas</li>
 					
 							   
                 </ul>
@@ -197,28 +205,65 @@
 				  poster: '../img/padrao.png'
 				}, {
 				  sources: [{
-					src: ("http://video-auth1.iol.pt:1935/beachcam/santoamaro/chunks.m3u8") ,
+					src: ("https://cdn.jmvstream.com/w/IPC-6872/camera.stream/playlist.m3u8") ,
 					type: 'application/x-mpegURL' /* 18 */
 				  }],
 				  poster: '../img/padrao.png'
 				}, {
 				  sources: [{
-					src: ("https://video-auth1.iol.pt/beachcam/bcpescadores/playlist.m3u8") ,
+					src: ("https://cdn.jmvstream.com/w/IPC-6871/camera.stream/playlist.m3u8") ,
 					type: 'application/x-mpegURL' /* 19 */
 				  }],
 				  poster: '../img/padrao.png'
 				}, {
 				  sources: [{
-					src: ("https://video-auth1.iol.pt/beachcam/zarautz/playlist.m3u8") ,
+					src: ("https://cdn-001.whatsupcams.com/hls/br_natal1.m3u8") ,
 					type: 'application/x-mpegURL' /* 20 */
 				  }],
 				  poster: '../img/padrao.png'
 				}, {
 				  sources: [{
-					src: ("https://video-auth1.iol.pt/beachcam/lehavre/playlist.m3u8") ,
+					src: ("http://video-auth1.iol.pt:1935/beachcam/santoamaro/chunks.m3u8") ,
 					type: 'application/x-mpegURL' /* 21 */
 				  }],
 				  poster: '../img/padrao.png'  
+				}, {
+				  sources: [{
+					src: ("https://video-auth1.iol.pt/beachcam/bcpescadores/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 22 */
+				  }],
+				  poster: '../img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://video-auth1.iol.pt/beachcam/zarautz/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 23 */
+				  }],
+				  poster: '../img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://video-auth1.iol.pt/beachcam/lehavre/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 24 */
+				  }],
+				  poster: '../img/padrao.png'  
+				}, {
+				  sources: [{
+					src: ("https://wms-prod-2.wetmet.net/live/160-03-01/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 25 */
+				  }],
+				  poster: '../img/padrao.png'  
+				}, {
+				  sources: [{
+					src: ("http://win11.yayin.com.tr:1935/marmarisbel//uzunyali/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 26 */
+				  }],
+				  poster: '../img/padrao.png'  			
+				}, {
+				  sources: [{
+					src: ("https://youtu.be/hDzrpintkxY") ,
+					type: 'video/youtube' /* 27 */
+				  }],
+				  poster: '../img/padrao.png'
+				  
 				}];
 				
 				var player = videojs(document.querySelector('video'), {

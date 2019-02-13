@@ -69,6 +69,8 @@
 					<li id="17" onClick="reply_click(17)">The Temple, Irlanda</li>					
 					<li id="18" onClick="reply_click(18)">New Orleans Karaoke 1</li>					
 					<li id="19" onClick="reply_click(19)">New Orleans Karaoke 2</li>					
+					<li id="20" onClick="reply_click(20)">Bar Harbor - USA</li>					
+					<li id="21" onClick="reply_click(21)">Dauphin’s Restaurant - USA</li>					
 							   
                 </ul>
             </div>
@@ -199,15 +201,28 @@
 					type: 'application/x-mpegURL' /* 18 */
 				  }],
 				  poster: '../img/padrao.png'
-				  }, {
+				}, {
 				  sources: [{
 					src: ("https://videos3.earthcam.com/fecnetwork/9106.flv/chunklist_w1787721571.m3u8") ,
 					type: 'application/x-mpegURL' /* 19 */
 				  }],
 				  poster: '../img/padrao.png'  
+				}, {
+				  sources: [{
+					src: ("http://wse1.resortcams.com/live/barharbor.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 20 */
+				  }],
+				  poster: '../img/padrao.png'  
+				}, {
+				  sources: [{
+					src: ("https://s8.ipcamlive.com/streams/085c63f0c62fa3037/stream.m3u8") ,
+					type: 'application/x-mpegURL' /* 21 */
+				  }],
+				  poster: '../img/padrao.png'  
+				
 				}];
 				
-				https://videos3.earthcam.com/fecnetwork/4054.flv/playlist.m3u8
+				
 				
 				var player = videojs(document.querySelector('video'), {
 				  inactivityTimeout: 1200
