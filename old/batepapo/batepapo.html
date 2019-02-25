@@ -14,7 +14,7 @@
 		
 		<link href="../scripts/panes.css" rel="stylesheet" type="text/css">
         <link href="../scripts/tablet.css" rel="stylesheet" type="text/css">        
-		
+		<script src="../scripts/plugin.min.js"></script>
 		
 		
 		<style type="text/css">
@@ -40,19 +40,25 @@
 				
 				
 				
-				<ul id="ul_li" class="listview">
-                    <li id="0" onClick="go(0,'https://www5.cbox.ws/box/?boxid=912099&boxtag=tMXEJl')" class="selected">Câmeras do Brasil</li>
-					<li id="1" onClick="go(1,'https://www6.cbox.ws/box/?boxid=820904&boxtag=C5L434')">BBB ao Vivo</li>
-					<li id="2" onClick="reply_click(2)">02</li>
-					<li id="3" onClick="reply_click(3)">03</li>
-					<li id="4" onClick="reply_click(4)">04</li>
-					<li id="5" onClick="reply_click(5)">05</li>					
-					<li id="6" onClick="reply_click(6)">06</li>
-					<li id="7" onClick="reply_click(7)">07</li>
-					<li id="8" onClick="reply_click(8)">08</li>
-					<li id="9" onClick="reply_click(9)">09</li>
-					
 				
+				<ul id="ul_li" class="listview">
+                    <li id="0" onClick="go(0,'https://www5.cbox.ws/box/?boxid=912099&boxtag=tMXEJl')" class="selected">Amizade</li>
+					<li id="1" onClick="go(1,'https://www5.cbox.ws/box/?boxid=912213&boxtag=w7AGko')">Namoro</li>
+					<li id="2" onClick="go(2,'https://www5.cbox.ws/box/?boxid=912214&boxtag=1nSAkQ')">Futebol</li>
+					<li id="3" onClick="go(3,'https://www5.cbox.ws/box/?boxid=912215&boxtag=GYsDgl')">Zap Zap</li>
+					<li id="4" onClick="go(4,'https://www5.cbox.ws/box/?boxid=912216&boxtag=IMizFI')">Anônimas</li>
+					
+					<li id="5" onClick="go(5,'https://www3.cbox.ws/box/?boxid=2787424&boxtag=6715')">Conversa Fiada</li>
+					<li id="6" onClick="go(6,'https://www4.cbox.ws/box/?boxid=4321406&boxtag=M9X9aV')">BBB 1</li>
+					<li id="7" onClick="go(7,'https://www6.cbox.ws/box/?boxid=820904&boxtag=C5L434')">BBB 2</li>
+					<li id="8" onClick="go(8,'https://www2.cbox.ws/box/?boxid=2405994&boxtag=X68Z0T')">Fatinha</li>
+					<li id="9" onClick="go(9,'https://www4.cbox.ws/box/?boxid=4315071&boxtag=AYSrKa')">BlackList</li>
+					<li id="10" onClick="go(10,'https://www6.cbox.ws/box/?boxid=163668&boxtag=gd3qt9')">Pavil Curto</li>
+					<li id="11" onClick="go(11,'https://www2.cbox.ws/box/?boxid=2386393&boxtag=bvQW51')">Bate Papo</li>
+					<li id="12" onClick="go(12,'https://www3.cbox.ws/box/?boxid=2474990&boxtag=7388')">Jogos</li>
+					<li id="13" onClick="go(13,'https://www5.cbox.ws/box/?boxid=905396&boxtag=fpxa2l')">Paulino</li>
+					<li id="14" onClick="go(14,'https://www7.cbox.ws/box/?boxid=262426&boxtag=rkvzmg')">Católico</li>
+					
 							   
                 </ul>
             </div>
@@ -69,14 +75,15 @@
 			
 			
 			
-			 <script>
+			 <script>			  
+		
 				  function go(num,loc) {
 					document.getElementById('canal').src = loc;
 					const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
 					for (let i = 0; i < numItems; i++) {					
 						document.getElementById(i).classList.remove('selected');						
 					}	
-					//procomum();
+					procomum();
 					document.getElementById(num).classList.add('selected');
 				  }
 			 </script>
