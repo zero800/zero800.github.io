@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)http://stevesanderson.github.io/fixed-height-layouts-demo/two-columns.html -->
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134118723-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-134118723-1');
+		</script>		
+		
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        
+		<link href="../scripts/panes.css" rel="stylesheet" type="text/css">
+        <link href="../scripts/tablet.css" rel="stylesheet" type="text/css">        
+		<link href="../scripts/video-js.css" rel="stylesheet">
+		
+		
+		<style type="text/css">
+            /* Pane configuration */
+            .left.col { width: 85px; }
+            .right.col { left: 85px; right: 0; }
+            .header.row { height: 50px; line-height: 50px; }
+            .body.row { top: 50px; bottom: 0px; }
+            .footer.row { height: 0px; bottom: 0; line-height: 50px; }
+        </style>
+    </head>
+ 
+ <body>
+        <script src="../scripts/video-min.js"></script>
+        <script src="../scripts/pt-BR.js"></script>		
+		<script src="../scripts/plugin.min.js"></script>
+		<script src="../scripts/videojs-playlist-min.js"></script>				
+		
+		<div class="left col">
+            <div class="header row"> &nbsp;&nbsp;
+			 <a href="../geral.html">
+			<img border="0" src="../img/inicio.png" align="top" alt="Início" width="42" >
+			</a>
+			</div>
+            <div class="body row scroll-y">			
+				
+				
+				
+				<ul id="ul_li" class="listview">
+                    <li id="0" onClick="reply_click(0)" class="selected">Guriri 1</li>
+					<li id="1" onClick="reply_click(1)">Guriri 2</li>
+					<li id="2" onClick="reply_click(2)">Guriri 3</li>
+					<li id="3" onClick="reply_click(3)">São Mateus 1</li>
+					<li id="4" onClick="reply_click(4)">São Mateus 2</li>																
+							   
+                </ul>
+            </div>
+            
+        </div>
+        <div class="right col">
+            <div class="header row">&nbsp;&nbsp; Espírito Santo - ES
+			 <img border="0" src="../img/mini.png" align="right" alt="Cameras do Brasil" width="42" >
+			</div>
+            <div class="body row">            		
+			
+				
+			<video autoplay id="example_video_1" class="video-js vjs-big-play-centered vjs-16-9" controls preload="auto" width="100%" poster="../img/padrao.png" data-setup="{}">  
+			</video>	
+			
+			<script>
+				   var videoList = [{
+				  sources: [{					
+					src: ("https://ipc-62.camerite.com/3dias/d0688210-fe32-11e8-8711-b59b77cab526.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 00 */
+				  }],
+				  poster: '../img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://ipc-51.camerite.com/3dias/b3af5ac0-ecf0-11e8-abbe-89717337f108.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 01 */
+				  }],
+				  poster: '../img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://ipc-20.camerite.com/3dias/4c5f0e70-ecf9-11e8-a0f9-c755bbbaf3da.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 02 */
+				  }],
+				  poster: '../img/padrao.png'			    
+				}, {
+				  sources: [{
+					src: ("https://ipc-16.camerite.com/3dias/60af9170-01e8-11e9-b919-25a6ae9b6108.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 03 */
+				  }],
+				  poster: '../img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://ipc-30.camerite.com/3dias/54efd810-fe30-11e8-99ce-25a13b715cbe.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 04 */
+				  }],
+				  poster: '../img/padrao.png'
+			    
+				}];
+				
+				var player = videojs(document.querySelector('video'), {
+				  inactivityTimeout: 1200
+				});				
+				//player.playlist(videoList, 4);/// play video 5				
+				player.playlist(videoList);
+				player.playlist.autoadvance(0); // 0 = play all								
+				
+				
+				/* ADD PREVIOUS */
+				var Button = videojs.getComponent("Button");
+
+				// Extend default
+				var PrevButton = videojs.extend(Button, {				 
+				  constructor: function() {
+					Button.apply(this, arguments);				
+					this.addClass("vjs-icon-previous-item");
+					this.controlText("Previous");
+					
+				  },			
+
+				  handleClick: function() {
+				  
+				  const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
+					for (let i = 0; i < numItems; i++) {					
+					  if (document.getElementById(i).classList == 'selected' &&  i != 0){
+						document.getElementById(i).classList.remove('selected');
+						document.getElementById(i-1).classList.add('selected');	
+						i = numItems;
+					  } 				
+					}	
+					procomum();
+					player.playlist.previous();
+				  }
+				});
+				
+				var NextButton = videojs.extend(Button, {				  
+				  constructor: function() {
+					Button.apply(this, arguments);
+				
+					this.addClass("vjs-icon-next-item");
+					this.controlText("Next");
+				  },
+
+				  handleClick: function() {
+					
+					const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
+					for (let i = 0; i < numItems; i++) {					
+					  if (document.getElementById(i).classList == 'selected' &&  i != numItems-1){
+						document.getElementById(i).classList.remove('selected');
+						document.getElementById(i+1).classList.add('selected');	
+						i = numItems;
+					  } 				
+					}			
+					procomum();
+					player.playlist.next();
+				  }
+				});
+				
+				videojs.registerComponent("NextButton", NextButton);
+				videojs.registerComponent("PrevButton", PrevButton);				
+				player.getChild("controlBar").addChild("PrevButton", {}, 0);
+				player.getChild("controlBar").addChild("NextButton", {}, 2);
+				
+				
+				
+				  
+					
+					let url = 'https://voyeur-house.tv/streams/?action=getPlaylist&userid=5c6312fecf539&realm=realm3&cam=cam14';
+					fetch(url)
+					.then(res => res.json())
+					.then((out) => {
+					  console.log(out.uri);					 
+					})
+					.catch(err => { throw err });
+					
+					
+				
+				
+				
+				function reply_click(clicked_id)
+				{							
+					const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
+					for (let i = 0; i < numItems; i++) {					
+						document.getElementById(i).classList.remove('selected');						
+					}	
+					procomum();
+					document.getElementById(clicked_id).classList.add('selected');
+					player.playlist.currentItem(clicked_id); 
+				}
+			  </script>
+			               
+            </div>
+            
+        </div>       
+    
+</body></html>
