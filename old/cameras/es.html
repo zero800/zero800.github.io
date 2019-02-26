@@ -165,21 +165,6 @@
 				player.getChild("controlBar").addChild("NextButton", {}, 2);
 				
 				
-				
-				  
-					
-					let url = 'https://voyeur-house.tv/streams/?action=getPlaylist&userid=5c6312fecf539&realm=realm3&cam=cam14';
-					fetch(url)
-					.then(res => res.json())
-					.then((out) => {
-					  console.log(out.uri);					 
-					})
-					.catch(err => { throw err });
-					
-					
-				
-				
-				
 				function reply_click(clicked_id)
 				{							
 					const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
