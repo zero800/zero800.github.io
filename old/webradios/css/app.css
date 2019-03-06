@@ -34,11 +34,13 @@ div#black-player-controls {
   
   
 }
+
 div#black-player-controls img.playlist-album-art {
   float: left;
   width: 84px;
   height: 84px;
 }
+
 div#black-player-controls div.black-player-controls-container {
   float: left;
   width: calc( 100% - 150px );
@@ -53,6 +55,17 @@ div#black-player-controls div.black-player-controls-container span.song-name {
   font-weight: bold;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+
+div#black-player-controls div.black-player-controls-container span.song-name2 {
+  display: block;
+  color: #dd0;
+  font-size: 14px;
+  text-align: left;
+  font-weight: bold;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  margin-top:-4em; 
+}
+
 div#black-player-controls div.black-player-controls-container span.song-artist {
   display: block;
   color: rgba(255, 255, 255, 0.7);
