@@ -44,8 +44,8 @@ div#black-player-controls img.playlist-album-art {
 div#black-player-controls div.black-player-controls-container {
   float: left;
   width: calc( 100% - 150px );
-  margin-left: 20px;
-  text-align: center;
+  margin-left: 1em;
+  text-align: left; /* alinhamento controles   */
 }
 div#black-player-controls div.black-player-controls-container span.song-name {
   display: block;
@@ -56,15 +56,6 @@ div#black-player-controls div.black-player-controls-container span.song-name {
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-div#black-player-controls div.black-player-controls-container span.song-name2 {
-  display: block;
-  color: #dd0;
-  font-size: 14px;
-  text-align: left;
-  font-weight: bold;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  margin-top:-4em; 
-}
 
 div#black-player-controls div.black-player-controls-container span.song-artist {
   display: block;
@@ -74,8 +65,32 @@ div#black-player-controls div.black-player-controls-container span.song-artist {
   font-weight: bold;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+
+
+div#black-player-controls div.black-player-controls-container span.song-name2 {
+  display: block;
+  color: #dd0;
+  font-size: 14px;
+  text-align: left;
+  font-weight: bold;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  margin-top:-4em;  /* alinhamento do artista  */
+  margin-left: 9em; 
+}
+div#black-player-controls div.black-player-controls-container span.song-artist2 {
+  display: block;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  text-align: left;
+  font-weight: bold;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  margin-left: 9em; 
+}
+
+
+
 div#black-player-controls div.black-player-controls-container div#progress-container-black {
-  margin-right: 20px;
+  margin-right: -2em;
   position: relative;
   height: 20px;
   cursor: pointer;
@@ -136,6 +151,8 @@ div#black-player-controls div.black-player-controls-container div#progress-conta
   height: 3px;
   
 }
+
+
 div#black-player-controls div.black-player-controls-container div#progress-container-black progress#song-buffered-progress-black {
   position: absolute;
   left: 0;
@@ -192,9 +209,9 @@ div#black-player-controls div.black-player-controls-container div#progress-conta
 div#black-player-controls div.black-player-controls-container div#progress-container-black input[type=range] {
   -webkit-appearance: none;
   width: 100%;
-  margin: 7.5px 0;
+  margin: 6.5px 0;
   position: absolute;
-  z-index: 9999;
+  z-index: 999;
   top: -7px;
   height: 20px;
   cursor: pointer;
@@ -324,11 +341,11 @@ div#black-player-controls div.black-player-controls-container div#shuffle-black 
   margin-left: -16px;
 }
 div#black-player-controls div.black-player-controls-container div#shuffle-black.amplitude-shuffle-off {
-   margin-left: 10em;
+  margin-left: 10em;
   background: url("../img/black-shuffle-off.svg");
 }
 div#black-player-controls div.black-player-controls-container div#shuffle-black.amplitude-shuffle-on {
-   margin-left: 10em;
+  margin-left: 116px;
   background: url("../img/black-shuffle-on.svg");
 }
 div#black-player-controls div.black-player-controls-container div#previous-black {
@@ -340,6 +357,7 @@ div#black-player-controls div.black-player-controls-container div#previous-black
   vertical-align: middle;
   margin-right: 10px;
 }
+
 div#black-player-controls div.black-player-controls-container div#play-pause-black {
   display: inline-block;
   width: 52px;
