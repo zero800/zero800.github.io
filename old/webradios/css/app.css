@@ -19,12 +19,12 @@ div#black-player {
 }
 
 div#black-player-playlist {
-  height: 400px;
+  height: 224px;
   overflow-y: scroll; 
 }
 
 div#black-player-controls {
-  height: 130px;
+  height: 90px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#07131a), color-stop(100%,#484e56));
  
   border-width: 3px;
@@ -36,8 +36,8 @@ div#black-player-controls {
 }
 div#black-player-controls img.playlist-album-art {
   float: left;
-  width: 130px;
-  height: 130px;
+  width: 84px;
+  height: 84px;
 }
 div#black-player-controls div.black-player-controls-container {
   float: left;
@@ -47,7 +47,7 @@ div#black-player-controls div.black-player-controls-container {
 }
 div#black-player-controls div.black-player-controls-container span.song-name {
   display: block;
-  color: white;
+  color: #dd0;
   font-size: 14px;
   text-align: left;
   font-weight: bold;
@@ -365,12 +365,12 @@ div.black-player-song {
   border-bottom: 1px solid #979797;
 }
 div.black-player-song img {
-  height: 52px;
-  width: 52px;
+  height: 44px;
+  width: 44px;
   float: left;
 }
 div.black-player-song div.song-meta-container {
-  width: calc( 100% - 52px );
+  width: calc( 100% - 44px );
   float: left;
   padding-left: 10px;
 }
@@ -453,4 +453,4 @@ body span.playlist-title {
   7. Vendors
 */
 
-/*# sourceMappingURL=examples/multiple-playlists/css/app.css.map */
+/*# sourceMappingURL=app.css.map */
