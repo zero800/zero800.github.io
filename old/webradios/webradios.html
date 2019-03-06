@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)http://stevesanderson.github.io/fixed-height-layouts-demo/two-columns.html -->
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134118723-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-134118723-1');
+		</script>		
+		
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        
+		<link href="../scripts/panes.css" rel="stylesheet" type="text/css">
+        <link href="../scripts/tablet.css" rel="stylesheet" type="text/css">        
+				
+		
+		<style type="text/css">
+            /* Pane configuration */
+            .left.col { width: 85px; }
+            .right.col { left: 85px; right: 0; }
+            .header.row { height: 50px; line-height: 50px; }
+            .body.row { top: 50px; bottom: 0px; }
+            .footer.row { height: 0px; bottom: 0; line-height: 50px; }
+        </style>
+    </head>
+ 
+ <body>       
+		<script src="../scripts/plugin.min.js"></script>
+		 <!-- Include Resource Stylesheets -->
+		<link rel="stylesheet" type="text/css" href="css/foundation.min.css"/>
+
+    <!-- Include font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i" rel="stylesheet">
+
+		<!--
+			Include Resource Javascript
+
+			NOTE: These are for handling things outside of the scope of AmplitudeJS
+		-->
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/foundation.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+
+		<!-- Include Amplitude JS -->
+		<script type="text/javascript" src="js/amplitude.min.js"></script>
+
+		<!-- Include Style Sheet -->
+		<link rel="stylesheet" type="text/css" href="css/app.css"/>		
+		
+		<div class="left col">
+            <div class="header row"> &nbsp;&nbsp;
+			 <a href="../geral.html">
+			<img border="0" src="../img/inicio.png" align="top" alt="Início" width="42" >
+			</a>
+			</div>
+            <div class="body row scroll-y">			
+				
+				
+				
+				<ul id="ul_li" class="listview">
+                    <li id="0" onClick="reply_click(0)" class="selected">00</li>
+					<li id="1" onClick="reply_click(1)">01</li>
+					<li id="2" onClick="reply_click(2)">02</li>
+					<li id="3" onClick="reply_click(3)">03</li>
+					<li id="4" onClick="reply_click(4)">04</li>
+					<li id="5" onClick="reply_click(5)">05</li>					
+					<li id="6" onClick="reply_click(6)">06</li>
+					<li id="7" onClick="reply_click(7)">07</li>
+					<li id="8" onClick="reply_click(8)">08</li>
+					<li id="9" onClick="reply_click(9)">09</li>
+					
+					<li id="10" onClick="reply_click(10)">10</li>
+					<li id="11" onClick="reply_click(11)">11</li>
+					<li id="12" onClick="reply_click(12)">12</li>
+					<li id="13" onClick="reply_click(13)">13</li>
+					<li id="14" onClick="reply_click(14)">14</li>
+					<li id="15" onClick="reply_click(15)">15</li>					
+					<li id="16" onClick="reply_click(16)">16</li>
+					<li id="17" onClick="reply_click(17)">17</li>
+					<li id="18" onClick="reply_click(18)">18</li>
+					<li id="19" onClick="reply_click(19)">19</li>
+					
+										
+							   
+                </ul>
+            </div>
+            
+        </div>
+        <div class="right col">
+            <div class="header row">&nbsp;&nbsp; Web Radios
+			 <img border="0" src="../img/mini.png" align="right" alt="Cameras do Brasil" width="42" >
+			</div>
+            <div class="body row">            		
+			
+			
+       
+        <div id="black-player">
+          <div id="black-player-playlist">
+            <div class="black-player-song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="0" data-amplitude-playlist="emancipator">
+              <img src="img/anvil.jpg">
+              <div class="song-meta-container">
+                <span class="individual-song-name">First Snow</span>
+                <span class="individual-song-artist">Emancipator</span>
+              </div>
+            </div>
+
+            <div class="black-player-song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="1" data-amplitude-playlist="emancipator">
+              <img src="img/dust.jpg">
+              <div class="song-meta-container">
+                <span class="individual-song-name">Dusk To Dawn</span>
+                <span class="individual-song-artist">Emancipator</span>
+              </div>
+            </div>
+            <div class="black-player-song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="2" data-amplitude-playlist="emancipator">
+              <img src="img/anvil.jpg">
+              <div class="song-meta-container">
+                <span class="individual-song-name">Anthem</span>
+                <span class="individual-song-artist">Emancipator</span>
+              </div>
+            </div>
+			 <div class="black-player-song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="3" data-amplitude-playlist="emancipator">
+              <img src="img/dust.jpg">
+              <div class="song-meta-container">
+                <span class="individual-song-name">Anthem</span>
+                <span class="individual-song-artist">Emancipator</span>
+              </div>
+            </div>
+			 <div class="black-player-song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="4" data-amplitude-playlist="emancipator">
+              <img src="img/anvil.jpg">
+              <div class="song-meta-container">
+                <span class="individual-song-name">Anthem</span>
+                <span class="individual-song-artist">Emancipator</span>
+              </div>
+            </div>
+			 <div class="black-player-song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="5" data-amplitude-playlist="emancipator">
+              <img src="img/dust.jpg">
+              <div class="song-meta-container">
+                <span class="individual-song-name">Anthem</span>
+                <span class="individual-song-artist">Emancipator</span>
+              </div>
+            </div>
+			 <div class="black-player-song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="6" data-amplitude-playlist="emancipator">
+              <img src="img/anvil.jpg">
+              <div class="song-meta-container">
+                <span class="individual-song-name">Anthem</span>
+                <span class="individual-song-artist">Emancipator</span>
+              </div>
+            </div>
+			 <div class="black-player-song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="7" data-amplitude-playlist="emancipator">
+              <img src="img/dust.jpg">
+              <div class="song-meta-container">
+                <span class="individual-song-name">Anthem</span>
+                <span class="individual-song-artist">Emancipator</span>
+              </div>
+            </div>
+			 <div class="black-player-song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="8" data-amplitude-playlist="emancipator">
+              <img src="img/anvil.jpg">
+              <div class="song-meta-container">
+                <span class="individual-song-name">Anthem</span>
+                <span class="individual-song-artist">Emancipator</span>
+              </div>
+            </div>
+			
+			
+          </div>
+          <div id="black-player-controls">
+            <img data-amplitude-song-info="cover_art_url" data-amplitude-playlist="emancipator" class="playlist-album-art"/>
+            <div class="black-player-controls-container">
+              <span data-amplitude-song-info="name" data-amplitude-playlist="emancipator" class="song-name"></span>
+              <span data-amplitude-song-info="artist" data-amplitude-playlist="emancipator" class="song-artist"></span>
+
+              <div id="progress-container-black">
+                <input type="range" class="amplitude-song-slider" data-amplitude-playlist="emancipator"/>
+                <progress id="song-played-progress-black" class="amplitude-song-played-progress" data-amplitude-playlist="emancipator"></progress>
+                <progress id="song-buffered-progress-black" class="amplitude-buffered-progress" value="0"></progress>
+              </div>
+
+              <div>
+                <div class="amplitude-shuffle amplitude-shuffle-off" data-amplitude-playlist="emancipator" id="shuffle-black"></div>
+                <div class="amplitude-prev" data-amplitude-playlist="emancipator" id="previous-black"></div>
+                <div class="amplitude-play-pause" data-amplitude-playlist="emancipator" id="play-pause-black"></div>
+                <div class="amplitude-next" data-amplitude-playlist="emancipator" id="next-black"></div>
+                <div class="amplitude-repeat" data-amplitude-playlist="emancipator" id="repeat-black"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+	
+					<script type="text/javascript">
+					
+			
+					
+					
+					
+					
+					Amplitude.init({
+					  "songs": [
+						{
+						  "name": "First Snow",
+						  "artist": "Emancipator",
+						  "album": "Soon It Will Be Cold Enough",
+						  "url": "http://s02.w3bserver.com:9934/stream?1551873696474",
+						  "cover_art_url": "img/anvil.jpg"
+						}
+					  ],
+					  "playlists": {
+						"emancipator": {
+						  songs: [
+							{
+							  "name": "First Snow",
+							  "artist": "Emancipator",
+							  "album": "Soon It Will Be Cold Enough",
+							  "url": "http://s02.w3bserver.com:9934/stream?1551873696474",
+							  "cover_art_url": "img/anvil.jpg"
+							},
+							{
+							  "name": "Dusk To Dawn",
+							  "artist": "Emancipator",
+							  "album": "Dusk To Dawn",
+							  "url": "test.mp3",
+							  "cover_art_url": "img/dust.jpg"
+							},
+							{
+							  "name": "Anthem",
+							  "artist": "Emancipator",
+							  "album": "Soon It Will Be Cold Enough",
+							  "url": "test.mp3",
+							  "cover_art_url": "img/anvil.jpg"
+							},
+							{
+							  "name": "Dusk To Dawn",
+							  "artist": "Emancipator",
+							  "album": "Dusk To Dawn",
+							  "url": "test.mp3",
+							  "cover_art_url": "img/dust.jpg"
+							},
+							{
+							  "name": "Dusk To Dawn",
+							  "artist": "Emancipator",
+							  "album": "Dusk To Dawn",
+							  "url": "test.mp3",
+							  "cover_art_url": "img/anvil.jpg"
+							},
+							{
+							  "name": "Dusk To Dawn",
+							  "artist": "Emancipator",
+							  "album": "Dusk To Dawn",
+							  "url": "test.mp3",
+							  "cover_art_url": "img/dust.jpg"
+							},
+							{
+							  "name": "Dusk To Dawn",
+							  "artist": "Emancipator",
+							  "album": "Dusk To Dawn",
+							  "url": "test.mp3",
+							  "cover_art_url": "img/anvil.jpg"
+							},
+							{
+							  "name": "Dusk To Dawn",
+							  "artist": "Emancipator",
+							  "album": "Dusk To Dawn",
+							  "url": "test.mp3",
+							  "cover_art_url": "img/dust.jpg"
+							}
+						  ]
+						},       
+					  }
+					});	
+	
+				
+							
+			  </script>
+			               
+            </div>
+            
+        </div>       
+    
+</body></html>
