@@ -123,6 +123,7 @@ div#black-player-controls div.black-player-controls-container div#progress-conta
 div#black-player-controls div.black-player-controls-container div#progress-container-black progress#song-played-progress-black[value]::-webkit-progress-bar {
   background: none;
   border-radius: 5px;
+  background-color: #FFFFFF; /* barra chrome player*/
 }
 div#black-player-controls div.black-player-controls-container div#progress-container-black progress#song-played-progress-black[value]::-webkit-progress-value {
   background-color: #FFFFFF;
@@ -323,9 +324,11 @@ div#black-player-controls div.black-player-controls-container div#shuffle-black 
   margin-left: -16px;
 }
 div#black-player-controls div.black-player-controls-container div#shuffle-black.amplitude-shuffle-off {
+   margin-left: 10em;
   background: url("../img/black-shuffle-off.svg");
 }
 div#black-player-controls div.black-player-controls-container div#shuffle-black.amplitude-shuffle-on {
+   margin-left: 10em;
   background: url("../img/black-shuffle-on.svg");
 }
 div#black-player-controls div.black-player-controls-container div#previous-black {
