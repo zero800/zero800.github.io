@@ -237,7 +237,7 @@ var getJSON = function(url) {
 
 			
 			
-	getJSON("https://e21.voyeur-house.tv/realm51/stream/2d0bf8abc88bc11a957e4c308e646ead.m3u8?p%5B0%5D=e21.voyeur-house.tv&p%5B1%5D=5c655f4dd582f&p%5B2%5D=&p%5B3%5D=realm51&p%5B4%5D=cam11&p%5B5%5D=hi&p%5B6%5D=0&p%5B7%5D=1555412328&p%5B8%5D=0&s=9d49704af41b02faf829bd9f3228112c&v=076350f9677da001ab0dfb383364a9c2").then(function(data) { // Replace <URL> With your URL
+	getJSON("https://voyeur-house.tv/streams/?action=getPlaylist&realm=realm51&cam=cam11").then(function(data) { // Replace <URL> With your URL
     var jsondata = data.result; //store result in variable
 	 alert(jsondata[0].uri);
 
