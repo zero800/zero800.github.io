@@ -148,7 +148,7 @@
 					<li id="89" onClick="reply_click(89)">89</li>	
 					
 					<li id="90" onClick="reply_click(90)">90</li>	
-					<li id="91" onClick="reply_click(91)">91</li>	
+					<li id="91" onClick="reply_click(91)">91</li>
 					<li id="92" onClick="reply_click(92)">92</li>	
 					<li id="93" onClick="reply_click(93)">93</li>	
 					<li id="94" onClick="reply_click(94)">94</li>						
@@ -159,7 +159,7 @@
 					<li id="99" onClick="reply_click(99)">99</li>
 					
 					<li id="100" onClick="reply_click(100)">100</li>						
-					<li id="101" onClick="reply_click(101)">101</li>						
+					<li id="101" onClick="reply_click(101)">101</li>
 					<li id="102" onClick="reply_click(102)">102</li>						
 					<li id="103" onClick="reply_click(103)">103</li>						
 					<li id="104" onClick="reply_click(104)">104</li>						
@@ -180,27 +180,8 @@
 					<li id="118" onClick="reply_click(118)">118</li>
 					<li id="119" onClick="reply_click(119)">119</li>
 					
-					<li id="120" onClick="reply_click(120)">120</li>						
-					<li id="121" onClick="reply_click(121)">121</li>						
-					<li id="122" onClick="reply_click(122)">122</li>						
-					<li id="123" onClick="reply_click(123)">123</li>						
-					<li id="124" onClick="reply_click(124)">124</li>						
-					<li id="125" onClick="reply_click(125)">125</li>						
-					<li id="126" onClick="reply_click(126)">126</li>						
-					<li id="127" onClick="reply_click(127)">127</li>
-					<li id="128" onClick="reply_click(128)">128</li>
-					<li id="129" onClick="reply_click(129)">129</li>
-					
-					<li id="130" onClick="reply_click(130)">130</li>						
-					<li id="131" onClick="reply_click(131)">131</li>						
-					<li id="132" onClick="reply_click(132)">132</li>						
-					<li id="133" onClick="reply_click(133)">133</li>						
-					<li id="134" onClick="reply_click(134)">134</li>						
-					<li id="135" onClick="reply_click(135)">135</li>						
-					<li id="136" onClick="reply_click(136)">136</li>						
-					<li id="137" onClick="reply_click(137)">137</li>
-					<li id="138" onClick="reply_click(138)">138</li>
-					<li id="139" onClick="reply_click(139)">139</li>			
+					<li id="120" onClick="reply_click(120)">120</li>				
+
 					
                 </ul>
             </div>
@@ -217,49 +198,18 @@
 			</video>	
 			
 			<script>
-
-var getJSON = function(url) {
-  return new Promise(function(resolve, reject) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('get', url, true);
-    xhr.responseType = 'json';
-    xhr.onload = function() {
-      var status = xhr.status;
-     if (status == 200) {
-        resolve(xhr.response);
-      } else {
-        reject(status);
-      }
-    };
-    xhr.send();
-  });
-};
-
-			
-			
-	getJSON("https://voyeur-house.tv/streams/?action=getPlaylist&realm=realm51&cam=cam11").then(function(data) { // Replace <URL> With your URL
-    var jsondata = data.result; //store result in variable
-	 alert(jsondata[0].uri);
-
-    // Your code here....///
-    ///  Now you can access the json's data using jsondata variable:  //
-    // jsondata[0].year will have the value of year key, jsondata[0].month will have month key and so on.... //
-
-}, function(status) { //error detection....
-  alert('Something went wrong.');
-});
-			
+		
 			
 				    var videoList = [{
 				  sources: [{					
-					src: (jsondata[0].uri) ,  
+					src: aeskey2("ZXl5fX43IiJ7YnRoeH8gZWJ4fmgjeXsifnl/aGxgfiIybG55ZGJjMGpoeV1hbHRhZH55K3h+aH9kaTA4bm81Oz0+O286OT1rK39obGFgMH9obGFgOz0rbmxgMG5sYDw/") ,  
 					type: 'application/x-mpegURL' /* 00 */
 				  }],
 				  poster: '../img/padrao.png'
 				}, {
 				  sources: [{
-					src: ("https://youtu.be/rHI9q1LaEnk") ,
-					type: 'video/youtube' /* 01 */
+					src: aeskey2("ZXl5fX43IiJ7YnRoeH8gZWJ4fmgjeXsifnl/aGxgfiIybG55ZGJjMGpoeV1hbHRhZH55K39obGFgMH9obGFgPDQrbmxgMG5sYDw5") ,
+					type: 'application/x-mpegURL' /* 01 */
 				  }],
 				  poster: '../img/padrao.png'
 				}, {
@@ -708,119 +658,277 @@ var getJSON = function(url) {
 				  poster: '../img/padrao.png'				
 				}, {
 				 sources: [{
-					src: aeskey("ZXl5fX43IiJjYmloOSN7YnRoeH9lYnh+aCNuYmAie2VSfX9iaSJ+YGRhNz44I35gZGEifWFsdGFkfnkjYD54NQ==") ,
+					src: ("https://e28.voyeur-house.tv/realm60/stream/a7ab117161fcff44dbd3402f36a31cd4.m3u8?p%5B0%5D=e28.voyeur-house.tv&p%5B1%5D=5cb7d55dc0f71&p%5B2%5D=&p%5B3%5D=realm60&p%5B4%5D=cam13&p%5B5%5D=hi&p%5B6%5D=0&p%5B7%5D=1555551648&p%5B8%5D=0&s=b89507e2d89141d1081b3c24ea6072fb&v=076350f9677da001ab0dfb383364a9c2") ,
 					type: 'application/x-mpegURL' /* 76 */
 				  }],
 				  poster: '../img/padrao.png'				
 				}, {
 				 sources: [{
-					src: aeskey("ZXl5fX43IiJjYmloOSN7YnRoeH9lYnh+aCNuYmAie2VSfX9iaSJ+YGRhNz40I35gZGEifWFsdGFkfnkjYD54NQ==") ,
+					src: ("https://e19.voyeur-house.tv/realm60/stream/1fd5812a7e21c5eba85532687e5f8fa3.m3u8?p%5B0%5D=e19.voyeur-house.tv&p%5B1%5D=5cb7d55dc0f71&p%5B2%5D=&p%5B3%5D=realm60&p%5B4%5D=cam14&p%5B5%5D=hi&p%5B6%5D=0&p%5B7%5D=1555551693&p%5B8%5D=0&s=4adae60cf1835dd03ffe7f70cbea4667&v=076350f9677da001ab0dfb383364a9c2") ,
 					type: 'application/x-mpegURL' /* 77 */
 				  }],
 				  poster: '../img/padrao.png'				
 				}, {
 				 sources: [{
-					src: aeskey("ZXl5fX43IiJjYmloOSN7YnRoeH9lYnh+aCNuYmAie2VSfX9iaSJ+YGRhNzk+I35gZGEifWFsdGFkfnkjYD54NQ==") ,
+					src: ("https://e27.voyeur-house.tv/realm51/stream/caebb3fe5ddfd308d6145d9408823bb4.m3u8?p%5B0%5D=e27.voyeur-house.tv&p%5B1%5D=5cb7d55dc0f71&p%5B2%5D=&p%5B3%5D=realm51&p%5B4%5D=cam11&p%5B5%5D=hi&p%5B6%5D=0&p%5B7%5D=1555551723&p%5B8%5D=0&s=bc7de5d225cc9624fa54b6648baeb4cc&v=076350f9677da001ab0dfb383364a9c2") ,
 					type: 'application/x-mpegURL' /* 78 */
 				  }],
 				  poster: '../img/padrao.png'				
 				}, {
 				 sources: [{
-					src: aeskey("ZXl5fX43IiJjYmloOSN7YnRoeH9lYnh+aCNuYmAie2VSfX9iaSJ+YGRhNzg8I35gZGEifWFsdGFkfnkjYD54NQ==") ,
+					src: ("https://e27.voyeur-house.tv/realm51/stream/7126eb2a7abb512c749654c1236858d8.m3u8?p%5B0%5D=e27.voyeur-house.tv&p%5B1%5D=5cb7d55dc0f71&p%5B2%5D=&p%5B3%5D=realm51&p%5B4%5D=cam14&p%5B5%5D=hi&p%5B6%5D=0&p%5B7%5D=1555551759&p%5B8%5D=0&s=b61d184874a5800c80327067372da6dc&v=076350f9677da001ab0dfb383364a9c2") ,
 					type: 'application/x-mpegURL' /* 79 */
 				  }],
 				  poster: '../img/padrao.png'				
 				}, {
 				 sources: [{
-					src: aeskey("ZXl5fX43IiJjYmloOSN7YnRoeH9lYnh+aCNuYmAie2VSfX9iaSJ+YGRhNzg+I35gZGEifWFsdGFkfnkjYD54NQ==") ,
+					src: ("https://e46.voyeur-house.tv/realm13/stream/e64121b3215c64efaa77624fe35aeafb.m3u8?p%5B0%5D=e46.voyeur-house.tv&p%5B1%5D=5cb7d55dc0f71&p%5B2%5D=&p%5B3%5D=realm13&p%5B4%5D=cam11&p%5B5%5D=hi&p%5B6%5D=0&p%5B7%5D=1555551786&p%5B8%5D=0&s=85cb6cd13211a4e0c703c6c1ee500b16&v=076350f9677da001ab0dfb383364a9c2") ,
 					type: 'application/x-mpegURL' /* 80 */
 				  }],
 				  poster: '../img/padrao.png'				
 				}, {
 				 sources: [{
-					src: aeskey("ZXl5fX43IiJjYmloOSN7YnRoeH9lYnh+aCNuYmAie2VSfX9iaSJ+YGRhNzg4I35gZGEifWFsdGFkfnkjYD54NQ==") ,
+					src: ("https://e46.voyeur-house.tv/realm13/stream/6711cc1fc188d3d659b9cee5236a325f.m3u8?p%5B0%5D=e46.voyeur-house.tv&p%5B1%5D=5cb7d55dc0f71&p%5B2%5D=&p%5B3%5D=realm13&p%5B4%5D=cam14&p%5B5%5D=hi&p%5B6%5D=0&p%5B7%5D=1555551824&p%5B8%5D=0&s=fe151d30b6a1bc873cd27e03666bdd02&v=076350f9677da001ab0dfb383364a9c2") ,
 					type: 'application/x-mpegURL' /* 81 */
 				  }],
 				  poster: '../img/padrao.png'				
 				}, {
 				 sources: [{
-					src: aeskey("ZXl5fX43IiJjYmloOSN7YnRoeH9lYnh+aCNuYmAie2VSfX9iaSJ+YGRhNzg0I35gZGEifWFsdGFkfnkjYD54NQ==") ,
+					src: ("https://e10.voyeur-house.tv/realm44/stream/ee24ce429e8f2b1bafeeb02480c2b8fa.m3u8?p%5B0%5D=e10.voyeur-house.tv&p%5B1%5D=5cb7d55dc0f71&p%5B2%5D=&p%5B3%5D=realm44&p%5B4%5D=cam11&p%5B5%5D=hi&p%5B6%5D=0&p%5B7%5D=1555551850&p%5B8%5D=0&s=cf789277431fd98e570cf60a56c3876d&v=076350f9677da001ab0dfb383364a9c2") ,
 					type: 'application/x-mpegURL' /* 82 */
 				  }],
 				  poster: '../img/padrao.png'				
 				}, {
 				 sources: [{
-					src: aeskey("ZXl5fX43IiJjYmloOSN7YnRoeH9lYnh+aCNuYmAie2VSfX9iaSJ+YGRhNzs+I35gZGEifWFsdGFkfnkjYD54NQ==") ,
+					src: ("https://e20.voyeur-house.tv/realm44/stream/ceb3fb20fd70f9a7a15e2799de6f47e8.m3u8?p%5B0%5D=e20.voyeur-house.tv&p%5B1%5D=5cb7d55dc0f71&p%5B2%5D=&p%5B3%5D=realm44&p%5B4%5D=cam12&p%5B5%5D=hi&p%5B6%5D=0&p%5B7%5D=1555551872&p%5B8%5D=0&s=33366f522ed8e42aa541392e5f7cec92&v=076350f9677da001ab0dfb383364a9c2") ,
 					type: 'application/x-mpegURL' /* 83 */
 				  }],
 				  poster: '../img/padrao.png'		
 				}, {
 				 sources: [{
-					src: aeskey("ZXl5fX43IiJrfjwje2J0aHh/IHtkYWFsI25iYCJ/aGxhYDUibmxgPiJkY2lodSNgPng1") ,
+					src: ("https://e44.voyeur-house.tv/realm57/stream/016ff45012bd19f1f05a9637fdc035c1.m3u8?p%5B0%5D=e44.voyeur-house.tv&p%5B1%5D=5cb7d55dc0f71&p%5B2%5D=&p%5B3%5D=realm57&p%5B4%5D=cam11&p%5B5%5D=hi&p%5B6%5D=0&p%5B7%5D=1555551901&p%5B8%5D=0&s=570d9853dfd5aceb18e8470d6eb6a25a&v=076350f9677da001ab0dfb383364a9c2") ,
 					type: 'application/x-mpegURL' /* 84 */
 				  }],
 				  poster: '../img/padrao.png'		
 				}, {
 				 sources: [{
-					src: aeskey("ZXl5fX43IiJrfjwje2J0aHh/IHtkYWFsI25iYCJ/aGxhYDUibmxgOCJkY2lodSNgPng1") ,
+					src: ("https://e10.voyeur-house.tv/realm57/stream/568c5fa6bf209a6d8f993995a07f10d1.m3u8?p%5B0%5D=e10.voyeur-house.tv&p%5B1%5D=5cb7d55dc0f71&p%5B2%5D=&p%5B3%5D=realm57&p%5B4%5D=cam12&p%5B5%5D=hi&p%5B6%5D=0&p%5B7%5D=1555551959&p%5B8%5D=0&s=6eac8ab99193d3c0f5d9b00a2b7caacc&v=076350f9677da001ab0dfb383364a9c2") ,
 					type: 'application/x-mpegURL' /* 85 */
 				  }],
 				  poster: '../img/padrao.png'
 				}, {
 				 sources: [{
-					src: aeskey("ZXl5fX43IiJrfjwje2J0aHh/IHtkYWFsI25iYCJ/aGxhYDQibmxgPCJkY2lodSNgPng1") ,
+					src: ("https://e14.voyeur-house.tv/realm57/stream/fe95be6293c5d1f04f2b21627cfa5a3a.m3u8?p%5B0%5D=e14.voyeur-house.tv&p%5B1%5D=5cb7d55dc0f71&p%5B2%5D=&p%5B3%5D=realm57&p%5B4%5D=cam112&p%5B5%5D=hi&p%5B6%5D=0&p%5B7%5D=1555551989&p%5B8%5D=0&s=61dc52f95d228a931b7ed5e2ad6cb7d2&v=076350f9677da001ab0dfb383364a9c2") ,
 					type: 'application/x-mpegURL' /* 86 */
 				  }],
 				  poster: '../img/padrao.png'
 				}, {
 				 sources: [{
-					src: aeskey("ZXl5fX43IiJrfjwje2J0aHh/IHtkYWFsI25iYCJ/aGxhYDQibmxgPiJkY2lodSNgPng1") ,
+					src: ("") ,
 					type: 'application/x-mpegURL' /* 87 */
 				  }],
 				  poster: '../img/padrao.png'
 				}, {
 				 sources: [{
-					src: aeskey("ZXl5fX43IiJrfjwje2J0aHh/IHtkYWFsI25iYCJ/aGxhYDw8Im5sYD8iZGNpaHUjYD54NQ==") ,
+					src: ("") ,
 					type: 'application/x-mpegURL' /* 88 */
 				  }],
 				  poster: '../img/padrao.png'
 				}, {
 				 sources: [{
-					src: aeskey("ZXl5fX43IiJrfjwje2J0aHh/IHtkYWFsI25iYCJ/aGxhYDw8Im5sYDwiZGNpaHUjYD54NQ==") ,
+					src: ("") ,
 					type: 'application/x-mpegURL' /* 89 */
 				  }],
 				  poster: '../img/padrao.png'				
 				}, {
 				 sources: [{
-					src: aeskey("ZXl5fTciIn55f2hsYGNifn5hIzw0PDRlaXl7I25iYDc1NTU9ImFrZSJSaWhrZGN+eVIiXnl/aGxgPyJ9YWx0YWR+eSNgPng1") ,					
+					src: ("") ,					
 					type: 'application/x-mpegURL' /* 90 */
 				  }],
 				  poster: '../img/padrao.png'				
 				}, {
 				 sources: [{
-					src: aeskey("ZXl5fTciIn55f2hsYGNifn5hIzw0PDRlaXl7I25iYDc1NTU9ImFrZSJSaWhrZGN+eVIiXnl/aGxgPCJ9YWx0YWR+eSNgPng1") ,
+					src: ("") ,
 					type: 'application/x-mpegURL' /* 91 */
 				  }],
-				  poster: '../img/padrao.png'				
+				  poster: '../img/padrao.png'										
 				}, {
 				 sources: [{
-					src: aeskey("ZXl5fTciIntuY29kZmRjZGNoeXpif2YjeWhhaGJ+YGhpZGwjbmJgIn55f2hsYCJvZGZkY2RjaHl6Yn9mImw+b2RmZGNkIn5oamFkfnlSOj89fSNgPng1") ,
+					src: ("") ,
 					type: 'application/x-mpegURL' /* 92 */
 				  }],
 				  poster: '../img/padrao.png'				
 				}, {
 				 sources: [{
-					src: aeskey("ZXl5fX43IiJoPjUje2J0aHh/IGVieH5oI3l7In9obGFgODsifnl/aGxgIm9sO2g1a2w6aD8+ODxuaT49PDw5NGk9OWtrPDxoNGs0I2A+eDU=") ,
+					src: ("") ,
 					type: 'application/x-mpegURL' /* 93 */
 				  }],
 				  poster: '../img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 94 */
+				  }],
+				  poster: '../img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 95 */
+				  }],
+				  poster: '../img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 96 */
+				  }],
+				  poster: '../img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 97 */
+				  }],
+				  poster: '../img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 98 */
+				  }],
+				  poster: '../img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 99 */
+				  }],
+				  poster: '../img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 100 */
+				  }],
+				  poster: '../img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 101 */
+				  }],
+				  poster: '../img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 102 */
+				  }],
+				  poster: '../img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 103 */
+				  }],
+				  poster: '../img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 104 */
+				  }],
+				  poster: '../img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 105 */
+				  }],
+				  poster: '../img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 106 */
+				  }],
+				  poster: '../img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 107 */
+				  }],
+				  poster: '../img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 108 */
+				  }],
+				  poster: '../img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 109 */
+				  }],
+				  poster: '../img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 110 */
+				  }],
+				  poster: '../img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 111 */
+				  }],
+				  poster: '../img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 112 */
+				  }],
+				  poster: '../img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 113 */
+				  }],
+				  poster: '../img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 114 */
+				  }],
+				  poster: '../img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 115 */
+				  }],
+				  poster: '../img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 116 */
+				  }],
+				  poster: '../img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 117 */
+				  }],
+				  poster: '../img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 118 */
+				  }],
+				  poster: '../img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 119 */
+				  }],
+				  poster: '../img/padrao.png'				
+				}, {
+				 sources: [{
+					src: ("") ,
+					type: 'application/x-mpegURL' /* 120 */
+				  }],
+				  poster: '../img/padrao.png'			
+				}];				
 				
-				}];
-	
-
-
-
-	
+				
 				var player = videojs(document.querySelector('video'), {
 				  inactivityTimeout: 1200
 				});				
@@ -884,6 +992,30 @@ var getJSON = function(url) {
 				player.getChild("controlBar").addChild("PrevButton", {}, 0);
 				player.getChild("controlBar").addChild("NextButton", {}, 2);
 				
+				function aeskey2(value) {     
+					ok = aeskey(value);
+					ok = pega(ok); 
+					return ok;
+				}
+
+							
+				function pega (lk) {
+				var oReq = new XMLHttpRequest();
+				oReq.addEventListener("load", reqListener);
+				oReq.open("GET", lk);
+				oReq.send();
+				}
+
+
+				function reqListener () {
+				  //console.log(this.responseText);
+				  var str = this.responseText;
+				  var found = str.match(/\:"(.*?)\"}/);
+				  console.log(found[1]);  
+				}
+				
+				
+				
 				function reply_click(clicked_id)
 				{							
 					const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
@@ -894,6 +1026,7 @@ var getJSON = function(url) {
 					document.getElementById(clicked_id).classList.add('selected');
 					player.playlist.currentItem(clicked_id); 
 				}
+				
 			  </script>
 			               
             </div>
