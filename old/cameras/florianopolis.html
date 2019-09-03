@@ -75,7 +75,10 @@
 					<li id="23" onClick="reply_click(23)">Coqueiros</li>
 					<li id="24" onClick="reply_click(24)">Barra da Lagoa</li>
 					<li id="25" onClick="reply_click(25)">Praia da Joaquina</li>					
-					<li id="26" onClick="reply_click(26)">Mirante Serra do Rio Castro</li>						
+					<li id="26" onClick="reply_click(26)">Mirante Serra do Rio Castro</li>	
+					<li id="27" onClick="reply_click(27)">Pontal Norte</li>	
+					<li id="28" onClick="reply_click(28)">Balneário Camboriú</li>	
+					<li id="29" onClick="reply_click(29)">Rua Bruno Silva</li>		
 											   
                 </ul>
             </div>
@@ -255,7 +258,24 @@
 					type: 'application/x-mpegURL' /* 26 */
 				  }],
 				  poster: '../img/padrao.png'
-			     
+				 }, {
+				  sources: [{
+					src: ("https://ipc-97.camerite.com/60dias/4d2dc010-acdb-11e9-a1fd-51936b7d188f.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 27 */
+				  }],
+				  poster: '../img/padrao.png' 
+			     }, {
+				  sources: [{
+					src: ("https://ipc-58.camerite.com/1dia/54b796c0-8216-11e9-9753-df05978d45ce.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 28 */
+				  }],
+				  poster: '../img/padrao.png'
+				 }, {
+				  sources: [{
+					src: ("https://ipc-47.camerite.com/1dia/42922550-83c9-11e9-9dfa-1bc835e602e1.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 29 */
+				  }],
+				  poster: '../img/padrao.png'
 				}];
 				
 				var player = videojs(document.querySelector('video'), {

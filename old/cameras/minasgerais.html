@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)http://stevesanderson.github.io/fixed-height-layouts-demo/two-columns.html -->
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134118723-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-134118723-1');
+		</script>		
+		
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        
+		<link href="../scripts/panes.css" rel="stylesheet" type="text/css">
+        <link href="../scripts/tablet.css" rel="stylesheet" type="text/css">        
+		<link href="../scripts/video-js.css" rel="stylesheet">
+		
+		
+		<style type="text/css">
+            /* Pane configuration */
+            .left.col { width: 85px; }
+            .right.col { left: 85px; right: 0; }
+            .header.row { height: 50px; line-height: 50px; }
+            .body.row { top: 50px; bottom: 0px; }
+            .footer.row { height: 0px; bottom: 0; line-height: 50px; }
+        </style>
+    </head>
+ 
+ <body>
+        <script src="../scripts/video-min.js"></script>
+        <script src="../scripts/pt-BR.js"></script>		
+		<script src="../scripts/plugin.min.js"></script>
+		<script src="../scripts/videojs-playlist-min.js"></script>				
+		
+		<div class="left col">
+            <div class="header row"> &nbsp;&nbsp;
+			 <a href="../geral.html">
+			<img border="0" src="../img/inicio.png" align="top" alt="Início" width="42" >
+			</a>
+			</div>
+            <div class="body row scroll-y">			
+				
+				
+				
+				<ul id="ul_li" class="listview">
+                    <li id="0" onClick="reply_click(0)" class="selected">Av. Rio Branco x Av. Brasil</li>
+					<li id="1" onClick="reply_click(1)">Av. Pres. Itamar Franco x Av. Getúlio Vargas</li>
+					<li id="2" onClick="reply_click(2)">Av. Rio Branco x Rua Mal. Floriano Peixoto</li>
+					<li id="3" onClick="reply_click(3)">Av. Rio Branco x Av. Francisco Bernardino</li>
+					<li id="4" onClick="reply_click(4)">Rua Benjamin Constant com Avenida Brasil</li>
+					<li id="5" onClick="reply_click(5)">Av. Francisco Bernardino x Rua Marechal Deodoro</li>					
+					<li id="6" onClick="reply_click(6)">Av. Francisco Bernardino x Rua Benjamin Constant</li>
+					<li id="7" onClick="reply_click(7)">Av. Rio Branco x Av. Pres. Itamar Franco</li>	
+					<li id="8" onClick="reply_click(8)">Av. Rio Branco x Av. Getúlio Vargas</li>
+					<li id="9" onClick="reply_click(9)">Av. Pres. Itamar Franco x Rua Monsenhor Gustavo Freire</li>	
+					<li id="10" onClick="reply_click(10)">Av. Rio Branco x Av. Dr. José Procópio Teixeira</li>	
+					<li id="11" onClick="reply_click(11)">Avenida Barão do Rio Branco com Rua Doutor Romualdo</li>	
+					<li id="12" onClick="reply_click(12)">PJF - SETRA</li>	
+					<li id="13" onClick="reply_click(13)" class="selected">Rua Sete de Abril</li>
+					<li id="14" onClick="reply_click(14)">Gliceria C, de Melo 02</li>
+					<li id="15" onClick="reply_click(15)">Gliceria C, de Melo 04</li>
+					<li id="16" onClick="reply_click(16)">Gliceria C, de Melo 05</li>
+					<li id="17" onClick="reply_click(17)">Gliceria C, de Melo 06</li>	
+					
+							   
+                </ul>
+            </div>
+            
+        </div>
+        <div class="right col">
+            <div class="header row">&nbsp;&nbsp; Juiz de Fora - MG
+			<a href="../imagens/beloh.html">			
+			<img border="0" src="../img/img.png" align="right" alt="Img." width="42" > </a>		
+			</div>
+            <div class="body row">            		
+			
+				
+			<video autoplay id="example_video_1" class="video-js vjs-big-play-centered vjs-16-9" controls preload="auto" width="100%" poster="../img/padrao.png" data-setup="{}">  
+			</video>	
+			
+			<script>
+				   var videoList = [{
+				  sources: [{					
+					src: ("http://cbmap.com.br/settra/Site/videos/video1.mp4") ,
+					type: 'video/mp4' /* 00 */
+				  }],
+				  poster: '../img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://cbmap.com.br/settra/Site/videos/video3.mp4") ,
+					type: 'video/mp4' /* 01 */
+				  }],
+				  poster: '../img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://cbmap.com.br/settra/Site/videos/video4.mp4") ,
+					type: 'video/mp4' /* 02 */
+				  }],
+				  poster: '../img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://cbmap.com.br/settra/Site/videos/video6.mp4") ,
+					type: 'video/mp4' /* 03 */
+				  }],
+				  poster: '../img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://cbmap.com.br/settra/Site/videos/video11.mp4") ,
+					type: 'video/mp4' /* 04 */
+				  }],
+				  poster: '../img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://cbmap.com.br/settra/Site/videos/video5.mp4") ,
+					type: 'video/mp4' /* 05 */
+				  }],
+				  poster: '../img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://cbmap.com.br/settra/Site/videos/video7.mp4") ,
+					type: 'video/mp4' /* 06 */
+				  }],
+				  poster: '../img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://cbmap.com.br/settra/Site/videos/video8.mp4") ,
+					type: 'video/mp4' /* 07 */
+				  }],
+				  poster: '../img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://cbmap.com.br/settra/Site/videos/video2.mp4") ,
+					type: 'video/mp4' /* 08 */
+				  }],
+				  poster: '../img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://cbmap.com.br/settra/Site/videos/video9.mp4") ,
+					type: 'video/mp4' /* 09 */
+				  }],
+				  poster: '../img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://cbmap.com.br/settra/Site/videos/video10.mp4") ,
+					type: 'video/mp4' /* 10 */
+				  }],
+				  poster: '../img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://cbmap.com.br/settra/Site/videos/video12.mp4") ,
+					type: 'video/mp4' /* 11 */
+				  }],
+				  poster: '../img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("http://cbmap.com.br/settra/Site/videos/video13.mp4") ,
+					type: 'video/mp4' /* 12 */
+				  }],
+				  poster: '../img/padrao.png'
+				}, {  
+				  sources: [{					
+					src: ("https://ipc-98.camerite.com/3dias/da548600-9f60-11e9-88db-61c2a6785466.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 13 */
+				  }],
+				  poster: '../img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://ipc-70.camerite.com/3dias/339ccc00-ddf5-11e8-85f5-bf7e0e9ccc57.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 14 */
+				  }],
+				  poster: '../img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://ipc-73.camerite.com/3dias/1a19d4e0-45d2-11e9-8146-efcd70f58377.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 15 */
+				  }],
+				  poster: '../img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://ipc-90.camerite.com/1dia/3c24d4b0-4760-11e9-ad61-abfbc214a0f2.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 16 */
+				  }],
+				  poster: '../img/padrao.png'
+				}, {
+				  sources: [{
+					src: ("https://ipc-72.camerite.com/1dia/f0b52ca0-d94b-11e8-8170-9160a98c9683.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 17 */
+				  }],
+				  poster: '../img/padrao.png'  
+				  
+				}];
+				
+				var player = videojs(document.querySelector('video'), {
+				  inactivityTimeout: 1200
+				});				
+				//player.playlist(videoList, 4);/// play video 5				
+				player.playlist(videoList);
+				player.playlist.autoadvance(0); // 0 = play all								
+				
+				
+				/* ADD PREVIOUS */
+				var Button = videojs.getComponent("Button");
+
+				// Extend default
+				var PrevButton = videojs.extend(Button, {				 
+				  constructor: function() {
+					Button.apply(this, arguments);				
+					this.addClass("vjs-icon-previous-item");
+					this.controlText("Previous");
+					
+				  },			
+
+				  handleClick: function() {
+				  
+				  const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
+					for (let i = 0; i < numItems; i++) {					
+					  if (document.getElementById(i).classList == 'selected' &&  i != 0){
+						document.getElementById(i).classList.remove('selected');
+						document.getElementById(i-1).classList.add('selected');	
+						i = numItems;
+					  } 				
+					}	
+					promedio();
+					player.playlist.previous();
+				  }
+				});
+				
+				var NextButton = videojs.extend(Button, {				  
+				  constructor: function() {
+					Button.apply(this, arguments);
+				
+					this.addClass("vjs-icon-next-item");
+					this.controlText("Next");
+				  },
+
+				  handleClick: function() {
+					
+					const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
+					for (let i = 0; i < numItems; i++) {					
+					  if (document.getElementById(i).classList == 'selected' &&  i != numItems-1){
+						document.getElementById(i).classList.remove('selected');
+						document.getElementById(i+1).classList.add('selected');	
+						i = numItems;
+					  } 				
+					}			
+					promedio();
+					player.playlist.next();
+				  }
+				});
+				
+				videojs.registerComponent("NextButton", NextButton);
+				videojs.registerComponent("PrevButton", PrevButton);				
+				player.getChild("controlBar").addChild("PrevButton", {}, 0);
+				player.getChild("controlBar").addChild("NextButton", {}, 2);
+				
+				function reply_click(clicked_id)
+				{							
+					const numItems = document.getElementById("ul_li").getElementsByTagName("li").length;
+					for (let i = 0; i < numItems; i++) {					
+						document.getElementById(i).classList.remove('selected');						
+					}	
+					promedio();
+					document.getElementById(clicked_id).classList.add('selected');
+					player.playlist.currentItem(clicked_id); 
+				}
+			  </script>
+			               
+            </div>
+            
+        </div>       
+    
+</body></html>
