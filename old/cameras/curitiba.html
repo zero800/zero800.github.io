@@ -70,6 +70,8 @@
 					<li id="19" onClick="reply_click(19)">Cascavel - Terminal Leste</li>
 					
 					<li id="20" onClick="reply_click(20)">Cascavel - Interlagos</li>
+					<li id="21" onClick="reply_click(21)">Maringá 1</li>
+					<li id="22" onClick="reply_click(22)">Maringá 2</li>
 					
                 </ul>
             </div>
@@ -124,7 +126,7 @@
 				  poster: '../img/padrao.png'
 				}, {
 				  sources: [{
-					src: ("https://5b33b873179a2.streamlock.net:1443/cameradiscolandia/cameradiscolandia.stream/playlist.m3u8") ,
+					src: ("https://5b33b873179a2.streamlock.net:1443/cameradiscolandia/cameradiscolandia.stream/playlist.m3u8") , 
 					type: 'application/x-mpegURL' /* 06 */
 				  }],
 				  poster: '../img/padrao.png'
@@ -212,11 +214,20 @@
 					type: 'application/x-mpegURL' /* 20 */
 				  }],
 				  poster: '../img/padrao.png'
-				
-				
+				}, {
+				  sources: [{
+					src: ("https://ipc-87.camerite.com/1dia/d00855c0-db60-11e7-92ba-8b48b81430e4.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 21 */
+				  }],
+				  poster: '../img/padrao.png'
+			    }, {
+				  sources: [{
+					src: ("https://ipc-93.camerite.com/1dia/d4c32390-6a4b-11e8-9af4-8d35ca66e841.stream/playlist.m3u8") ,
+					type: 'application/x-mpegURL' /* 22 */
+				  }],
+				  poster: '../img/padrao.png'
+              				
 				}];
-				
-				
 				
 				
 				var player = videojs(document.querySelector('video'), {
